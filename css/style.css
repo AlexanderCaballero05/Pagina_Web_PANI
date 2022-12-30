@@ -1,41 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@300&display=swap');
 
-nav.st{
-   word-spacing: 50px !important;
-}
 
 a{
     color:#fff;
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px #187996;
-  font-size: 20px; 
+  /*text-shadow: 1px 1px 1px #187996;*/
+  font-size: 17px; 
 }
 
-a.footer{
-    color:rgb(8, 8, 8);
-    text-decoration: none;
-    font-size: 20px; 
+.navbar{
+  /*background-color: transparent !important;*/
+  background-color:#49a6c8c9 !important;
+  font-family: 'Raleway', sans-serif !important; 
+  word-spacing: 30px !important;
 }
 
-footer{
-background-color: #2a99acb3;
 
+.carousel-inner{
+  height: 600px;
+  width: 95%;
+  background-size:cover;
+ 
+}
+.carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 500px;
 }
 
+
+/*
 .header {
     background: url(../img/3d-bandera-de-honduras-sobre-un-cristal-con-fondo-de-gota-de-agua-es-una-bandera-que-se-introdujo-en-2022-2k7p36n.jpg) no-repeat center;
     background-size: cover;
     min-height: 10%;
     }
 
-    .navbar{
-      /*background-color: transparent !important;*/
-      background-color:#49a6c8c9 !important;
-      font-family: 'Raleway', sans-serif !important; 
-
-    }
-
+    .item, img{
+  height: 100% !important;
+  width:  100% !important;
+  border: 1px solid red;
+}
+*/
+ 
+/*
     body, .foot{
         background: radial-gradient(white, rgb(245, 245, 245)) !important;
     }
+    */
