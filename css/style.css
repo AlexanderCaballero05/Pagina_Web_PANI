@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap');
 
 
+body{
+  background-color:#fdfbfb !important;
+}
 a{
     color:#fff;
   text-decoration: none;
@@ -9,11 +12,35 @@ a{
   font-size: 16px; 
 }
 
+P{
+  text-align: left;
+}
+
+h1, h2{
+  font-weight: 500;
+  color: #303030;
+  line-height: 1.6em;
+  margin: 0 0 15px 0;
+  clear: both;
+
+}
+
+h2, h1{
+  font-size: 1.9em;
+}
+
+img{
+  border: 0;
+  max-width: 90% !important;
+  height: auto;
+  margin-top: 0px;
+}
 .navbar{
   /*background-color: transparent !important;*/
   background-color:#49a6c8c9 !important;
   font-family: 'Raleway', sans-serif !important; 
   word-spacing: 30px !important;
+  
   
 }
 
@@ -29,6 +56,7 @@ a{
   object-fit: cover;
   top: 0;
   left: 0;
+  right: 0;
   min-height: 500px;
 }
 
@@ -37,6 +65,8 @@ a{
   font-family: 'Raleway', sans-serif !important; 
   color: #fff;
   font-size: 14px;
+  width: 100% !important;
+  height: 140px;
  
 }
 
@@ -57,6 +87,15 @@ text-align: justify !important;
   text-align: center;
 }
  
+.contacto{
+  line-height : 1.6em;
+  font-family: 'Poppins', sans-serif !important;
+  color: #606060 !important;
+  width: 95%;
+
+}
+
+
 
 
 
