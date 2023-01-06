@@ -4,15 +4,21 @@
 body{
   background-color:#fdfbfb !important;
 }
-a{
-    color:#fff;
+a{ /*anclas del navbar*/
+  color:#fff;
   text-decoration: none;
   text-transform: uppercase;
-  /*text-shadow: 1px 1px 1px #187996;*/
-  font-size: 16px; 
+  text-shadow: 1px 1px 1px #95bac5;
+  font-size: 17px; 
 }
 
-P{
+a:hover {
+  background-color: #b5d5e1c9 ;
+  color: black;
+  border-radius: 5px;
+  
+}
+P{/*alinear los parrafos de institucion*/
   text-align: left;
 }
 
@@ -22,83 +28,63 @@ h1, h2{
   line-height: 1.6em;
   margin: 0 0 15px 0;
   clear: both;
-
 }
 
 h2, h1{
   font-size: 1.9em;
 }
 
-img{
-  border: 0;
-  max-width: 90% !important;
-  height: auto;
-  margin-top: 0px;
-}
-.navbar{
-  /*background-color: transparent !important;*/
+
+.navbar{ /*Estilos del menu de la pagina*/
   background-color:#49a6c8c9 !important;
   font-family: 'Raleway', sans-serif !important; 
   word-spacing: 30px !important;
-  height: 85px !important;
-  
-  
+  height: auto;
+  width: auto;
 }
 
-
-.carousel-inner{
-  height: 600px;
-  max-width: 100%;
+.carousel-inner{ /*estilos del carousel de imagenes*/
+  height: auto;
   background-size:cover;
-  margin-left: 0;
- 
- 
+  margin-top: 70px; /*margen para bajar el carousel del menu*/
 }
-.carousel-item img {
-  position: absolute;
+.carousel-item img { /*estilos del carousel de imagenes*/
+  position: relative;
   object-fit: cover;
   top: 0;
   left: 0;
   right: 0;
-  min-height: 500px;
 }
 
-
-
-.footer{
+.footer{ /*Estilos del footer de la pagina*/
   background-color:#2b9eb3 !important;
   font-family: 'Raleway', sans-serif !important; 
   color: #fff;
   font-size: 14px;
-  width: 100% !important;
-  height: 140px;
- 
 }
 
-i{
+i{ /*Logos de redes sociales*/
 font-size: 25px;
 padding-left: 4px;
-
 }
 
 .text-justify{
 text-align: justify !important;
 }
 
-.sorteo{
+.sorteo{ /* Estilo del Titulo de ultimos sorteos*/
   margin-top: 5px;
   padding-right: 1.5em;
   padding-top: 1.5em;
   text-align: center;
 }
  
-.contacto{
-  line-height : 1.6em;
+.contacto{ /*Estilos pagina de contacto*/
+  line-height : 1.7em;
   font-family: 'Poppins', sans-serif !important;
   color: #606060 !important;
-  width: 95%;
-
 }
+
 
 
 
