@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap');
 
 
+
 body{
   background-color:#fdfbfb !important;
+  
 }
 a{ /*anclas del navbar*/
   color:#fff;
@@ -49,15 +51,18 @@ h2, h1{
   margin-top: 70px; /*margen para bajar el carousel del menu*/
 }
 .carousel-item img { /*estilos del carousel de imagenes*/
-  position: relative;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  right: 0;
+  height: 75vh;
+  min-height: auto;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .footer{ /*Estilos del footer de la pagina*/
-  background-color:#2b9eb3 !important;
+  background-color:#2b9eb3 !important; 
+
   font-family: 'Raleway', sans-serif !important; 
   color: #fff;
   font-size: 14px;
