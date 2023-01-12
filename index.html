@@ -188,57 +188,6 @@
 
             <script src="/js/jquery-3.5.1.slim.min.js"></script>
             <script src="/js/bootstrap.min.js"></script>
-            <div id="container">
-              <div id="left1">&nbsp;
-                <h2>Menu de noticias</h2>
-                <select class="form-select" size="0" aria-label="size 3 select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">Noticia 1</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-               
-              </div>
-        
-                <!--PHP ARRAYS-->
-                <?php 
-                    if($result_query->num_rows > 0){
-                      while($row = $result_query->fetch_array()){
-                        $titulo = $row['TITULO'];
-                        $cuerpo = $row['CUERPO'];
-                        $fecha =  $row['FECHA'];
-        
-                ?>
-                <!--PHP ARRAYS-->
-              <div id="right1">&nbsp;
-               <div class="row"><!--Row-->
-                <div class="col-sm-4"><!--column-->
-                  <article>
-                    <header class="post-info">
-                        <a href="" rel="">
-                          <h2 class="post-title"><?php echo $titulo; ?></h2>
-                        </a>
-                      <ul class="info">
-                        <li><?php echo $fecha; ?></li>
-                        <li>Tegucigalpa</li>
-                      </ul>
-                    </header>
-                    <body>
-                      <P><?php echo $cuerpo; ?></P>
-                    </body>
-                  </article>
-                   
-                </div><!--column-->
-               </div><!--Row-->
-               <?php
-                  }
-                }
-                    ?>
-              </div>
-              
-            </div>
+            
 </body>
 </html>
