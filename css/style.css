@@ -12,6 +12,7 @@ a{ /*anclas del navbar*/
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #95bac5;
   font-size: 17px; 
+  outline: none;
 }
 
 a:hover {
@@ -66,6 +67,8 @@ h2, h1{
   font-family: 'Raleway', sans-serif !important; 
   color: #fff;
   font-size: 14px;
+ /* position: fixed;
+  bottom: 0;*/
 }
 
 i{ /*Logos de redes sociales*/
@@ -92,8 +95,29 @@ text-align: justify !important;
   color: #606060 !important;
 }
 
+.post-info{/*para el header de los articulos*/
+  margin-bottom: 30px;
+}
 
+.post-title{/*para el header de los articulos*/
+  font-size: 24px;
+  
+}
+.post-title a{
+  color:inherit;
+}
 
+.info{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.info li {
+  display: inline-block;
+    margin-right: 15px;
+}
 
 
 
