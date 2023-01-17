@@ -1,28 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap');
 
-
 body{
   background-color:#fdfbfb !important;
+  font-family: 'Poppins', sans-serif !important;
 }
+
 a{ /*anclas del navbar*/
   color:#fff;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #95bac5;
   font-size: 17px; 
+  outline: none;
 }
 
-a:hover {
-  background-color: #b5d5e1c9 ;
-  color: black;
-  border-radius: 5px;
-  
-}
-P{/*alinear los parrafos de institucion*/
+
+p{/*alinear los parrafos de la seccion institucion*/
   text-align: left;
 }
 
-h1, h2{
+h1, h2{/*Revisar el codigo*/
   font-weight: 500;
   color: #303030;
   line-height: 1.6em;
@@ -33,9 +30,10 @@ h1, h2{
 h2, h1{
   font-size: 1.9em;
 }
-
-
-.navbar{ /*Estilos del menu de la pagina*/
+/*------------------------------------------------------------------
+:::::Estilos del menu de navegacion y la pagina de inicio del PANI:::
+-------------------------------------------------------------------*/
+.navbar{ /*Clase para los Estilos del menu de la pagina*/
   background-color:#49a6c8c9 !important;
   font-family: 'Raleway', sans-serif !important; 
   word-spacing: 30px !important;
@@ -43,35 +41,40 @@ h2, h1{
   width: auto;
 }
 
+.navbar a:hover {
+  background-color: #b5d5e1c9 ;
+  color: black;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 800px){/*Modificacion del Estilo responsive del menu de navegación*/
+.navbar .margin{
+  margin-left: 50px !important;
+}
+
+.navbar .mx-auto{
+  margin-left: 250px !important;
+}
+}
+
+.navbar-toggler{
+  padding: 0.25rem 5.05rem !important; /*Modificar el icono del menu para ser mas responsive*/
+}
+
 .carousel-inner{ /*estilos del carousel de imagenes*/
   height: auto;
   background-size:cover;
-  margin-top: 70px; /*margen para bajar el carousel del menu*/
+  margin-top: 85px; /*para bajar el margen del caroucel sobre el menu*/
 }
+
 .carousel-item img { /*estilos del carousel de imagenes*/
-  position: relative;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.footer{ /*Estilos del footer de la pagina*/
-  background-color:#2b9eb3 !important;
-  font-family: 'Raleway', sans-serif !important; 
-  color: #fff;
-  font-size: 14px;
-}
-
-i{ /*Logos de redes sociales*/
-font-size: 25px;
-padding-left: 4px;
-
-
-}
-
-.text-justify{
-text-align: justify !important;
+  height: 85vh;
+  min-height: auto;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .sorteo{ /* Estilo del Titulo de ultimos sorteos*/
@@ -80,34 +83,234 @@ text-align: justify !important;
   padding-top: 1.5em;
   text-align: center;
 }
- 
-.contacto{ /*Estilos pagina de contacto*/
+
+/*---------------------------------------------------------
+:::::::::Inicio de Estilos del footer de la pagina:::::::::
+---------------------------------------------------------*/
+
+.footer{ 
+  width: 100%;
+  background-color:#2b9eb3 !important; 
+  font-family: 'Raleway', sans-serif !important; 
+  font-size: 15px;
+ /* position: fixed;
+  bottom: 0;*/
+}
+
+.footer .grupo-1{
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 20% 44% 13% 25%);/*se repitan las tres columnas con todo el ancho*/
+  column-gap: 20px;
+  padding: 45px 35px 0px 15px;
+}
+
+.footer .grupo-1 .box figure{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center; /*Centrado horizontal*/
+align-items: center;/*centrado vertical*/
+}
+
+.footer .grupo-1 .box figure img{
+  width: 160px;
+  transform: scaleX(-1);
+  
+}
+  .footer .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+
+    .footer .grupo-1 .box p{
+      color: #efefef;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .footer .grupo-1 .red-social a{
+      display: inline-block;
+      text-decoration: none;
+      width: 40px;
+      height: 45px;
+      color: #fff;
+      background-color: #03519f;
+      text-align: center;
+      transition: all 300ms ease;
+
+    }
+
+    .red-social a{ /*Logos de redes sociales*/
+      font-size: 27px;
+      padding-left: 5px;
+      }
+
+    .footer .grupo-1 .red-social a:hover{
+      color: #000dff;
+    }
+
+    .footer .grupo-2{
+      padding: 25px 20px;
+      text-align: center;
+      color: #fff;
+
+    }
+      .footer .grupo-2 .small{
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      .footer hr{
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+
+      
+
+        p.text-justify{
+          text-align: left !important;
+          font-style: normal;
+          line-height: 22px;
+          }
+          
+      @media screen and (max-width: 800px){
+        .footer .grupo-1{
+          width: 85%;
+          grid-template-columns: repeat(1, 1fr);/*se repitan las tres columnas con todo el ancho*/
+          column-gap: 30px;
+          padding: 35px 0px;
+        }
+
+
+  }/*:::::final de Estilos del footer de la pagina:::::*/
+
+
+
+ /*-----------------------------------------
+ :::::::Estilos pagina de contacto:::::::
+ -------------------------------------------*/
+.contacto{ 
   line-height : 1.7em;
   font-family: 'Poppins', sans-serif !important;
   color: #606060 !important;
 }
 
+.text-justify{
+  text-align: left !important;
+  }
 
 
+  /*-------------------------------------------------------
+        :::::::Estilos pagina de noticias del PANI:::::::
+ ---------------------------------------------------------*/
 
-
-
-/*
-.header {
-    background: url(../img/3d-bandera-de-honduras-sobre-un-cristal-con-fondo-de-gota-de-agua-es-una-bandera-que-se-introdujo-en-2022-2k7p36n.jpg) no-repeat center;
-    background-size: cover;
-    min-height: 10%;
-    }
-
-    .item, img{
-  height: 100% !important;
-  width:  100% !important;
-  border: 1px solid red;
+.post-info{/*para el header de los articulos de la seccion de noticias*/
+  margin-bottom: 30px;
+  
 }
-*/
+
+.post-title{/*para el header de los articulos de la seccion de noticias*/
+  font-size: 24px;
  
-/*
-    body, .foot{
-        background: radial-gradient(white, rgb(245, 245, 245)) !important;
-    }
-    */
+}
+.post-title a{
+  color:inherit;
+}
+
+.titulo{/* Ancho del titulo de los articulos*/
+  max-width: 800px;
+}
+
+.info{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  
+}
+
+.info li {
+  display: inline-block;
+    margin-right: 15px;
+}
+
+
+
+/*Estilos del Menu de titulos despegable de la seccion de noticias*/
+.nav{
+  width: 300px;
+}
+
+.nav__link{
+  color: #303440;
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.nav__link--inside{
+  border-radius: 6px ;
+  text-align: left;
+  font-size:medium;
+  margin: -15px;
+  text-transform: capitalize;
+}
+
+.nav__link--inside:hover{
+background: #d0e1f3ca;
+}
+
+.list{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0 16px 16px 0;
+  
+}
+
+ul.list{
+padding-left: 0px !important;
+}
+
+.list__item{
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.list__item--click{
+  cursor: pointer;
+}
+
+.list__button{
+  display: flex;
+  align-items: initial;
+  gap: 1em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.arrow .list__arrow{
+  transform: rotate(90deg);
+}
+
+.list__arrow{
+  /*margin-left: auto;*/
+  transition: transform .3s;
+}
+
+.list__show{
+  /*width: 80%;*/
+  margin-left: auto;
+  border-left: 2px solid #303440;
+  list-style: none;
+  transition: height .4s;
+  height: 0;
+}
+
+/*Fin de Menu despegable de la seccion de noticias*/
