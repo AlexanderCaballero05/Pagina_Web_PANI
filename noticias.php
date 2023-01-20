@@ -117,7 +117,7 @@ html {
         </nav>
                      <!--Banner de noticias-->
                      <div class="mx-auto" style="margin-top: 50px;">
-                     <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger w-100" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
+                       <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger w-100" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
                      </div>
 
                 <div class="mx-auto" style="margin-top: 50px; margin-left: 60px !important;">

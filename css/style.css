@@ -33,6 +33,13 @@ h2, h1{
 /*------------------------------------------------------------------
 :::::Estilos del menu de navegacion y la pagina de inicio del PANI:::
 -------------------------------------------------------------------*/
+
+.navbar-nav li{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
 .navbar{ /*Clase para los Estilos del menu de la pagina*/
   background-color:#49a6c8c9 !important;
   font-family: 'Raleway', sans-serif !important; 
@@ -46,28 +53,55 @@ h2, h1{
   color: black;
   border-radius: 5px;
 }
-
-@media screen and (min-width: 800px){/*Modificacion del Estilo responsive del menu de navegación*/
+/*Para trabajar con el tema de responsive es recomendable trabajar
+con porcentajes*/
+@media screen and (min-width: 960px){/*Modificacion del Estilo responsive del menu de navegación*/
 .navbar .margin{
   margin-left: 50px !important;
 }
-
 .navbar .mx-auto{
   margin-left: 250px !important;
 }
+
+}
+
+@media screen and (max-width: 960px){
+  .navbar-nav .nav-link{
+    color: #fff !important;
+    }
 }
 
 .navbar-toggler{
-  padding: 0.25rem 5.05rem !important; /*Modificar el icono del menu para ser mas responsive*/
+  padding: -0.75rem .75rem !important; /*Modificar el icono del menu para ser mas responsive*/
+  border-color: #fbfbfb !important;
+  border: 1px solid #d7f6f2 !important;
+  border-radius: 3px !important;
+  margin-top: 20px !important;
+  background: none !important;
 }
 
-.carousel-inner{ /*estilos del carousel de imagenes*/
+/*:::::::::::::::::::estilos del carousel de imagenes::::::::::::::::::*/
+
+.slide{
+  margin-top: 95px; 
+}
+
+.slide img {
+height: auto;
+}
+
+.w-85{
+  width: 85% !important;
+}
+
+/*
+.carousel-inner{ 
   height: auto;
   background-size:cover;
-  margin-top: 85px; /*para bajar el margen del caroucel sobre el menu*/
+  margin-top: 85px; 
 }
 
-.carousel-item img { /*estilos del carousel de imagenes*/
+.carousel-item img { 
   height: 85vh;
   min-height: auto;
   background: no-repeat center center scroll;
@@ -76,12 +110,101 @@ h2, h1{
   -o-background-size: cover;
   background-size: cover;
 }
+*/
+
+
+
+/*---------------------------------------------------------
+:::::::::Inicio de Estilos de sorteo:::::::::
+---------------------------------------------------------*/
+.conteiner-principal-sorteos{
+  width: 90%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 40px 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2 ,60% 20% 5%);
+}
+
+.conteiner-sorteos{
+  display: grid;
+  grid-template-columns: repeat(2 ,1fr);
+  gap: 10px;
+}
+
+.face-social-pani{
+  width: 100%;
+  height: 90%;
+  display: grid;
+  margin: auto;
+  gap: 20px;
+}
+
+.banner-panni{
+  display: grid;
+  grid-template-rows: auto;
+  padding: 18px 35px 15px 35px;
+}
+
+
+
+.banner-panni img{
+width: 139px;
+height: 174px;
+
+}
+/*Para trabajar con el tema de responsive es recomendable trabajar
+con porcentajes*/
+@media screen and (max-width: 960px){ 
+  .conteiner-principal-sorteos{
+    width: 80%;
+    padding: 15px 0;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
+  }
+  .conteiner-sorteos{
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .banner-panni img{
+    width: 70px !important;
+    height: 90px !important;
+    margin-top: 10px !important;
+    gap: 10px;
+    }
+
+    .banner-panni button{
+      width: 200px !important;
+      height: 60px !important;
+      margin: 15px 15px !important;
+      padding: 10px 10px !important;
+      text-align: center;
+      
+      }
+      .face-social-pani{
+        width: auto;
+        height: auto;
+        margin: auto;
+        gap: 20px;
+      
+      }
+
+}
 
 .sorteo{ /* Estilo del Titulo de ultimos sorteos*/
   margin-top: 5px;
   padding-right: 1.5em;
   padding-top: 1.5em;
   text-align: center;
+  font-size: 3.5vw;
+}
+
+.sorteo hr{
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 /*---------------------------------------------------------
@@ -117,8 +240,6 @@ align-items: center;/*centrado vertical*/
 
 .footer .grupo-1 .box figure img{
   width: 160px;
-  transform: scaleX(-1);
-  
 }
   .footer .grupo-1 .box h2{
     color: #fff;
@@ -176,7 +297,8 @@ align-items: center;/*centrado vertical*/
           font-style: normal;
           line-height: 22px;
           }
-          
+          /*Para trabajar con el tema de responsive es recomendable trabajar
+con porcentajes*/
       @media screen and (max-width: 800px){
         .footer .grupo-1{
           width: 85%;
