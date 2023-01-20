@@ -31,23 +31,30 @@
           <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Sorteos</a>
+            <?php 
+            if($_SERVER['REQUEST_URI'] == '/Sitio_PANi/Pagina_Web_PANI/index.php'){
+              echo '<a class="nav-link" href="#Sorteos">Sorteos</a>';
+            }else{
+            echo  '<a class="nav-link" href="index.php">Sorteos</a>';
+            }
+
+            ?>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Premios</a>
+          <!--
           <li class="nav-item">
               <a class="nav-link" href="noticias.php">Noticias</a>
-            </li>
+            </li>-->
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="institucion.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Institución</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="institucion.php">Historia</a></li>
               <li><a class="dropdown-item" href="institucion.php">Misión/Visión </a></li>
             <li><a class="dropdown-item" href="institucion.php">Valores </a></li>
 
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Productos</a></li>
+            <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>
           </ul>
         </li>
         

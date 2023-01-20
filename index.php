@@ -6,15 +6,9 @@ include_once "conexion.php";
   $objeto_consulta =mysqli_fetch_object($Consulta);
   $nombre = $objeto_consulta->VALOR;
 
-  $query1 = "SELECT imagen FROM TBL_EMPRESA WHERE ID =1; ";
-  $Consulta1 =$conn->query($query1);
-
-  $objeto_consulta1 =mysqli_fetch_object($Consulta1);
-  $imagen1 = $objeto_consulta1->imagen;
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,36 +35,34 @@ include_once "conexion.php";
 
      <!---------------------------------------INICIO DE CARRUSEL--------------------------------------->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators w-100">
+  <div class="carousel-indicators ms-5">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner mx-auto w-auto">
-    <div class="carousel-item active w-100">
+  <div class="carousel-inner mx-auto w-85">
+    <div class="carousel-item active">
       <img src="img/Institucional.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
         <h5></h5>
       </div>
     </div>
-    <div class="carousel-item w-100">
+    <div class="carousel-item">
       <img src="img/La_Grande_Web.png" class="d-block w-100" alt="panihonduras.">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Honduras</h5>
       </div>
     </div>
-    <div class="carousel-item w-100">
+    <div class="carousel-item">
       <img src="img/La_Chica.png" class="d-block w-100" alt="panihonduras">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev w-25" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Anterior</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next w-25" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Siguiente</span>
   </button>
@@ -78,49 +70,72 @@ include_once "conexion.php";
     <!---------------------------------------CIERRE DE CARRUSEL--------------------------------------->
 
     <!---------------------------------------INICIO-PRODUCTOS--------------------------------------->
-    <section>
-     
-
-      <h2 class="sorteo" id="Sorteos">Sorteos</h2>
-      <hr>
-        <div class="container">
-          <div class="row mt-5 mb-5">
-            <div class="col-sm-4">
-              <div class="card border-0 rounded-0">
-                <div class="card-body">
-                 <img src="img/1253.jpg" class="card-img-top">
-                 <h2 class="text-center">Imagen 1</h2>
-                </div>               
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card border-0 rounded-0">
-                <div class="card-body">
-                 <img src="img/1253.jpg" class="card-img-top">
-                 <h2 class="text-center">Imagen 1</h2>
-                </div>               
-              </div>
-            </div>        
-            <div class="col-sm-4">
-              <div class="card border-0 rounded-0">
-                <div class="card-body">
-                 <img src="img/1253.jpg" class="card-img-top">
-                 <h2 class="text-center">Imagen 1</h2>
-                </div>               
-              </div>
-            </div>
+  
+    <h2 class="sorteo" id="Sorteos">Sorteos
+    <hr size="4">
+    </h2>
+    <div class="conteiner-principal-sorteos">
+      <div class="conteiner-sorteos">
+        <div class="card border-0 rounded-0">
+          <div class="card-body">
+            <img src="img/1253.jpg" alt="" class="card-img-top">
           </div>
         </div>
-      </section>
+        <div class="card border-0 rounded-0">
+          <div class="card-body">
+            <img src="img/1253.jpg" alt="" class="card-img-top">
+          </div>
+        </div>          
+      </div>
+        
+
+           <div class="face-social-pani">
+            <div class="fb-page" data-href="https://www.facebook.com/panihonduras" data-tabs="timeline,messages" data-width="380" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/panihonduras" class="fb-xfbml-parse-ignore">
+                  <a href="https://www.facebook.com/panihonduras">PANI Honduras</a>
+              </blockquote>
+            </div>
+           </div>
+
+           <div class="banner-panni">
+            <div>
+              <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
+            </div>
+           <div class="mx-auto">
+           <a href="https://portalunico.iaip.gob.hn/#/homeLanding" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
+           </div>
+        </div> 
+      </div>
+    </div>
+     
     <!---------------------------------------FINAL-PRODUCTOS--------------------------------------->
+<!--Load Facebook SDK for JavaScript
+<div id="fb-root" data-autoplay="">
+
+</div>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+
+  <div class="fb-video" data-href="https://www.facebook.com/panihonduras/videos/848412879767551/" data-width="220" data-allowfullscreen="true" data-show-text="true" data-autoplay="true">
+    <blockquote cite="https://es-la.facebook.com/panihonduras/videos/848412879767551/" class="fb-xfbml-parse-ignore">
+      <a href="https://es-la.facebook.com/panihonduras/videos/848412879767551/"></a>
+      <p>Imaginate empezar el 2023 con un millón 🤩🤩 🤑
+          #LoteríaNacional #LaGrande #Honduras #NuevoPANI #EmpezarEl2023
+      </p>
+          Publicado por <a href="https://www.facebook.com/panihonduras">PANI Honduras</a> en Viernes, 30 de diciembre de 2022
+    </blockquote>
+  </div>
+-->
+
+
+
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
 <?php
 include "footer.php";
 ?>
 <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->
-
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
             <script src="js/jquery-3.5.1.slim.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
 </body>
