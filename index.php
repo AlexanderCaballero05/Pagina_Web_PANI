@@ -1,13 +1,41 @@
+        <!-- 
+        -----------------------------------------------------------------------
+                PATRONATO NACIONAL DE LA INFANCIA (PANI)
+                        Gobierno de la Republica
+                      Departamento de Informatica
+              Analisis, diseño y programacion de sitio web
+                             Año 2023
+
+          Equipo:
+          1) Licdo. Arnold Alexander Caballero Garcia  
+             APORTO EN: (Analisis y diseño del sistema, Analisis de base de datos, programación)
+          2) Ing. Luis Fernando Cambar Vallecillo 
+             APORTO EN: (Analisis y diseño del sistema, Analisis de base de datos)
+
+          Revisado y aprobado por:
+          Ing. Luis Fernando Cambar Vallecillo
+
+        ---------------------------------------------------------------------
+            Programa:         index del sitio web
+            Fecha:            1/23/2023 
+            Programador:      Arnold Alexander Caballero Garcia
+            descripcion:      Index del sitio web, muestra el menu, los sorteos
+            @versión 1.0
+        -----------------------------------------------------------------------
+          Historial de Cambio
+        -----------------------------------------------------------------------
+            Programador               Fecha                      Descripcion
+          
+        ----------------------------------------------------------------------->
 <?php
+/*
 include_once "conexion.php";
   $query = "SELECT VALOR FROM TBL_EMPRESA WHERE NOMBRE = 'NOMBRE'; ";
   $Consulta =$conn->query($query);
 
   $objeto_consulta =mysqli_fetch_object($Consulta);
   $nombre = $objeto_consulta->VALOR;
-
-
-
+  */
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +44,7 @@ include_once "conexion.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title><?php echo $nombre; ?></title>
+         <title>PANI-Instituto Nacional de la Infancia</title>
          <link rel="icon" href="img/pani1.png" type="image/png">
       
   
@@ -109,26 +137,6 @@ include_once "conexion.php";
     </div>
      
     <!---------------------------------------FINAL-PRODUCTOS--------------------------------------->
-<!--Load Facebook SDK for JavaScript
-<div id="fb-root" data-autoplay="">
-
-</div>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-
-
-  <div class="fb-video" data-href="https://www.facebook.com/panihonduras/videos/848412879767551/" data-width="220" data-allowfullscreen="true" data-show-text="true" data-autoplay="true">
-    <blockquote cite="https://es-la.facebook.com/panihonduras/videos/848412879767551/" class="fb-xfbml-parse-ignore">
-      <a href="https://es-la.facebook.com/panihonduras/videos/848412879767551/"></a>
-      <p>Imaginate empezar el 2023 con un millón 🤩🤩 🤑
-          #LoteríaNacional #LaGrande #Honduras #NuevoPANI #EmpezarEl2023
-      </p>
-          Publicado por <a href="https://www.facebook.com/panihonduras">PANI Honduras</a> en Viernes, 30 de diciembre de 2022
-    </blockquote>
-  </div>
--->
-
-
-
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
 <?php

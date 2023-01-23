@@ -245,7 +245,7 @@ con porcentajes*/
   max-width: 1800px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 20% 44% 13% 25%);/*se repitan las tres columnas con todo el ancho*/
+  grid-template-columns: repeat(4, 20% 44% 13% 10%);/*se repitan las tres columnas con todo el ancho*/
   column-gap: 20px;
   padding: 45px 35px 0px 15px;
 }
@@ -384,11 +384,8 @@ con porcentajes*/
   padding-top: 4.5em !important;
 }
 
-.div-img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
 
 
 /*Estilos del Menu de titulos despegable de la seccion de noticias*/

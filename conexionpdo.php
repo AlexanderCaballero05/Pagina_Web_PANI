@@ -1,4 +1,5 @@
 <?php
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,5 +12,5 @@ try {
 } catch (PDOException $e) {
     echo "ERROR DE CONEXION DE: ".$e->getMessage();
 }
-
+*/
 ?>
