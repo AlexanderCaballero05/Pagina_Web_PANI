@@ -20,7 +20,7 @@
    <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
     <img src="img/pani1.png" class="margin d-block" alt="logo-pani" width="160px" style="">
   </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -42,10 +42,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Premios</a>
-          <!--
-          <li class="nav-item">
-              <a class="nav-link" href="noticias.php">Noticias</a>
-            </li>-->
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="institucion.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Institución</a>
@@ -71,5 +67,6 @@
     </div>
   </div>
 </nav>
+            
 </body>
 </html>

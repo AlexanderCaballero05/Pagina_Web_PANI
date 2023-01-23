@@ -22,11 +22,11 @@
     <!------------------------------Seccion Institucion---------------------------------->
     <div class="container m-auto">
         <div class="row mt-5 mb-5 text-center m-auto">
-            <div class="col-sm-12 pt-5 pb-5 contacto m-auto">
+            <div class="col-sm-12 parrafos-institucion m-auto">
                   <h2><strong>Patronato Nacional de la Infancia</strong></h2>
-                <p class="contacto"><strong>MISIÓN:</strong> Somos la Institución del Estado de Honduras, que rectora y regula la producción, venta y distribución de la lotería nacional; controla, supervisa y facilita a operadores que ofrecen productos similares, con el fin de garantizar los recursos financieros para la ejecución de los programas y proyectos de inclusión Social del Estado, contribuyendo a reducir la brecha de desigualdad en la población hondureña. 
+                <p><strong>MISIÓN:</strong> Somos la Institución del Estado de Honduras, que rectora y regula la producción, venta y distribución de la lotería nacional; controla, supervisa y facilita a operadores que ofrecen productos similares, con el fin de garantizar los recursos financieros para la ejecución de los programas y proyectos de inclusión Social del Estado, contribuyendo a reducir la brecha de desigualdad en la población hondureña. 
                 </p>
-                <p class="contacto"><strong>VISIÓN: </strong> Ser la Institución líder, moderna, eficiente, con credibilidad, transparente y confiable, comprometida con la generación de ingresos financieros que garanticen la sostenible de los programas y proyectos de protección social, dirigidos a la población en situación de riesgo, vulnerabilidad y exclusión social..
+                <p><strong>VISIÓN: </strong> Ser la Institución líder, moderna, eficiente, con credibilidad, transparente y confiable, comprometida con la generación de ingresos financieros que garanticen la sostenible de los programas y proyectos de protección social, dirigidos a la población en situación de riesgo, vulnerabilidad y exclusión social..
                 </p>
                  <p><strong>Valores institucionales:</strong></p>
                  <p>
@@ -49,18 +49,17 @@
                     <strong><em>5. </em></strong>
                     RESPONSABILIDAD: Damos fiel cumplimiento a nuestras obligaciones y principios filantrópicos que nos dieron origen.  
                  </p>
-                 <p class="contacto"><strong>Objetivos estratégicos: </strong>
+                 <p><strong>Objetivos estratégicos: </strong>
                     <ul>
-                        <li class="text-justify">Maximizar la generación de recursos que asegure el funcionamiento adecuado de la institución.</li>
-                        <li class="text-justify">Maximizar la generación de recursos, que asegure la sostenibilidad de la institución.</li>
-                        
+                        <li>Maximizar la generación de recursos que asegure el funcionamiento adecuado de la institución.</li>
+                        <li>Maximizar la generación de recursos, que asegure la sostenibilidad de la institución.</li>
                     </ul>
                 </p>
         </div>
       </div>
     </div>
 
-    <div class="container m-auto w-auto h-auto">
+    <div class="container div-img">
       <div class="row mb-5">
       <img src="img/organigrama.jpg" alt="Organigrama_PANI">
       </div>

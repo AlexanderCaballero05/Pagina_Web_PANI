@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap');
 
 
-
 a{ /*anclas del navbar*/
   color:#fff;
   text-decoration: none;
@@ -36,15 +35,13 @@ h2, h1{
   padding-right: 10px;
 }
 
-
-.navbar{ /*Clase para los Estilos del menu de la pagina*/
+.navbar{ 
   background-color:#49a6c8c9 !important;
   font-family: 'Raleway', sans-serif !important; 
   word-spacing: 30px !important;
   height: auto;
   width: auto;
 }
-
 
 .navbar a:hover {
   background-color: #b5d5e1c9 ;
@@ -54,13 +51,13 @@ h2, h1{
 /*Para trabajar con el tema de responsive es recomendable trabajar
 con porcentajes*/
 @media screen and (min-width: 960px){/*Modificacion del Estilo responsive del menu de navegación*/
-.navbar .margin{
-  margin-left: 50px !important;
+  .navbar .margin{
+    margin-left: 50px !important;
 
-}
-.navbar .mx-auto{
-  margin-left: 250px !important;
-}
+  }
+  .navbar .mx-auto{
+    margin-left: 250px !important;
+  }
 
 }
 
@@ -93,6 +90,17 @@ height: auto;
   width: 85% !important;
 }
 
+.carousel-indicators{
+  margin-bottom: -3rem !important;
+  margin-right: 6% !important;
+
+}
+.carousel-indicators button{
+  width: 1rem !important; 
+  height: 1rem !important;  
+  border: solid #49a6c8c9 !important;
+  border-radius: 100% !important;
+}
 /*
 .carousel-inner{ 
   height: auto;
@@ -147,7 +155,6 @@ height: auto;
 }
 
 
-
 .banner-panni img{
 width: 139px;
 height: 174px;
@@ -192,19 +199,33 @@ con porcentajes*/
       }
 
 }
+/*Para trabajar con el tema de responsive es recomendable trabajar
+con porcentajes*/
+    @media screen and (max-width: 960px) {
+      .sorteo{ 
+        margin-top: 50px !important;  
+        font-size: 25px !important;
+        padding-left: 1.5em !important;
+      }
+      .sorteo hr{
+         margin-right: 1rem !important;
+        margin-left: 1rem !important;
+      }
+      
+    }
 
-.sorteo{ /* Estilo del Titulo de ultimos sorteos*/
-  margin-top: 5px;
-  padding-right: 1.5em;
-  padding-top: 1.5em;
-  text-align: center;
-  font-size: 3.5vw;
-}
+    .sorteo{ /* Estilo del Titulo sorteos*/
+      margin-top: 5px;
+      padding-right: 1.5em;
+      padding-top: 1.5em;
+      text-align: center;
+      font-size: 3.5vw;
+    }
 
-.sorteo hr{
-  margin-right: 100px;
-  margin-left: 100px;
-}
+    .sorteo hr{
+      margin-right: 100px;
+      margin-left: 100px;
+    }
 
 /*---------------------------------------------------------
 :::::::::Inicio de Estilos del footer de la pagina:::::::::
@@ -314,10 +335,27 @@ con porcentajes*/
  /*-----------------------------------------
  :::::::Estilos pagina de contacto:::::::
  -------------------------------------------*/
+
+ @media screen and (min-width:960px){
+  .contacto{ 
+    line-height : 1.7em;
+    font-family: 'Poppins', sans-serif !important;
+    color: #606060 !important;
+    padding: 2.5em 2.5em !important;
+  }
+  
+  .datos-contacto{
+    line-height: 2em;
+  }
+  
+ }
+
+
 .contacto{ 
   line-height : 1.7em;
   font-family: 'Poppins', sans-serif !important;
   color: #606060 !important;
+  padding-top: 4.5em !important;
 }
 
 
@@ -326,6 +364,31 @@ con porcentajes*/
     margin-right: 15px;
 }
 
+/*---------------------------------------------
+::::::::Estilos de institucion:::::::::::::::::
+-----------------------------------------------*/
+@media screen and (min-width: 960px) {
+  .parrafos-institucion{ 
+    line-height : 1.7em;
+    font-family: 'Poppins', sans-serif !important;
+    color: #606060 !important;
+    padding: 4em 1em 4em 5em !important;
+  }
+  
+}
+
+.parrafos-institucion{ 
+  line-height : 1.7em;
+  font-family: 'Poppins', sans-serif !important;
+  color: #606060 !important;
+  padding-top: 4.5em !important;
+}
+
+.div-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /*Estilos del Menu de titulos despegable de la seccion de noticias*/

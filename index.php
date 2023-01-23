@@ -24,7 +24,7 @@ include_once "conexion.php";
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="css/style.css" rel="stylesheet"/>
-  
+
 </head>
 <body>
     <!---------------------------------------INICIO DE MENU--------------------------------------->
