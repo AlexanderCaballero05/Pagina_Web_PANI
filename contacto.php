@@ -45,10 +45,10 @@
 
         <!---------INICIO SECCION DE CONTACTO----------->
         <div class="container">
-            <div class="row mt-5 mb-5 justify-content-center">
-                <div class="col-sm-12 pt-5 pb-5 contacto">
-                    <h2 class="text-center"><strong>CONTACTO</strong></h2>
-                    <h4 class="mt-4">Datos de contacto</h4>
+            <div class="row mt-5 mb-5 justify-content-center mx-auto">
+                <div class="col-sm-12 contacto mx-auto">
+                    <h2 class="text-center pt-3"><strong>CONTACTO</strong></h2>
+                    <h4 class="mx-auto ps-4 pb-2">Datos de contacto</h4>
                 <!--PHP CONTACTO -->
                     <?php  
 
@@ -71,10 +71,10 @@
                 <!--FIN PHP CONTACTO -->  
                     <ul>
                         <li class="text-justify"><strong> Razón Social: </strong><?php echo $razon_social;?></li>
-                        <li><strong> Teléfono: </strong><?php echo $telefono;?></i></li>
-                        <li><strong> Email: </strong> <?php echo $email;?></li>
-                        <li><strong> Sitio Web: </strong> <?php echo $web;?></li>
-                        <li><strong> Dirección:</strong> <?php echo $direccion;?></li>
+                        <li class="datos-contacto"><strong> Teléfono: </strong><?php echo $telefono;?></i></li>
+                        <li class="datos-contacto"><strong> Email: </strong> <?php echo $email;?></li>
+                        <li class="datos-contacto"><strong> Sitio Web: </strong> <?php echo $web;?></li>
+                        <li class="datos-contacto"><strong> Dirección:</strong> <?php echo $direccion;?></li>
                     </ul>
                         <hr>
                         <h4 class="mt-5 mb-2">Ubicación PANI</h4>
@@ -95,5 +95,10 @@
 
             <script src="js/jquery-3.5.1.slim.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
+            <!--<script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/main.js"></script>-->
+
+
 </body>
 </html>
