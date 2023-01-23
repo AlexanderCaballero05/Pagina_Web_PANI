@@ -1,3 +1,33 @@
+<!-- 
+        -----------------------------------------------------------------------
+                PATRONATO NACIONAL DE LA INFANCIA (PANI)
+                        Gobierno de la Republica
+                      Departamento de Informatica
+              Analisis, diseño y programacion de sitio web
+                             Año 2023
+
+          Equipo:
+          1) Licdo. Arnold Alexander Caballero Garcia  
+             APORTO EN: (Analisis y diseño del sistema, Analisis de base de datos, programación)
+          2) Ing. Luis Fernando Cambar Vallecillo 
+             APORTO EN: (Analisis y diseño del sistema, Analisis de base de datos)
+
+          Revisado y aprobado por:
+          Ing. Luis Fernando Cambar Vallecillo
+
+        ---------------------------------------------------------------------
+            Programa:         Menu del sitio web
+            Fecha:            1/23/2023 
+            Programador:      Arnold Alexander Caballero Garcia
+            descripcion:      Elemento del index en donde se visualiza el menu general del sitio web.
+            @versión 1.0
+        -----------------------------------------------------------------------
+          Historial de Cambio
+        -----------------------------------------------------------------------
+            Programador               Fecha                      Descripcion
+          
+        ----------------------------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +61,15 @@
           <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
         </li>
         <li class="nav-item">
+        <a class="nav-link" href="index.php">Sorteos</a>
             <?php 
+            /*
             if($_SERVER['REQUEST_URI'] == '/Sitio_PANi/Pagina_Web_PANI/index.php'){
               echo '<a class="nav-link" href="#Sorteos">Sorteos</a>';
             }else{
             echo  '<a class="nav-link" href="index.php">Sorteos</a>';
             }
-
+            */
             ?>
         </li>
         <li class="nav-item">
@@ -48,7 +80,6 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="institucion.php">Misión/Visión </a></li>
             <li><a class="dropdown-item" href="institucion.php">Valores </a></li>
-
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>
           </ul>
@@ -58,15 +89,8 @@
           <a class="nav-link" href="contacto.php">Contacto</a>
         </li>
       </ul>
-      <!--
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit" >Buscar</button>
-      </form>
--->
     </div>
   </div>
 </nav>
-            
 </body>
 </html>
