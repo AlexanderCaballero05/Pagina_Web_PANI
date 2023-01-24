@@ -76,7 +76,56 @@ con porcentajes*/
   background: none !important;
 }
 
-/*:::::::::::::::::::estilos del carousel de imagenes::::::::::::::::::*/
+/* Estilos del item Institución, que contiene los despliegues de menus*/
+.dropdown-menu {
+  margin-top: 0;
+}
+.dropdown-menu .dropdown-toggle::after {
+  vertical-align: middle;
+  border-left: 4px solid;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+}
+.dropdown-menu .dropdown .dropdown-menu {
+  left: 100%;
+  top: 0%;
+  margin: 0 20px;
+  border-width: 0;
+}
+
+.dropdown-menu .dropdown .dropdown-menu.left {
+  right: 100%;
+  left: auto;
+}
+
+@media (min-width: 768px) {
+  .dropdown-menu .dropdown .dropdown-menu {
+    margin: 0;
+    border-width: 1px;
+  }
+
+  .dropdown-menu > li a:hover,
+  .dropdown-menu > li.show {
+    background: #007bff;
+    color: white;
+  }
+  .dropdown-menu > li.show > a {
+    color: white;
+  }
+}
+
+.dropdown-menu > li > a {
+  color: #000000;
+  word-spacing: -0em !important;
+}
+
+.dropdown a{
+  word-spacing: -0em !important;
+}
+
+/*--------------------------------------------------------------------
+:::::::::::::::::::estilos del carousel de imagenes::::::::::::::::::
+----------------------------------------------------------------------*/
 
 .slide{
   margin-top: 95px; 
@@ -93,37 +142,18 @@ height: auto;
 .carousel-indicators{
   margin-bottom: -3rem !important;
   margin-right: 6% !important;
-
 }
+
 .carousel-indicators button{
   width: 1rem !important; 
   height: 1rem !important;  
   border: solid #49a6c8c9 !important;
   border-radius: 100% !important;
 }
-/*
-.carousel-inner{ 
-  height: auto;
-  background-size:cover;
-  margin-top: 85px; 
-}
 
-.carousel-item img { 
-  height: 85vh;
-  min-height: auto;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-*/
-
-
-
-/*---------------------------------------------------------
-:::::::::Inicio de Estilos de sorteo:::::::::
----------------------------------------------------------*/
+/*--------------------------------------------------------------
+::::::::::::::::::::Inicio de Estilos de sorteo::::::::::::::::
+---------------------------------------------------------------*/
 .conteiner-principal-sorteos{
   width: 90%;
   max-width: 1600px;
@@ -153,7 +183,6 @@ height: auto;
   grid-template-rows: auto;
   padding: 18px 35px 15px 35px;
 }
-
 
 .banner-panni img{
 width: 139px;
@@ -227,9 +256,9 @@ con porcentajes*/
       margin-left: 100px;
     }
 
-/*---------------------------------------------------------
-:::::::::Inicio de Estilos del footer de la pagina:::::::::
----------------------------------------------------------*/
+/*-------------------------------------------------------------
+::::::::::::Inicio de Estilos del footer de la pagina:::::::::
+-------------------------------------------------------------*/
 
 .footer{ 
   width: 100%;
@@ -310,15 +339,13 @@ align-items: center;/*centrado vertical*/
         margin-right: 100px;
       }
 
-      
-
         p.text-justify{
           text-align: left !important;
           font-style: normal;
           line-height: 22px;
           }
           /*Para trabajar con el tema de responsive es recomendable trabajar
-con porcentajes*/
+              con porcentajes*/
       @media screen and (max-width: 800px){
         .footer .grupo-1{
           width: 85%;
@@ -326,15 +353,13 @@ con porcentajes*/
           column-gap: 30px;
           padding: 35px 0px;
         }
-
-
   }/*:::::final de Estilos del footer de la pagina:::::*/
 
 
 
- /*-----------------------------------------
- :::::::Estilos pagina de contacto:::::::
- -------------------------------------------*/
+ /*---------------------------------------------------------------------
+ ::::::::::::::::::::::Estilos pagina de contacto:::::::::::::::::::::::
+ ----------------------------------------------------------------------*/
 
  @media screen and (min-width:960px){
   .contacto{ 
@@ -347,9 +372,7 @@ con porcentajes*/
   .datos-contacto{
     line-height: 2em;
   }
-  
  }
-
 
 .contacto{ 
   line-height : 1.7em;
@@ -358,15 +381,14 @@ con porcentajes*/
   padding-top: 4.5em !important;
 }
 
-
 .info li {
   display: inline-block;
     margin-right: 15px;
 }
 
-/*---------------------------------------------
-::::::::Estilos de institucion:::::::::::::::::
------------------------------------------------*/
+/*--------------------------------------------------------------
+::::::::::::::::::::::Estilos de institucion:::::::::::::::::::::
+---------------------------------------------------------------*/
 @media screen and (min-width: 960px) {
   .parrafos-institucion{ 
     line-height : 1.7em;
@@ -374,7 +396,6 @@ con porcentajes*/
     color: #606060 !important;
     padding: 4em 1em 4em 5em !important;
   }
-  
 }
 
 .parrafos-institucion{ 
@@ -383,10 +404,6 @@ con porcentajes*/
   color: #606060 !important;
   padding-top: 4.5em !important;
 }
-
-
-
-
 
 /*Estilos del Menu de titulos despegable de la seccion de noticias*/
 .nav{
@@ -462,3 +479,4 @@ padding-left: 0px !important;
 }
 
 /*Fin de Menu despegable de la seccion de noticias*/
+

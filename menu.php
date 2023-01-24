@@ -45,7 +45,7 @@
 </head>
 <body>
          
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top p-2">
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top p-2" id="main_navbar">
     <div class="container-fluid">
    <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
     <img src="img/pani1.png" class="margin d-block" alt="logo-pani" width="160px" style="">
@@ -75,15 +75,90 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Premios</a>
         </li>
-        <li class="nav-item dropdown">
+        
+        
+        <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="institucion.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Institución</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="institucion.php">Misión/Visión </a></li>
+            <li><a class="dropdown-item" href="institucion.php">Misión/Visión</a></li>
             <li><a class="dropdown-item" href="institucion.php">Valores </a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>
           </ul>
-        </li>
+        </li>-->
+
+        <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
+               Institución
+              </a>
+              <ul class="dropdown-menu">
+                <li class="nav-item dropdown"><!--Quienes somos-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Quienes Somos
+                  </a>
+                  <ul class="dropdown-menu">
+                    <!--<li><a class="dropdown-item" href="institucion.php">Historia</a></li>-->
+                    <li><a class="dropdown-item" href="institucion.php">Misión/Visión</a></li>
+                    <li><a class="dropdown-item" href="institucion.php">Valores</a></li>
+                    <li><hr class="dropdown-divider"/></li>
+                    <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>   
+                  </ul>
+                </li><!--Quienes somos-->
+
+                <li class="nav-item dropdown"><!--Direccion-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Direcciones
+                  </a>
+                  <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Dirección Ejecutiva</a></li>
+                    <li><a class="dropdown-item" href="#">Sub dirección Ejecutiva</a></li>
+
+                  </ul>
+                </li><!--Direccion-->
+
+                <li class="nav-item dropdown"><!--Secretaria-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Secretarias
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Secretaria General</a></li>
+                    <li><a class="dropdown-item" href="#">Asesoría legal</a></li>
+                  </ul>
+                </li><!--Secretaria-->
+
+
+                <li class="nav-item dropdown"><!--Unidades-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Unidades
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Unid. de Relaciones Públicas</a></li>
+                    <li><a class="dropdown-item" href="#">Unid. de Planificación</a></li>
+                    <li><a class="dropdown-item" href="#">Unid. de Informática</a></li>
+
+                  </ul>
+                </li><!--Unidades-->
+
+                <li class="nav-item dropdown"><!--Gerencias-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Gerencias
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><span>Gcia. de Imprenta</span></a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. de Comercialización</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
+
+
+                  </ul>
+                </li><!--Unidades-->
+
+                
+              </ul>
+            </li>
+
+
+
         
         <li class="nav-item">
           <a class="nav-link" href="contacto.php">Contacto</a>
@@ -92,5 +167,12 @@
     </div>
   </div>
 </nav>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootnavbar.js"></script>
+    <script>
+      new bootnavbar();
+    </script>
+
 </body>
 </html>
