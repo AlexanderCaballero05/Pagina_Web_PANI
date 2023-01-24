@@ -121,7 +121,7 @@
                         <hr>
                         <h4 class="mt-5 mb-4 ps-3">Ubicación PANI</h4>
                     <iframe class="mx-auto ps-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.5572688365055!2d-87.18515678555123!3d14.103292792851676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fa2df6fb0366b%3A0x802c240caf286950!2sNational%20Child%20Welfare%20Agency!5e0!3m2!1sen!2shn!4v1672325485727!5m2!1sen!2shn"
-                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                       
+                     width="100%" height="450" style="border: solid 1px #fee;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                       
                     
                 </div>
             </div>
