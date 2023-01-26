@@ -54,6 +54,7 @@ include_once "conexion.php";
     <link href="css/style.css" rel="stylesheet"/>
 
 </head>
+
 <body>
     <!---------------------------------------INICIO DE MENU--------------------------------------->
      <?php
@@ -135,17 +136,40 @@ include_once "conexion.php";
         </div> 
       </div>
     </div>
+
+    <div class="container-de-comites">
+          <p>Comites PANI</p>
+      <div class="container-comite">
+          <div class="card">
+            <img src="img/etica.png" alt="" class="card-img-top" width="50" height="100">
+          </div>
+          <div class="card">
+            <img src="img/etica.png" alt="" class="card-img-top">
+          </div>
+
+          <div class="card">
+            <img src="img/etica.png" alt="" class="card-img-top">
+          </div>
+          <div class="card">
+            <img src="img/etica.png" alt="" class="card-img-top">
+          </div>
+      </div>
+    </div>
      
     <!---------------------------------------FINAL-PRODUCTOS--------------------------------------->
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
+
 <?php
 include "footer.php";
 ?>
+
+
 <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
             <script src="js/jquery-3.5.1.slim.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
 

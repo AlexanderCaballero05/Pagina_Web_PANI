@@ -59,6 +59,8 @@ con porcentajes*/
     margin-left: 250px !important;
   }
 
+  nav.fixed{ 
+    position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100px; }
 }
 
 @media screen and (max-width: 960px){
@@ -128,9 +130,17 @@ con porcentajes*/
 ----------------------------------------------------------------------*/
 
 .slide{
-  margin-top: 95px; 
+  margin-top: 110px; 
 }
 
+    @media screen and (max-width: 960px){ 
+      .slide{
+        margin-top: 30px !important; 
+      }
+      .slide img {
+        height: 180px !important;
+        }
+    }
 .slide img {
 height: auto;
 }
@@ -154,6 +164,8 @@ height: auto;
 /*--------------------------------------------------------------
 ::::::::::::::::::::Inicio de Estilos de sorteo::::::::::::::::
 ---------------------------------------------------------------*/
+
+
 .conteiner-principal-sorteos{
   width: 90%;
   max-width: 1600px;
@@ -226,7 +238,7 @@ con porcentajes*/
         gap: 20px;
       
       }
-
+     
 }
 /*Para trabajar con el tema de responsive es recomendable trabajar
 con porcentajes*/
@@ -256,6 +268,54 @@ con porcentajes*/
       margin-left: 100px;
     }
 
+
+
+
+/*---------------------------------------------------------------------------
+:::::::::::::::::::::::::Estilos del contenedor comites::::::::::::::::::::
+----------------------------------------------------------------------------*/
+    .container-de-comites{
+      width: 90%;
+      max-width: 1499px;
+      margin: auto;
+      margin-bottom: 1rem;
+      padding: 13px 10px;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      border: solid 0.5px #ebf2f4;
+      background-color: #f2f2f2;
+    }
+    
+    .container-de-comites p{
+      display: flex;
+      margin: auto;
+      font-size: 1.25rem;
+      padding-bottom: 1rem;
+    }
+    
+    .container-comite {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      background-color: #f2f2f2;
+    }
+    
+    .container-comite .card{
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+    }
+    
+    .container-de-comites img{
+         border: 0;
+        max-width: 100% !important;
+        height: auto; 
+        background-color: #f2f2f2;
+    
+      }
 /*-------------------------------------------------------------
 ::::::::::::Inicio de Estilos del footer de la pagina:::::::::
 -------------------------------------------------------------*/
@@ -285,6 +345,7 @@ height: 100%;
 display: flex;
 justify-content: center; /*Centrado horizontal*/
 align-items: center;/*centrado vertical*/
+padding-bottom: 7px;
 }
 
 .footer .grupo-1 .box figure img{
@@ -350,10 +411,47 @@ align-items: center;/*centrado vertical*/
         .footer .grupo-1{
           width: 85%;
           grid-template-columns: repeat(1, 1fr);/*se repitan las tres columnas con todo el ancho*/
-          column-gap: 30px;
-          padding: 35px 0px;
+          gap: 25px;
+          padding: 35px 10px;
         }
-  }/*:::::final de Estilos del footer de la pagina:::::*/
+  }
+  
+  /* Botón Subir */
+      .toTop {
+        border: none;
+        display: flex;
+        cursor: pointer;
+        transition: opacity 0.3s, transform 0.3s;
+        /* posición */
+        position: fixed; right: 1rem; bottom: 1rem; z-index: 9999;
+      }
+      .toTop:not(.is-visible) {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-2rem);
+      }
+      .toTop svg {
+        stroke-width: 3px;
+        stroke: currentColor;
+        fill: none;
+        width: 20px;
+      }
+      /* Personalizar */
+      .toTop {
+        background-color: #31708f;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        padding: 0.43rem;
+        color: #fff;
+        margin-left: 250px;
+        margin-top: 0px;
+      }
+        
+        
+        
+  
+  
+  /*:::::final de Estilos del footer de la pagina:::::*/
 
 
 
@@ -479,4 +577,6 @@ padding-left: 0px !important;
 }
 
 /*Fin de Menu despegable de la seccion de noticias*/
+
+
 

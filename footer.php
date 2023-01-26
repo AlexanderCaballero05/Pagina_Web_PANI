@@ -19,7 +19,7 @@
             Programa:         Footer del sitio web
             Fecha:            1/23/2023 
             Programador:      Arnold Alexander Caballero Garcia
-            descripcion:      Elemento del Index en donde se visualiza el copyright y otros elementos del sitio web.
+            descripcion:      Elemento del footer en donde se visualiza el copyright y otros elementos del sitio web.
             @versión 1.0
         -----------------------------------------------------------------------
           Historial de Cambio
@@ -45,18 +45,18 @@
 <body>
 <footer class="footer">
   <div class="grupo-1">
-    <div class="box">
+    <div class="box"><!--box del logo-->
       <figure>
         <a href="">
           <img src="img/pani2.png" alt="Logo Pani">
         </a>
       </figure>
     </div>
-    <div class="box">
+    <div class="box"><!--box de texto sobre pani-->
       <h2>Sobre el PANI</h2>
       <P class="text-justify"> Somos una institución del estado con autonomía técnica, administrativa y patrimonio propio, generando recursos para proyecto sociales. A través de la producción y comercialización de las loterías del Estado para el bienestar integral de la población.</P>
     </div>
-    <div class="box">
+    <div class="box"><!--box de redes sociales-->
       <h2>Redes Sociales</h2>
       <div class="red-social">
       <a href="https://www.facebook.com/panihonduras" target="_blank" style="background-color: transparent;"><i class="bi-facebook social"></i></a>
@@ -67,11 +67,20 @@
     <div class="box">
       <h2>App PANI</h2>
       <div class="">
+        <!--Plugin de facebook en tiempo real-->
         <a href="https://play.google.com/store/apps/details?id=com.pani.honduras&hl=es" target="_blank">
         <img src="img/googleplay.png" alt="logo google play">
         </a>
+        <!--Boton de subir al inicio-->
+        <button class="toTop" id="toTop">
+          <svg viewBox="0 0 24 24">
+            <path d="m4 16 8-8 8 8"></path>
+          </svg>
+        </button>
       </div>
+      
     </div>
+           
   </div>
   
   <div class="grupo-2">
@@ -79,9 +88,28 @@
 
     <small>Copyright &copy; PANI<b> 2023</b> - Todos los derechos reservados.</small>
   </div>
+  
 </footer>
 
-  <script src="/js/jquery-3.5.1.slim.min.js"></script>
+
+
+             <script src="/js/jquery-3.5.1.slim.min.js"></script>
             <script src="/js/bootstrap.min.js"></script>
+
+            <script>      
+                const toTop = (() => {
+                  let button = document.getElementById("toTop");
+                  window.onscroll = () => {
+                    button.classList[
+                        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+                      ]("is-visible")
+                  }
+                  button.onclick = () => {
+                    window.scrollTo({
+                      top:0, behavior:"smooth"
+                    })
+                  }
+                })();/*]]>*/
+            </script>
 </body>
 </html>
