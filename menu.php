@@ -45,17 +45,17 @@
 </head>
 <body>
          
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top p-2" id="main_navbar">
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed p-2" id="main_navbar">
     <div class="container-fluid">
    <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
-    <img src="img/pani1.png" class="margin d-block" alt="logo-pani" width="160px" style="">
+    <img src="img/pani1.png" class="margin d-block" alt="logo-pani" width="160px">
   </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
       <ul class="navbar-nav mx-auto mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
@@ -75,17 +75,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Premios</a>
         </li>
-        
-        
-        <!--<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="institucion.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Institución</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="institucion.php">Misión/Visión</a></li>
-            <li><a class="dropdown-item" href="institucion.php">Valores </a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>
-          </ul>
-        </li>-->
 
         <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
@@ -144,7 +133,7 @@
                     Gerencias
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"><span>Gcia. de Imprenta</span></a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. de Imprenta</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. de Comercialización</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
@@ -170,8 +159,14 @@
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/bootnavbar.js"></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script>
       new bootnavbar();
+
+
+     $('.contraer').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        }); 
     </script>
 
 </body>
