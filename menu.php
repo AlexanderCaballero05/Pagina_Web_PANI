@@ -25,7 +25,6 @@
           Historial de Cambio
         -----------------------------------------------------------------------
             Programador               Fecha                      Descripcion
-          
         ----------------------------------------------------------------------->
 
 <!DOCTYPE html>
@@ -39,9 +38,13 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="css/style.css" rel="stylesheet"/>
-    
+    <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
+    <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+
 </head>
 <body>
          
@@ -53,8 +56,6 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-
     <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
       <ul class="navbar-nav mx-auto mb-lg-0">
         <li class="nav-item">
@@ -137,18 +138,11 @@
                     <li><a class="dropdown-item" href="#">Gcia. de Comercialización</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
-
-
                   </ul>
-                </li><!--Unidades-->
-
-                
+                </li><!--Unidades-->                
               </ul>
             </li>
 
-
-
-        
         <li class="nav-item">
           <a class="nav-link" href="contacto.php">Contacto</a>
         </li>
@@ -156,18 +150,18 @@
     </div>
   </div>
 </nav>
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+<!--Scripts del sitio web-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
     <script src="js/bootnavbar.js"></script>
     <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script>
-      new bootnavbar();
-
-
-     $('.contraer').on('click', function(){
-            $('.navbar-collapse').collapse('hide');
-        }); 
-    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="Plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="jquery/codigoSweetAlert2.js"></script>
+    <script src="js/main.js"></script>
+    <script> new bootnavbar();</script>
+<!--Scripts del sitio web-->
 
 </body>
 </html>

@@ -37,31 +37,14 @@ include_once "conexion.php";
   $nombre = $objeto_consulta->VALOR;
   */
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>PANI-Instituto Nacional de la Infancia</title>
-         <link rel="icon" href="img/pani1.png" type="image/png">
-      
-  
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="css/style.css" rel="stylesheet"/>
-
-</head>
-
-<body>
     <!---------------------------------------INICIO DE MENU--------------------------------------->
-     <?php
+    <?php
      include "menu.php";
      ?>  
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
+  
 
+<body>
      <!---------------------------------------INICIO DE CARRUSEL--------------------------------------->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators ms-5">
@@ -99,8 +82,8 @@ include_once "conexion.php";
     <!---------------------------------------CIERRE DE CARRUSEL--------------------------------------->
 
     <!---------------------------------------INICIO-PRODUCTOS--------------------------------------->
-  
-    <h2 class="sorteo" id="Sorteos">Sorteos
+ <!--  <button class="btn btn-info" id="botonprueba" >Boton Prueba</button>-->
+    <h2 class="sorteo animate__animated aanimate__bounce" id="Sorteos">Sorteos
     <hr size="4">
     </h2>
     <div class="conteiner-principal-sorteos">
@@ -160,16 +143,17 @@ include_once "conexion.php";
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
 
-<?php
-include "footer.php";
-?>
-
-
-<!-------------------------------------------FINAL DE FOOTER/-------------------------------------->
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
-            <script src="js/jquery-3.5.1.slim.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-
+        <?php
+        include "footer.php";
+        ?>
+  <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->        
+<script>$("#botonprueba").click(function(){
+    Swal.fire({
+        type:'info',
+        title:'mensaje',
+        text:'prueba'
+    });
+});</script>
 </body>
-</html>
+
 
