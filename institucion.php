@@ -28,27 +28,14 @@
           
         ----------------------------------------------------------------------->
 
-<!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANI-Instituto Nacional de la Infancia</title>
-    <link rel="icon" href="img/pani1.png" type="image/png">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="css/style.css" rel="stylesheet"/>
-</head>
-<body>
  
     <!---------------------------------------INICIO DE MENU--------------------------------------->
   <?php
     include "menu.php";
   ?>
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
- 
+ <body>
     <!------------------------------Seccion Institucion---------------------------------->
     <div class="container m-auto">
         <div class="row mt-5 mb-5 text-center m-auto">
@@ -87,8 +74,6 @@
                     <strong><em>- </em></strong>
                     Maximizar la generación de recursos, que asegure la sostenibilidad de la institución.                
                  </p>
-                  
-                
         </div>
       </div>
     </div>
@@ -103,9 +88,5 @@
         <?php
         include "footer.php";
         ?>
-<!-------------------------------------------FINAL DE FOOTER/-------------------------------------->
-            <script src="js/jquery-3.5.1.slim.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-    
+   <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->
 </body>
-</html>

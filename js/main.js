@@ -1,3 +1,4 @@
+//codigo para la seccion de noticias
 let listElements = document.querySelectorAll('.list__button--click');
 
 listElements.forEach(listElement => {
@@ -16,14 +17,3 @@ listElements.forEach(listElement => {
     })
 });
 
-
-     const $listFocus = document.getElementById("#listFocus");
-    $titleFocus = document.getElementById("#titleFocus");
-    console.log($listFocus+"Hello");
-
-    //Enfocar al dar click
-
-    $listFocus.addEventListener("click", () => {
-            $titleFocus.focus();
-            
-    });

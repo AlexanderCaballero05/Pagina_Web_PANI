@@ -42,23 +42,10 @@
  */
 ?>
 <!--fin consulta php-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANI-Patronato Nacional de la Infancia</title>
-    <link rel="icon" href="img/pani1.png" type="image/png">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+  <!---------------------------------------INICIO DE MENU--------------------------------------->
+  <?php include "menu.php";?>
+  
+    <!---------------------------------------CIERRE DE MENU--------------------------------------->
 <style>
 
 html, body, * {
@@ -96,13 +83,10 @@ html {
 }
 
 </style>
-</head>
+
 <body>
     
-    <!---------------------------------------INICIO DE MENU--------------------------------------->
-  <?php include "menu.php";?>
   
-    <!---------------------------------------CIERRE DE MENU--------------------------------------->
   
 <!-------------------------------Inicio de seccion de Noticias------------------------------->
   
@@ -211,9 +195,4 @@ html {
 
 <!-------------------------------Fin de seccion de Noticias------------------------------->
 
-            <script src="js/jquery-3.5.1.slim.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/main.js"></script>
-
 </body>
-</html>
