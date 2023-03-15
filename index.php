@@ -28,14 +28,36 @@
           
         ----------------------------------------------------------------------->
 <?php
-/*
-include_once "conexion.php";
-  $query = "SELECT VALOR FROM TBL_EMPRESA WHERE NOMBRE = 'NOMBRE'; ";
-  $Consulta =$conn->query($query);
 
-  $objeto_consulta =mysqli_fetch_object($Consulta);
-  $nombre = $objeto_consulta->VALOR;
-  */
+include_once "conexion.php";
+//Sorteo Mayor
+  $query_mayor = "SELECT imagen FROM tbl_imagen_sorteo where estado = 'ACTIVO' and TIPO_SORTEO = '1';";
+  $consulta_mayor =$conn->query($query_mayor);
+  $objeto_consulta_mayor =mysqli_fetch_object($consulta_mayor);
+  $imagen_mayor = $objeto_consulta_mayor->imagen;
+//Sorteo Menor
+  $query_menor = "SELECT imagen FROM tbl_imagen_sorteo where estado = 'ACTIVO' and TIPO_SORTEO = '2';";
+  $Consulta_menor =$conn->query($query_menor);
+  $objeto_consulta_menor =mysqli_fetch_object($Consulta_menor);
+  $imagen_menor = $objeto_consulta_menor->imagen;
+//Carrucel 1
+  $query_carrucel1 = "SELECT imagen FROM tbl_imagen_sorteo WHERE estado = 'ACTIVO' and TIPO_SORTEO = '3' AND NUMERO_SORTEO = 1;";
+  $consulta_carrucel1 = $conn->query($query_carrucel1);
+  $objeto_consulta_carrucel1 = mysqli_fetch_object($consulta_carrucel1);
+  $imagen_carrucel1 = $objeto_consulta_carrucel1->imagen;
+//carrucel 2
+  $query_carrucel2 = "SELECT imagen FROM tbl_imagen_sorteo WHERE estado = 'ACTIVO' and TIPO_SORTEO = '3' AND NUMERO_SORTEO = 2;";
+  $consulta_carrucel2 = $conn->query($query_carrucel2);
+  $objeto_consulta_carrucel2 = mysqli_fetch_object($consulta_carrucel2);
+  $imagen_carrucel2 = $objeto_consulta_carrucel2->imagen;
+//carrucel 3
+  $query_carrucel3 = "SELECT imagen FROM tbl_imagen_sorteo WHERE estado = 'ACTIVO' and TIPO_SORTEO = '3' AND NUMERO_SORTEO = 3;";
+  $consulta_carrucel3 = $conn->query($query_carrucel3);
+  $objeto_consulta_carrucel3 = mysqli_fetch_object($consulta_carrucel3);
+  $imagen_carrucel3 = $objeto_consulta_carrucel3->imagen;
+
+
+
 ?>
     <!---------------------------------------INICIO DE MENU--------------------------------------->
     <?php
@@ -52,24 +74,29 @@ include_once "conexion.php";
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+ 
   <div class="carousel-inner mx-auto w-85">
     <div class="carousel-item active">
-      <img src="img/Institucional.png" class="d-block w-100" alt="panihonduras" >
-      <div class="carousel-caption d-none d-md-block">
-        <h5></h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/La_Grande_Web.png" class="d-block w-100" alt="panihonduras.">
+      <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel1); ?>" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
+
+    
+    
     <div class="carousel-item">
-      <img src="img/La_Chica.png" class="d-block w-100" alt="panihonduras">
+      <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel2); ?>" class="d-block w-100" alt="panihonduras" >
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel3); ?>" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
   </div>
+  
   <button class="carousel-control-prev w-25" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Anterior</span>
@@ -88,14 +115,14 @@ include_once "conexion.php";
     </h2>
     <div class="conteiner-principal-sorteos">
       <div class="conteiner-sorteos">
-        <div class="card border-0 rounded-0">
+        <div class="card border-0 rounded-0"><!--Imagen sorteo mayor-->
           <div class="card-body">
-            <img src="img/1253.jpg" alt="" class="card-img-top">
+          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_mayor); ?>" class="card-img-top">
           </div>
         </div>
-        <div class="card border-0 rounded-0">
+        <div class="card border-0 rounded-0"><!--Imagen sorteo menor-->
           <div class="card-body">
-            <img src="img/1253.jpg" alt="" class="card-img-top">
+          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_menor); ?>" class="card-img-top">
           </div>
         </div>          
       </div>
@@ -119,7 +146,7 @@ include_once "conexion.php";
         </div> 
       </div>
     </div>
-
+    <!--
     <div class="container-de-comites">
           <p>Comites PANI</p>
       <div class="container-comite">
@@ -138,7 +165,7 @@ include_once "conexion.php";
           </div>
       </div>
     </div>
-     
+      -->
     <!---------------------------------------FINAL-PRODUCTOS--------------------------------------->
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
