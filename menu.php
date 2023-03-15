@@ -108,7 +108,7 @@
 
                 <li class="nav-item dropdown"><!--Secretaria-->
                   <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                    Secretarias
+                    Secretaria
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Secretaria General</a></li>
@@ -124,8 +124,11 @@
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Unid. de Relaciones Públicas</a></li>
                     <li><a class="dropdown-item" href="#">Unid. de Planificación</a></li>
-                    <li><a class="dropdown-item" href="#">Unid. de Informática</a></li>
-
+                    <li><a class="dropdown-item" href="autoridades.php">Unid. de Informática</a></li>
+                    <?php
+                    $option = 1;
+                    '<li><a class="dropdown-item" href="autoridades.php">Unid. de Informática</a></li>'
+                    ?>
                   </ul>
                 </li><!--Unidades-->
 
