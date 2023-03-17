@@ -30,24 +30,24 @@
 
 <!--INICIO DE QUERYS CON PHP-->
 <?php 
-/*
+
     include_once "conexion.php";
 
-    $query = "SELECT VALOR FROM TBL_EMPRESA WHERE ID= 3;";
+    $query = "SELECT CONTENIDO FROM TBL_EMPRESA WHERE CODIGO_TIPO_DATO = 1;";
     $Consulta =$conn->query($query);
 
-    $query1 = "SELECT VALOR FROM TBL_EMPRESA WHERE ID= 4;";
+    $query1 = "SELECT CONTENIDO FROM TBL_EMPRESA WHERE CODIGO_TIPO_DATO = 2;";
     $Consulta1 =$conn->query($query1);
 
-    $query2 = "SELECT VALOR FROM TBL_EMPRESA WHERE ID= 5;";
+    $query2 = "SELECT CONTENIDO FROM TBL_EMPRESA WHERE CODIGO_TIPO_DATO = 3;";
     $Consulta2 =$conn->query($query2);
 
-    $query3 = "SELECT VALOR FROM TBL_EMPRESA WHERE ID= 6;";
+    $query3 = "SELECT CONTENIDO FROM TBL_EMPRESA WHERE CODIGO_TIPO_DATO = 4;";
     $Consulta3 =$conn->query($query3);
 
-    $query4 = "SELECT VALOR FROM TBL_EMPRESA WHERE ID= 2;";
+    $query4 = "SELECT CONTENIDO FROM TBL_EMPRESA WHERE CODIGO_TIPO_DATO = 5;";
     $Consulta4 =$conn->query($query4);   
-    */
+
 ?>
 <!--FIN DE QUERYS CON PHP-->
  <!---------------------------------------INICIO DE MENU--------------------------------------->
@@ -64,33 +64,33 @@
                     <h4 class="mx-auto ps-4 pb-2">Datos de contacto</h4>
                 <!--PHP CONTACTO -->
                     <?php  
-                    /*
+                    
                     $objeto_consulta = mysqli_fetch_object($Consulta);
-                    $razon_social = $objeto_consulta->VALOR;
+                    $razon_social = $objeto_consulta->CONTENIDO;
 
                     $objeto_consulta1 = mysqli_fetch_object($Consulta1);
-                    $telefono = $objeto_consulta1->VALOR;
+                    $telefono = $objeto_consulta1->CONTENIDO;
 
                     $objeto_consulta2 = mysqli_fetch_object($Consulta2);
-                    $email = $objeto_consulta2->VALOR;
+                    $email = $objeto_consulta2->CONTENIDO;
                     
                     $objeto_consulta4 = mysqli_fetch_object($Consulta3);
-                    $web = $objeto_consulta4->VALOR;
+                    $web = $objeto_consulta4->CONTENIDO;
 
                     $objeto_consulta5 = mysqli_fetch_object($Consulta4);
-                    $direccion = $objeto_consulta5->VALOR;
-                    */
+                    $direccion = $objeto_consulta5->CONTENIDO;
+                
                     ?>    
                 <!--FIN PHP CONTACTO -->  
-                <!--
+                
                     <ul>
-                        <li class="text-justify"><strong> Razón Social: </strong><?php /* echo $razon_social; */ ?></li>
-                        <li class="datos-contacto"><strong> Teléfono: </strong><?php /* echo $telefono;*/ ?></i></li>
-                        <li class="datos-contacto"><strong> Email: </strong> <?php /*echo $email;*/ ?></li>
-                        <li class="datos-contacto"><strong> Sitio Web: </strong> <?php /* echo $web;*/ ?></li>
-                        <li class="datos-contacto"><strong> Dirección:</strong> <?php /*echo $direccion;*/ ?></li>
+                        <li class="text-justify"><strong> Razón Social: </strong><?php  echo $razon_social; ?></li>
+                        <li class="datos-contacto"><strong> Teléfono: </strong><?php  echo $telefono; ?></i></li>
+                        <li class="datos-contacto"><strong> Email: </strong> <?php echo $email; ?></li>
+                        <li class="datos-contacto"><strong> Sitio Web: </strong> <?php echo $web;?></li>
+                        <li class="datos-contacto"><strong> Dirección:</strong> <?php echo $direccion; ?></li>
                     </ul>
-                  -->
+                  <!--
                     <ul>
                         <li class="text-justify"><strong> Razón Social: </strong>Somos una institución del estado con autonomía técnica, administrativa y patrimonio propio, generando recursos para proyecto sociales. A través de la producción y comercialización 
                         de las loterías del Estado para el bienestar integral de la población.</li>
@@ -98,7 +98,7 @@
                         <li class="datos-contacto"><strong> Email: </strong> panihonduras@pani.hn</li>
                         <li class="datos-contacto"><strong> Sitio Web: </strong> panigob@gmail.com</li>
                         <li class="datos-contacto"><strong> Dirección:</strong> Avenida los Próceres, Tegucigalpa</li>
-                    </ul>
+                    </ul>-->
                         <br>
                         <hr>
                         <h4 class="mt-5 mb-4 ps-3">Ubicación PANI</h4>
