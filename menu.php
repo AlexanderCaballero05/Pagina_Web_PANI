@@ -71,10 +71,12 @@
             echo  '<a class="nav-link" href="index.php">Sorteos</a>';
             }
             */
+
+            
             ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Premios</a>
+        <a class="nav-link" href="" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Premios</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -153,18 +155,108 @@
     </div>
   </div>
 </nav>
+
+
+   
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Consulta de premios</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body">
+          <div class="form-group">
+            <!--input tipo Loteria-->
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span style="width: 80px;" class="input-group-text">
+                     Loteria
+                  </span>
+                </div>
+                  <select class="form-control" id = "select-tipo-sorteo" >
+                    <option selected disabled>--Seleccione--</option>
+                    <option value = "1">Mayor</option>
+                    <option value = "2">Menor</option>
+                  </select>
+              </div>
+            <!--input sorteo-->
+              <div class="input-group"  style = "margin-top:8px">
+                <div class="input-group-prepend">
+                  <span style="width: 80px;" class="input-group-text" >
+                      Sorteo
+                   </span>
+                </div>
+                <input type = "numer" class = "form-control" min = "1" max = "9999" id="sorteo-premio" >
+              </div>
+            <!--input billete-->
+              <div id= 'show-cambio-inputs'>
+                <div class="input-group"  style = "margin-top:8px">
+                  <div class="input-group-prepend">
+                    <span style="width: 80px;" class="input-group-text" >
+                        Billete
+                    </span>
+                  </div>
+                   <input type = "numer" class = "form-control" min = "0" max = "99999" id="billete-premio" >
+                </div>
+              </div>
+            <!--Button-->
+                 <span id = 'btn-consulta-premio' class = 'btn btn-success' style = 'margin-top:10px; width:100%' onclick="consultar_premio()">Consultar Premio <i class="" id="icon_consultar"></i> </span>
+          </div>
+        </div>
+        <div class="modal-footer">
+           <div class="container" id="respuesta-consulta-premio"></div>
+         </div>
+  </div>
+</div>
+</div>
+
+
+
   
 <!--Scripts del sitio web-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
     <script src="js/bootnavbar.js"></script>
     <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="Plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="jquery/codigoSweetAlert2.js"></script>
     <script src="js/main.js"></script>
     <script> new bootnavbar();</script>
 <!--Scripts del sitio web-->
+
+
+<script type="text/javascript">
+function consultar_premio(){
+  //alert("se envio el dato");
+  
+  tipo_loteria = document.getElementById('select-tipo-sorteo').value;
+sorteo = document.getElementById('sorteo-premio').value;
+
+  if (tipo_loteria == 1) {
+
+billete = document.getElementById('billete-premio').value;
+numero  = 0;
+serie   = 0;
+
+}else{
+
+billete = 0;
+numero  = document.getElementById('numero-premio').value;
+serie   = document.getElementById('serie-premio').value;
+
+}
+
+
+  consulta = 'consultar_premio.php?ts='+tipo_loteria+'&sort='+sorteo+'&b='+billete+'&n='+numero+'&s='+serie;
+  $("#respuesta-consulta-premio").load(consulta);
+  
+}
+
+</script>
+
+<script src="jquery/jquery-3.3.1.min.js"></script>
 
 </body>
 </html>
