@@ -45,10 +45,15 @@
     <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
 
+    
+
 </head>
 <body>
-         
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed p-2" id="main_navbar">
+
+     
+    
+
+ <nav class="navbar navbar-expand-md navbar-light bg-light fixed p-2" id="main_navbar">
     <div class="container-fluid">
    <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
     <img src="img/pani1.png" class="margin d-block" alt="logo-pani" width="160px">
@@ -61,8 +66,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="index.php">Sorteos</a>
+        <!--<li class="nav-item">
+        <a class="nav-link" href="" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Sorteos</a>
+
             <?php 
             /*
             if($_SERVER['REQUEST_URI'] == '/Sitio_PANi/Pagina_Web_PANI/index.php'){
@@ -74,6 +80,15 @@
 
             
             ?>
+        </li>-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sorteos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Recién Jugado</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#sorteoAjugar">Próximo a jugar</a></li>
+          </ul>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Premios</a>
@@ -157,7 +172,7 @@
 </nav>
 
 
-   
+   <!--CODIGO CONSULTA DE PREMIOS LOTERIA MAYOR Y MENOR-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
@@ -173,7 +188,7 @@
                      Loteria
                   </span>
                 </div>
-                  <select class="form-control" id = "select-tipo-sorteo" >
+                  <select class="form-control" id ="select-tipo-sorteo">
                     <option selected disabled>--Seleccione--</option>
                     <option value = "1">Mayor</option>
                     <option value = "2">Menor</option>
@@ -209,6 +224,131 @@
   </div>
 </div>
 </div>
+<!--fIN DE CODIGO CONSULTA DE PREMIOS LOTERIA MAYOR Y MENOR-->
+
+
+<!-------------------------------------------------------------------------------------------------------
+  ------------------------------------------------CONSULTA DE SORTEOS RECIEN JUGADOS-------------------
+--------------------------------------------------------------------------------------------------------->
+<!-- Example Code -->
+<div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sorteos Jugados</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Elegi una loteria para ver los billetes ganadores
+          </div>
+         
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#loteriaMayor" data-bs-toggle="modal">Loteria Mayor</button>
+            <button class="btn btn-primary" data-bs-target="#loteriaMenor" data-bs-toggle="modal">Loteria Menor</button>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="loteriaMayor" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">SORTEO: 1256   |   FECHA: 15-05-23</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+                <div class="card" style="width: 100%;">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">An item</li>
+            
+                  </ul>
+                  <div class="card-footer">
+                    Card footer
+                  </div>
+                </div>
+          </div>
+          <div class="modal-footer">
+            <a href="index.php"><button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Regresar</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="loteriaMenor" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sorteo 3417</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            <div class="modal-body">
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              v
+              v
+              Hide this modal and show the first with the button below.Hide this modal and show the first with the button below.v
+
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              v
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+            
+              Hide this modal and show the first with the button below.
+              Hide this modal and show the first with the button below.
+
+              Hide this modal and show the first with the button below.
+
+              
+              
+            </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Regresar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--FIN DE CONSULTA DE SORTEOS RECIEN JUGADOS-->
+
+
+<!-------------------------------------------------------------------------------------------------------------------------
+  ------------------------------------------------CONSULTA DE SORTEOS A JUGAR-----------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------->
+
+<div class="modal fade" id="sorteoAjugar" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sorteos proximos a jugar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Elegi una loteria para ver los premios a jugar
+          </div>
+         
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#loteriaMayorJugar" data-bs-toggle="modal">Loteria Mayor</button>
+            <button class="btn btn-primary" data-bs-target="#loteriaMenorJugar" data-bs-toggle="modal">Loteria Menor</button>
+          </div>
+         
+        </div>
+      </div>
+    </div>
 
 
 
