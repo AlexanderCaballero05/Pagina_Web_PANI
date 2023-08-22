@@ -84,11 +84,11 @@
                 <!--FIN PHP CONTACTO -->  
                 
                     <ul>
-                        <li class="text-justify"><strong> Razón Social: </strong><?php  echo $razon_social; ?></li>
-                        <li class="datos-contacto"><strong> Teléfono: </strong><?php  echo $telefono; ?></i></li>
-                        <li class="datos-contacto"><strong> Email: </strong> <?php echo $email; ?></li>
-                        <li class="datos-contacto"><strong> Sitio Web: </strong> <?php echo $web;?></li>
-                        <li class="datos-contacto"><strong> Dirección:</strong> <?php echo $direccion; ?></li>
+                        <li class="text-justify"><strong> Razón Social: </strong><?= $razon_social; ?></li>
+                        <li class="datos-contacto"><strong> Teléfono: </strong><?= $telefono; ?></i></li>
+                        <li class="datos-contacto"><strong> Email: </strong> <?= $email; ?></li>
+                        <li class="datos-contacto"><strong> Sitio Web: </strong> <?= $web;?></li>
+                        <li class="datos-contacto"><strong> Dirección:</strong> <?= $direccion; ?></li>
                     </ul>
                   <!--
                     <ul>

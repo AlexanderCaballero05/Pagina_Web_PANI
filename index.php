@@ -55,17 +55,17 @@ include_once "conexion.php";
   $consulta_carrucel3 = $conn->query($query_carrucel3);
   $objeto_consulta_carrucel3 = mysqli_fetch_object($consulta_carrucel3);
   $imagen_carrucel3 = $objeto_consulta_carrucel3->imagen;
-
-
-
+  //comite SIELHO
+ /*  $query_carrucel3 = "SELECT imagen FROM tbl_imagen_sorteo WHERE estado = 'ACTIVO' and TIPO_SORTEO = '3' AND NUMERO_SORTEO = SIELHO;";
+  $consulta_carrucel3 = $conn->query($query_carrucel3);
+  $objeto_consulta_carrucel3 = mysqli_fetch_object($consulta_carrucel3);
+  $imagen_carrucel3 = $objeto_consulta_carrucel3->imagen; */
 ?>
     <!---------------------------------------INICIO DE MENU--------------------------------------->
     <?php
      include "menu.php";
      ?>  
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
-  
-
 <body>
      <!---------------------------------------INICIO DE CARRUSEL--------------------------------------->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -81,9 +81,7 @@ include_once "conexion.php";
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
-
-    
-    
+  
     <div class="carousel-item">
       <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel2); ?>" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
@@ -117,12 +115,12 @@ include_once "conexion.php";
       <div class="conteiner-sorteos">
         <div class="card border-0 rounded-0"><!--Imagen sorteo mayor-->
           <div class="card-body">
-          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_mayor); ?>" class="card-img-top">
+          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_mayor); ?>" class="card-img-top" alt="panihonduras">
           </div>
         </div>
         <div class="card border-0 rounded-0"><!--Imagen sorteo menor-->
           <div class="card-body">
-          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_menor); ?>" class="card-img-top">
+          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_menor); ?>" class="card-img-top" alt="panihonduras">
           </div>
         </div>          
       </div>
@@ -141,7 +139,7 @@ include_once "conexion.php";
               <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
             </div>
            <div class="mx-auto">
-           <a href="https://portalunico.iaip.gob.hn/#/homeLanding" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
+           <a href="https://portalunico.iaip.gob.hn/#/portal=359" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
            </div>
         </div> 
       </div>
@@ -151,26 +149,32 @@ include_once "conexion.php";
 
 
 
-    <!--
+    
     <div class="container-de-comites">
           <p>Comites PANI</p>
       <div class="container-comite">
           <div class="card">
-            <img src="img/etica.png" alt="" class="card-img-top" width="50" height="100">
+            <a href="http://sielho.iaip.gob.hn" target="_blank" rel="noopener noreferrer"> <img src="img/SIELHO.png" alt="" class="card-img-top" width="30" height="30"></a>
+           
           </div>
           <div class="card">
-            <img src="img/etica.png" alt="" class="card-img-top">
+            <a href="http://honducompras.gob.hn" target="_blank" rel="noopener noreferrer"><img src="img/honducompras.png" alt="" class="card-img-top"></a>
+            
           </div>
 
           <div class="card">
-            <img src="img/etica.png" alt="" class="card-img-top">
+          <a href="http://onadici.gob.hn" target="_blank" rel="noopener noreferrer"><img src="img/ONADICI.png" alt="" class="card-img-top"></a>
+          </div>
+
+          <div class="card">
+          <a href="http://tsc.gob.hn" target="_blank" rel="noopener noreferrer"><img src="img/TSC.png" alt="" class="card-img-top"></a>
           </div>
           <div class="card">
             <img src="img/etica.png" alt="" class="card-img-top">
           </div>
       </div>
     </div>
-      -->
+      
     <!---------------------------------------FINAL-PRODUCTOS--------------------------------------->
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
