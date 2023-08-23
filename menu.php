@@ -29,11 +29,11 @@
         Arnold Caballero             05/04/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR
       -------------------------------------------------------------------------------------------------->
    <?php
-        /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST consulta-premios-mayor*/
-        include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
-        $_PremiosMayor = new obtenerUrl;
-        $datos = $_PremiosMayor->obtenerDatos();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST consulta-premios-mayor*/
+        // include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
+        // $_PremiosMayor = new obtenerUrl;
+        // $datos = $_PremiosMayor->obtenerDatos();
 
     ?>
 
@@ -51,9 +51,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/style_bottom.css" rel="stylesheet"/>
+
     <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
     <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+<style>
+
+</style>
 </head>
 <body>
 
@@ -161,12 +166,22 @@
             Contacto
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link animated-button1" href="nuevaLoteria.php">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Nueva-Modalidad
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav><!--Fin items del Header-->
 
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="VpSfLOcE"></script>
    <!--CODIGO CONSULTA DE NUMEROS PREMIADOS LOTERIA MAYOR Y MENOR con Ventana Modales-->
 <div class="modal fade" id="ModalPremios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -363,6 +378,7 @@
 <!--Scripts del sitio web-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
+    
     <script src="js/bootnavbar.js"></script>
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="jquery/jquery-3.3.1.min.js"></script>

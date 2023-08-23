@@ -30,31 +30,31 @@
 <?php
 
 include_once "conexion.php";
-//Sorteo Mayor
-  $query_mayor = "SELECT imagen FROM tbl_imagen where estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '1';";
-  $consulta_mayor =$conn->query($query_mayor);
-  $objeto_consulta_mayor =mysqli_fetch_object($consulta_mayor);
-  $imagen_mayor = $objeto_consulta_mayor->imagen;
-//Sorteo Menor
-  $query_menor = "SELECT imagen FROM tbl_imagen where estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '2';";
-  $Consulta_menor =$conn->query($query_menor);
-  $objeto_consulta_menor =mysqli_fetch_object($Consulta_menor);
-  $imagen_menor = $objeto_consulta_menor->imagen;
-//Carrucel 1
-  $query_carrucel1 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = 1;";
-  $consulta_carrucel1 = $conn->query($query_carrucel1);
-  $objeto_consulta_carrucel1 = mysqli_fetch_object($consulta_carrucel1);
-  $imagen_carrucel1 = $objeto_consulta_carrucel1->imagen;
-//carrucel 2
-  $query_carrucel2 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = 2;";
-  $consulta_carrucel2 = $conn->query($query_carrucel2);
-  $objeto_consulta_carrucel2 = mysqli_fetch_object($consulta_carrucel2);
-  $imagen_carrucel2 = $objeto_consulta_carrucel2->imagen;
-//carrucel 3
-  $query_carrucel3 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = 3;";
-  $consulta_carrucel3 = $conn->query($query_carrucel3);
-  $objeto_consulta_carrucel3 = mysqli_fetch_object($consulta_carrucel3);
-  $imagen_carrucel3 = $objeto_consulta_carrucel3->imagen;
+// //Sorteo Mayor
+//   $query_mayor = "SELECT imagen FROM tbl_imagen where estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '1';";
+//   $consulta_mayor =$conn->query($query_mayor);
+//   $objeto_consulta_mayor =mysqli_fetch_object($consulta_mayor);
+//   $imagen_mayor = $objeto_consulta_mayor->imagen;
+// //Sorteo Menor
+//   $query_menor = "SELECT imagen FROM tbl_imagen where estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '2';";
+//   $Consulta_menor =$conn->query($query_menor);
+//   $objeto_consulta_menor =mysqli_fetch_object($Consulta_menor);
+//   $imagen_menor = $objeto_consulta_menor->imagen;
+// //Carrucel 1
+//   $query_carrucel1 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = 1;";
+//   $consulta_carrucel1 = $conn->query($query_carrucel1);
+//   $objeto_consulta_carrucel1 = mysqli_fetch_object($consulta_carrucel1);
+//   $imagen_carrucel1 = $objeto_consulta_carrucel1->imagen;
+// //carrucel 2
+//   $query_carrucel2 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = 2;";
+//   $consulta_carrucel2 = $conn->query($query_carrucel2);
+//   $objeto_consulta_carrucel2 = mysqli_fetch_object($consulta_carrucel2);
+//   $imagen_carrucel2 = $objeto_consulta_carrucel2->imagen;
+// //carrucel 3
+//   $query_carrucel3 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = 3;";
+//   $consulta_carrucel3 = $conn->query($query_carrucel3);
+//   $objeto_consulta_carrucel3 = mysqli_fetch_object($consulta_carrucel3);
+//   $imagen_carrucel3 = $objeto_consulta_carrucel3->imagen;
   //comite SIELHO
  /*  $query_carrucel3 = "SELECT imagen FROM tbl_imagen WHERE estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '3' AND NUMERO_SORTEO = SIELHO;";
   $consulta_carrucel3 = $conn->query($query_carrucel3);
