@@ -32,95 +32,10 @@
   include "menu.php";
   ?>
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
-    <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-</style>
+  
+<a href="https://api.whatsapp.com/send?phone=50433120275" class="btn-wsp" target="_blank">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
 
 <div class="container">
    <div lass="row mt-5 mb-5 justify-content-center mx-auto">
@@ -136,12 +51,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
                </h1>
                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
                  <div class="accordion-body align-content-center">
-                   <strong>Te presentamos nuestra nueva modalidad de juego con la cual vos podés ser un nuevo millonario 🤑🤑🤑
-                     ¡Con LaGrande sí que podés!.</strong> 
-                   
-                        <div class="fb-video" data-href="https://fb.watch/mBTNNt07QI/" data-width="600" data-show-text="false">
-
-                        </div>
+                   <strong>Te presentamos nuestra nueva modalidad de juego con la cual vos podés ser un nuevo millonario.</strong> 
+                        <div class="fb-video" data-href="https://fb.watch/mBTNNt07QI/" data-width="600" data-show-text="false"></div>
                  </div>
                </div>
              </div>
@@ -156,9 +67,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
                    <strong>Así es como podés jugar y ganar con La Grande de la Lotería Nacional </strong> 
                    <p>¡Vos podés ser nuestro próximo millonario, con nuestra nueva modalidad de juego que te dará muchos premios! 🤑🎉.</p>
 
-                   <div class="fb-post" data-href="https://www.facebook.com/photo/?fbid=679529490876178&amp;set=a.294808956014902&amp;__cft__[0]=AZVSGJpQQ6tuhIVlJTtqEZdhoN-Qe40Q6jgHqCEW01qs5KljgKTjx2FO5oGWTUvjEuuqRS44O6kfdOYPpMe1upCIAbYo4Tm7NKAJib7VjeI10_bvTBfC38uZBL9osOIBwqVi2AmpCxXRRKpkZ5sgbpLHIhZv2826KRgWY3EX_5lCDHR-DtiHpFfGISA5SXeoE-Y&amp;__tn__=EH-R" data-width="500" data-show-text="false">
+                   <div class="fb-video" data-href="https://fb.watch/mDqb6umplR/" data-width="600" data-show-text="false"></div>
 
-                   </div>
+                  
 
                  </div>
                </div>
@@ -218,12 +129,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
                  <div class="accordion-body">
                  <strong><p>Esta es la indumentaria de los vendedores que te llevarán la suerte y te convertirán a vos en nuestro próximo millonario. 🤑🤑🤑</p></strong>
                
-                 <div class="fb-video" data-href="https://fb.watch/mBX8VugZIj/" data-width="600" data-show-text="false"> </div>
+                 <div class="fb-video" data-href="https://fb.watch/mDqVsX7rdE/" data-width="600" data-show-text="false"> </div>
             
                </div> 
              </div>
            </div>
-           
+           <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
            <div id="fb-root"></div>
            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v17.0" nonce="dzE1Lwa1"></script>
