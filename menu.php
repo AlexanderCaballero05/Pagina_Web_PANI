@@ -56,9 +56,6 @@
     <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
     <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
-<style>
-
-</style>
 </head>
 <body>
 
@@ -166,6 +163,7 @@
             Contacto
           </a>
         </li>
+        <!-- Item Nueva Modalidad -->
         <li class="nav-item">
           <a class="nav-link animated-button1" href="nuevaLoteria.php">
             <span></span>

@@ -19,7 +19,7 @@
             Programa:         index del sitio web
             Fecha:            1/23/2023 
             Programador:      Arnold Alexander Caballero Garcia
-            descripcion:      Index del sitio web, muestra el menu, los sorteos
+            descripcion:      Index del sitio web, muestra la nueva modalidad
             @versión 1.0
         -----------------------------------------------------------------------
           Historial de Cambio
@@ -43,6 +43,7 @@
            <h2 class="text-center pt-5"><strong>Nueva Modalidad de Juego</strong></h2>
 
            <div class="accordion mt-5 mb-4 ps-3" id="accordionExample">
+            <!-- ITEM 1 -->
              <div class="accordion-item">
                <h1 class="accordion-header">
                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -56,6 +57,7 @@
                  </div>
                </div>
              </div>
+             <!-- ITEM 2 -->
              <div class="accordion-item">
                <h2 class="accordion-header">
                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -68,14 +70,11 @@
                    <p>¡Vos podés ser nuestro próximo millonario, con nuestra nueva modalidad de juego que te dará muchos premios! 🤑🎉.</p>
 
                    <div class="fb-video" data-href="https://fb.watch/mDqb6umplR/" data-width="600" data-show-text="false"></div>
-
-                  
-
                  </div>
                </div>
              </div>
-           <!-- ITEM 3 -->
 
+           <!-- ITEM 3 -->
              <div class="accordion-item">
                <h2 class="accordion-header">
                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -114,10 +113,9 @@
                  <strong><p>Esta es la indumentaria de los vendedores que te llevarán la suerte y te convertirán a vos en nuestro próximo millonario. 🤑🤑🤑</p></strong>
                
                  <div class="fb-video" data-href="https://fb.watch/mBX8VugZIj/" data-width="600" data-show-text="false"> </div>
-            
                </div> 
              </div>
-           </div>
+            </div>
           <!-- ITEM 5 -->
              <div class="accordion-item">
                <h2 class="accordion-header">
@@ -127,10 +125,9 @@
                </h2>
                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                  <div class="accordion-body">
-                 <strong><p>Esta es la indumentaria de los vendedores que te llevarán la suerte y te convertirán a vos en nuestro próximo millonario. 🤑🤑🤑</p></strong>
-               
-                 <div class="fb-video" data-href="https://fb.watch/mDqVsX7rdE/" data-width="600" data-show-text="false"> </div>
-            
+                 <strong><p>¿Ya sabés dónde comprar La Grande?</p></strong>
+                 <strong><p>La encontrás como el #PuntoAmarillo que te convertirá en el próximo millonario con los siguientes elementos que te presentamos en este video.</p></strong>
+                 <strong><a href="https://fb.watch/mEtrb99cSL/" target="_blank" style="text-decoration: none !important;"><p>Link del video</p></a></strong>          
                </div> 
              </div>
            </div>
@@ -143,37 +140,29 @@
 </div>
 </div>
 <script>
-// Get the modal
-var modal = document.getElementById("myModal");
+  // Get the modal
+  var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
 </script>
   <!-------------------------------------------INICIO DE FOOTER---------------------------------------------------------->
   <?php
-        include "footer.php";
-        ?>
-        <!-------------------------------------------FIN DE FOOTER---------------------------------------------------------->
-
-
-
-
-
-
-  
-    
+     include "footer.php";
+  ?>
+  <!-------------------------------------------FIN DE FOOTER------------------------------------------------------------->    
