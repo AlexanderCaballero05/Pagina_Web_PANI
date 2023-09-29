@@ -94,11 +94,11 @@
                     <ul>
                         <li class="text-justify"><strong> Razón Social: </strong>Somos una institución del estado con autonomía técnica, administrativa y patrimonio propio, generando recursos para proyecto sociales. A través de la producción y comercialización 
                         de las loterías del Estado para el bienestar integral de la población.</li>
-                        <li class="datos-contacto"><strong> Teléfono: </strong>2236-8636</i></li>
+                        <li class="datos-contacto"><strong> Teléfono: </strong>2236-863</i></li>
                         <li class="datos-contacto"><strong> Email: </strong> panihonduras@pani.hn</li>
                         <li class="datos-contacto"><strong> Sitio Web: </strong> panigob@gmail.com</li>
                         <li class="datos-contacto"><strong> Dirección:</strong> Avenida los Próceres, Tegucigalpa</li>
-                    </ul>-->
+                    </ul> -->
                         <br>
                         <hr>
                         <h4 class="mt-5 mb-4 ps-3">Ubicación PANI</h4>

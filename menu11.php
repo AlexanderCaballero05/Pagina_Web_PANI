@@ -28,7 +28,7 @@
         Arnold Caballero             28/03/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR-MENOR
         Arnold Caballero             05/04/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR
       -------------------------------------------------------------------------------------------------->
-   <?php
+      <?php
         /*Codigo php en donde se instancia la clase que obtiene
           la API-REST consulta-premios-mayor*/
         include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
@@ -83,8 +83,8 @@
             Sorteos
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMayor">Lotería Mayor</a></li>
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMenor">Lotería Menor</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Recién Jugado</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#sorteoAjugar">Próximo a jugar</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -239,9 +239,27 @@
 
 <!-------------------------------------------------------------------------------------------------------
 ----------CONSULTANDO API-REST-PANI DE LOS NUMEROS PREMIADOS DE LOS SORTEOS RECIEN JUGADOS---------------
---------------------------------------------------------------------------------------------------------->  
-<!--Inicio modal loteria Mayor-->
-    <div class="modal fade" id="loteriaMayor" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+--------------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sorteos Jugados</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             Elige una lotería para ver los números premiados 
+          </div>
+         
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#loteriaMayor" data-bs-toggle="modal" id="button-loteria-mayor">Lotería Mayor</button>
+            <button class="btn btn-primary" data-bs-target="#loteriaMenor" data-bs-toggle="modal">Lotería Menor</button>
+          </div>
+        </div>
+      </div>
+    </div><!--Fin Modal primario de loterias-->
+  
+    <div class="modal fade" id="loteriaMayor" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;"><!--Inicio modal loteria Mayor-->
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
@@ -297,37 +315,36 @@
       </div>
     </div><!--Fin modal loteria Mayor-->
 
-    <!--Inicio modal loteria Menor-->
-    <div class="modal fade" id="loteriaMenor" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal fade" id="loteriaMenor" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;"><!--Inicio modal loteria Menor-->
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sorteo Lotería Menor</h1>
             <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
           </div>
-          <div class="modal-body">
-            <div class="card p-2">
+            <div class="modal-body">
+              <div class="card">
                 <div class="card-header">
                     <h2 class="text-center">Sorteo No. <?= $datosMenor['sorteo']?></h2>
                     <h5 class="text-center"><strong>Jugado el: <?= $datosMenor['fecha_sorteo']?></strong> </h5>
                     <h5 class="text-center mb-5"><strong>Vencimiento: <?= $datosMenor['vencimiento_sorteo']?></strong> </h5>
                 </div>
 
-                        <?php 
-                        //codigo PHP
-                                  foreach ($datosMenor as $sorteoMenor => $registrosMenor):
-                                    foreach ($registrosMenor as $key => $premios):
-                                        $premios_menor = $premios['premios_menores_id'];
-                                      // $pago_premio = $premio['pago_premio'];
-                          ?>
+                     <?php 
+                     //codigo PHP
+                              foreach ($datosMenor as $sorteoMenor => $registrosMenor):
+                                foreach ($registrosMenor as $key => $premios):
+                                    $premios_menor = $premios['premios_menores_id'];
+                                  // $pago_premio = $premio['pago_premio'];
+                       ?>
 
-  	                   <?php  if ($premios_menor == 1): ?>
-                <div class="input-group input-group-lg mb-4">
-                   <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: green !important;">Número Derecho</span>
-                    <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="background: green !important; color:#fff !important; border-color: green !important;">
-                </div>
+  	              <?php  if ($premios_menor == 1): ?>
+                    <div class="input-group input-group-lg mb-4">
+                       <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: green !important;">Número Derecho</span>
+                        <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="background: green !important; color:#fff !important; border-color: green !important;">
+                    </div>
 
-                       <?php  elseif ($premios_menor == 2): ?>
+                     <?php  elseif ($premios_menor == 2): ?>
                 <table class="table table-striped table-inverse table-responsive">
                   <thead class="thead-inverse">
                     <tr>
@@ -343,13 +360,13 @@
                     </tbody>
                 </table>
 
-                        <?php  elseif ($premios_menor == 3): ?>
-                <div class="input-group input-group-lg mb-4 mt-4">
-                    <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: green !important;">Número Reves</span>
-                     <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="background: green !important; color:#fff !important; border-color: green !important;">
-                </div> 
+                <?php  elseif ($premios_menor == 3): ?>
+                   <div class="input-group input-group-lg mb-4">
+                       <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: green !important;">Número Reves</span>
+                        <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="background: green !important; color:#fff !important; border-color: green !important;">
+                    </div> 
                     
-                        <?php  elseif ($premios_menor == 4 || $premios_menor == 5 || $premios_menor == 6): ?>
+                <?php  elseif ($premios_menor == 4 || $premios_menor == 5 || $premios_menor == 6): ?>
                   <table class="table table-striped table-inverse table-responsive">
                     <thead class="thead-inverse">
                       <tr>
@@ -365,25 +382,73 @@
                       </tbody>
                   </table>
 
+                <?php  endif ?>
+                
                            <?php 
-                               endif; 
                               endforeach;
                             endforeach; 
+                            
                             ?> 
                   
-             </div> <!--Fin card -->
-          </div> <!--Fin modal Body -->
-          <div class="modal-footer">
-            <a href="index.php">  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button></a>
-          </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <a href="index.php">  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button></a>
+            </div>
       </div>
     </div>
   </div><!--fin modal loteria Menor-->
 <!-----------------------------------------------------------------------FIN DE CONSULTA DE SORTEOS RECIEN JUGADOS---------------------------------------------->
 
+
+<!-------------------------------------------------------------------------------------------------------
+----------CONSULTANDO API-REST-PANI DE LOS NUMEROS PREMIADOS DE LOS SORTEOS A JUGAR---------------
+--------------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="sorteoAjugar" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sorteos proximos a jugar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Elegi una loteria para ver los premios a jugar
+          </div>
+         
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#loteriaMayorJugar" data-bs-toggle="modal">Loteria Mayor</button>
+            <button class="btn btn-primary" data-bs-target="#loteriaMenorJugar" data-bs-toggle="modal">Loteria Menor</button>
+          </div>     
+        </div>
+      </div>
+    </div><!--FIN DE CONSULTA DE SORTEOS A JUGAR-->
+
+    <div class="modal fade" id="loteriaMayorJugar" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Premios del proximo sorteo a jugar</h1>
+            <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">#premio 1</li>
+              </ul>
+            </div>
+          </div>
+                           
+          <div class="modal-footer">
+            <a href="index.php"><button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button></a>
+          </div>
+        </div>
+      </div>
+    </div><!--Fin mod
+
 <!--Scripts del sitio web-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="zSsNCouo"></script>
+    
     <script src="js/bootnavbar.js"></script>
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="jquery/jquery-3.3.1.min.js"></script>
