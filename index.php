@@ -77,19 +77,19 @@ include_once "conexion.php";
  
   <div class="carousel-inner mx-auto w-85">
     <div class="carousel-item active">
-      <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel1); ?>" class="d-block w-100" alt="panihonduras" >
+      <img src="img/Institucional.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
   
     <div class="carousel-item">
-      <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel2); ?>" class="d-block w-100" alt="panihonduras" >
+      <img src="img/La_Chica.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
     
     <div class="carousel-item">
-      <img src="data:image/jpg;base64,<?php echo  base64_encode($imagen_carrucel3); ?>" class="d-block w-100" alt="panihonduras" >
+      <img src="img/La_Grande_Web.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
@@ -115,12 +115,12 @@ include_once "conexion.php";
       <div class="conteiner-sorteos">
         <div class="card border-0 rounded-0"><!--Imagen sorteo mayor-->
           <div class="card-body">
-          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_mayor); ?>" class="card-img-top" alt="panihonduras">
+          <img src="img/1253.jpg" class="card-img-top" alt="panihonduras">
           </div>
         </div>
         <div class="card border-0 rounded-0"><!--Imagen sorteo menor-->
           <div class="card-body">
-          <img src="data:image/jpeg;base64,<?php echo  base64_encode($imagen_menor); ?>" class="card-img-top" alt="panihonduras">
+          <img src="img/3445.jpg" class="card-img-top" alt="panihonduras">
           </div>
         </div>          
       </div>
