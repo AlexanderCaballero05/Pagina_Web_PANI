@@ -142,7 +142,7 @@
                     <li><a class="dropdown-item" href="autoridades.php">Unid. de Informática</a></li>
                     <?php
                     $option = 1;
-                    '<li><a class="dropdown-item" href="autoridades.php">Unid. de Informática</a></li>'
+                    // '<li><a class="dropdown-item" href="autoridades.php">Unid. de Informática</a></li>'
                     ?>
                   </ul>
                 </li><!--Unidades-->
