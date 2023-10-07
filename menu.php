@@ -85,6 +85,9 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMayor">Lotería Mayor</a></li>
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMenor">Lotería Menor</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Grande</a></li>
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li>
+            
           </ul>
         </li>
         <li class="nav-item">
@@ -250,6 +253,15 @@
           </div>
           <div class="modal-body">
             <div class="card">
+              <div class="form-group">
+                <label for="">Seleccione Sorteo</label>
+                <select name="" id="" class="form-control">
+                <option value=""><?= " Sorteo No. " .$datos['sorteo']?></option>
+              </select>
+              
+              </div>
+              
+            
               <h2 id="sorteo" class="text-center"><?= " Sorteo No. " .$datos['sorteo']?></h2>
               <h5 class="text-center"><strong>Jugado el: </strong><?= $datos['fecha_sorteo'];?></h5>
               <h5 class="text-center mb-5"><strong>Vencimiento: </strong><?=$datos['vencimiento_sorteo'];?></h5>
@@ -323,8 +335,8 @@
 
   	                   <?php  if ($premios_menor == 1): ?>
                 <div class="input-group input-group-lg mb-4">
-                   <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: green !important;">Número Derecho</span>
-                    <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="background: green !important; color:#fff !important; border-color: green !important;">
+                   <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: black !important;">Número Derecho</span>
+                    <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="color: green !important; border-color: green !important;">
                 </div>
 
                        <?php  elseif ($premios_menor == 2): ?>
@@ -345,8 +357,8 @@
 
                         <?php  elseif ($premios_menor == 3): ?>
                 <div class="input-group input-group-lg mb-4 mt-4">
-                    <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: green !important;">Número Reves</span>
-                     <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="background: green !important; color:#fff !important; border-color: green !important;">
+                    <span class="input-group-text" id="inputGroup-sizing-lg" style="border-color: green !important; color: black !important;">Número Reves</span>
+                    <input type="text" class="form-control" value="<?= $premios['numero_premiado_menor']?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="color: green !important; border-color: green !important;">
                 </div> 
                     
                         <?php  elseif ($premios_menor == 4 || $premios_menor == 5 || $premios_menor == 6): ?>
