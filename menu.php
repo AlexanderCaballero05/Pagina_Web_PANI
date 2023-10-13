@@ -38,6 +38,20 @@
         include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
         $_PremiosMenor = new obtenerEndPointMenor;
         $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+
+        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
+        $_PremiosLaGrande = new ObtenerEndPointLaGrande;
+        $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
+
+
+        $edicion = json_decode($datosLaGrande);
+        $number_edicion = implode(",",array_column($edicion->results, 'edition_number'));
+        $fecha = implode(",",array_column($edicion->results, 'draw_date_time'));
+        $decena_millar = implode(",",array($edicion->results->modalities));
+        $number_DM = implode(",",array_column($edicion->results, 'number'));
+         
+    //  $number_edicion;
+
     ?>
 
 <!DOCTYPE html>
@@ -85,8 +99,9 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMayor">Lotería Mayor</a></li>
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMenor">Lotería Menor</a></li>
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Grande</a></li>
+            <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="Item-LaGrande">Lotería La Grande</button></li>
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li>
+            <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li>
             
           </ul>
         </li>
@@ -391,6 +406,45 @@
       </div>
     </div>
   </div><!--fin modal loteria Menor-->
+
+  <!-- Modal loteria la grande -->
+  <div class='modal fade' id='loteriaLaGrande' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class='modal-content'>
+              <div class='modal-header'>
+                <h2 class='modal-title fs-5' id='exampleModalLabel'>Sorteo La Grande</h2>
+                <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+              </div>
+            <div class='modal-body'>
+               <div class="card p-2"><!--Inicio de card-->
+                  <div class="card-header">
+                    <h2 class="text-center">Edición No. <?php echo $number_edicion ?></h2>
+                    <h5 class="text-center">Jugado el: <?php echo $fecha ?></h5>
+                  </div>
+                  <div class="responsive">
+                    <table class="table table-striped table-inverse table-responsive">
+                      <thead class="thead-inverse">
+                        <tr>
+                          <th class="text-center">No.</th>
+                          <th class="text-center">Modalidad</th>
+                          <th class="text-center">Número</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">DM</td>
+                            <td class="text-center"><?= $number_DM ?></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+
+               </div><!--Fin de card-->
+            </div>
+       </div>
+     </div>
+  </div>
 <!-----------------------------------------------------------------------FIN DE CONSULTA DE SORTEOS RECIEN JUGADOS---------------------------------------------->
 
 <!--Scripts del sitio web-->
@@ -492,6 +546,8 @@
     </script>
 
     <script type="module" src="Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.js"></script>
+    <script type="module" src="Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.js"></script>
+
 
 </body>
 </html>
