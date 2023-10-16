@@ -15,8 +15,8 @@ class ObtenerEndPointLaGrande {
 
         $response = curl_exec($curl);
         curl_close($curl);
-
-        return $response;
+       
+        return $response; 
 
     }
 }

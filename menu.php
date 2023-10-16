@@ -42,13 +42,11 @@
         include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
         $_PremiosLaGrande = new ObtenerEndPointLaGrande;
         $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
-
-
-        $edicion = json_decode($datosLaGrande);
-        $number_edicion = implode(",",array_column($edicion->results, 'edition_number'));
-        $fecha = implode(",",array_column($edicion->results, 'draw_date_time'));
-        $decena_millar = implode(",",array($edicion->results->modalities));
-        $number_DM = implode(",",array_column($edicion->results, 'number'));
+        // $edicion = json_decode($datosLaGrande);
+        // $number_edicion = implode(",",array_column($edicion->results, 'edition_number'));
+        // $fecha = implode(",",array_column($edicion->results, 'draw_date_time'));
+        // // $decena_millar = implode(",",array($edicion->results->modalities));
+        // $number_DM = implode(",",array_column($edicion->results, 'number'));
          
     //  $number_edicion;
 
@@ -99,7 +97,9 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMayor">Lotería Mayor</a></li>
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMenor">Lotería Menor</a></li>
-            <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="Item-LaGrande">Lotería La Grande</button></li>
+            <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="">Lotería La Grande</button></li>
+            <li><button class="btn btn-primary" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Lotería La Grande JS</button></li>
+
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li>
             <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li>
             
@@ -416,11 +416,27 @@
                 <a href="index.php"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
               </div>
             <div class='modal-body'>
+                          <?php
+
+                              $array_data = json_decode($datosLaGrande, true);//convertir el Json en un array asociativo
+                              //iterar el array asociativo
+                              foreach ($array_data as $keys => $arrayEdicionLagrande):
+                                foreach ($arrayEdicionLagrande as $keys => $arrayModalities):
+                                       $d = $arrayModalities['modalities'][0]['number'];     
+                                       $dm = $arrayModalities['modalities'][1]['number'];         
+                                       $m = $arrayModalities['modalities'][2]['number'];         
+                                       $c = $arrayModalities['modalities'][3]['number'];         
+                                       $u = $arrayModalities['modalities'][4]['number'];         
+                           ?>
                <div class="card p-2"><!--Inicio de card-->
                   <div class="card-header">
-                    <h2 class="text-center">Edición No. <?php echo $number_edicion ?></h2>
-                    <h5 class="text-center">Jugado el: <?php echo $fecha ?></h5>
+                    <h2 class="text-center">Edición No. <?= $arrayEdicionLagrande[0]['edition_number'];?> </h2>
+                    <h5 class="text-center">Jugado el:  <?= $arrayEdicionLagrande[0]['draw_date_time'];?></h5>
                   </div>
+
+                  
+                             
+
                   <div class="responsive">
                     <table class="table table-striped table-inverse table-responsive">
                       <thead class="thead-inverse">
@@ -433,11 +449,36 @@
                         <tbody>
                           <tr>
                             <td class="text-center">1</td>
-                            <td class="text-center">DM</td>
-                            <td class="text-center"><?= $number_DM ?></td>
+                            <td class="text-center">Decena Millar</td>
+                            <td class="text-center"><?= $dm ?></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">2</td>
+                            <td class="text-center">Millar</td>
+                            <td class="text-center"><?= $m ?></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">3</td>
+                            <td class="text-center">Centena</td>
+                            <td class="text-center"><?= $c ?></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">4</td>
+                            <td class="text-center">Decena</td>
+                            <td class="text-center"><?= $d ?></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">5</td>
+                            <td class="text-center">Unidad</td>
+                            <td class="text-center"><?= $u ?></td>
                           </tr>
                         </tbody>
                     </table>
+                    <?php
+                                 endforeach;
+                               endforeach;
+                              ?>
+
                   </div>
 
                </div><!--Fin de card-->
@@ -546,7 +587,6 @@
     </script>
 
     <script type="module" src="Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.js"></script>
-    <script type="module" src="Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.js"></script>
 
 
 </body>

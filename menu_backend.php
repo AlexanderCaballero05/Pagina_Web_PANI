@@ -1,21 +1,36 @@
 <?php
 
-include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
-$_PremiosMayor = new obtenerEndPointMayor;
-$datos = $_PremiosMayor->obtenerDatos();
+// include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
+// $_PremiosMayor = new obtenerEndPointMayor;
+// $datos = $_PremiosMayor->obtenerDatos();
 
-        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
-        $_PremiosMenor = new obtenerEndPointMenor;
-        $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+//         include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
+//         $_PremiosMenor = new obtenerEndPointMenor;
+//         $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
 
-        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
-        $_PremiosLaGrande = new ObtenerEndPointLaGrande;
-        $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
+//         include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
+//         $_PremiosLaGrande = new ObtenerEndPointLaGrande;
+//         $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
 
-$edicion = json_decode($datosLaGrande);
-$modalities = implode(",",array_merge($edicion->results->modalities));
+// $edicion = json_decode($datosLaGrande, true);
 
-echo $modalities;
+// foreach ($edicion as $keys => $array_modalities) 
+// {
+//         foreach ($array_modalities as $keys => $data) {
+//          $d = $data['modalities'][0]['number'];     
+//          $dm = $data['modalities'][1]['number'];     
+
+              
+//         }     
+// }
+
+// print_r(($d));
+// print_r(($dm));
+
+
+// $modalities = implode(",",array_column($edicion->results, 'number'));
+
+// echo $modalities;
 //echo gettype($modalities);
 
 // $n_modalities = json_decode($modalities);
