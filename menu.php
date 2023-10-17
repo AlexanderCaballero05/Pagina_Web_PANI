@@ -30,26 +30,22 @@
       -------------------------------------------------------------------------------------------------->
    <?php
         /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST consulta-premios-mayor*/
+          la API-REST para consulta-premios-mayor*/
         include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
         $_PremiosMayor = new obtenerEndPointMayor;
         $datos = $_PremiosMayor->obtenerDatos();
 
+        /*Codigo php en donde se instancia la clase que obtiene
+          la API-REST para consulta-premios-menor*/
         include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
         $_PremiosMenor = new obtenerEndPointMenor;
         $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
 
+        /*Codigo php en donde se instancia la clase que obtiene
+          la API-REST para consulta-premios-LaGrande*/
         include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
         $_PremiosLaGrande = new ObtenerEndPointLaGrande;
         $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
-        // $edicion = json_decode($datosLaGrande);
-        // $number_edicion = implode(",",array_column($edicion->results, 'edition_number'));
-        // $fecha = implode(",",array_column($edicion->results, 'draw_date_time'));
-        // // $decena_millar = implode(",",array($edicion->results->modalities));
-        // $number_DM = implode(",",array_column($edicion->results, 'number'));
-         
-    //  $number_edicion;
-
     ?>
 
 <!DOCTYPE html>
@@ -98,10 +94,9 @@
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMayor">Lotería Mayor</a></li>
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMenor">Lotería Menor</a></li>
             <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="">Lotería La Grande</button></li>
-            <li><button class="btn btn-primary" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Lotería La Grande JS</button></li>
 
             <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li>
-            <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li>
+            <!-- <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li> -->
             
           </ul>
         </li>
@@ -281,7 +276,7 @@
               <h5 class="text-center"><strong>Jugado el: </strong><?= $datos['fecha_sorteo'];?></h5>
               <h5 class="text-center mb-5"><strong>Vencimiento: </strong><?=$datos['vencimiento_sorteo'];?></h5>
                 <div class="table-responsive">
-                  <table class="table">
+                  <table class="table table-responsive">
                     <thead>
                       <tr>
                         <th class="text-center">No.</th>
@@ -417,11 +412,14 @@
               </div>
             <div class='modal-body'>
                           <?php
+                                $fecha = $arrayEdicionLagrande[0]['draw_date_time'];
+                                $fecha_edicion = date("Y-m-d", $fecha);
 
                               $array_data = json_decode($datosLaGrande, true);//convertir el Json en un array asociativo
                               //iterar el array asociativo
                               foreach ($array_data as $keys => $arrayEdicionLagrande):
                                 foreach ($arrayEdicionLagrande as $keys => $arrayModalities):
+                                  $contador ++;
                                        $d = $arrayModalities['modalities'][0]['number'];     
                                        $dm = $arrayModalities['modalities'][1]['number'];         
                                        $m = $arrayModalities['modalities'][2]['number'];         
@@ -431,14 +429,14 @@
                <div class="card p-2"><!--Inicio de card-->
                   <div class="card-header">
                     <h2 class="text-center">Edición No. <?= $arrayEdicionLagrande[0]['edition_number'];?> </h2>
-                    <h5 class="text-center">Jugado el:  <?= $arrayEdicionLagrande[0]['draw_date_time'];?></h5>
+                    <h5 class="text-center">Jugado el:  <?= $fecha_edicion ?></h5>
                   </div>
 
                   
                              
 
                   <div class="responsive">
-                    <table class="table table-striped table-inverse table-responsive">
+                    <table class="table table-responsive">
                       <thead class="thead-inverse">
                         <tr>
                           <th class="text-center">No.</th>
@@ -450,27 +448,27 @@
                           <tr>
                             <td class="text-center">1</td>
                             <td class="text-center">Decena Millar</td>
-                            <td class="text-center"><?= $dm ?></td>
+                            <td class="text-center"> <span style = 'color:red;'><?= $dm?></span></td>
                           </tr>
                           <tr>
                             <td class="text-center">2</td>
                             <td class="text-center">Millar</td>
-                            <td class="text-center"><?= $m ?></td>
+                            <td class="text-center"><span style = 'color:red;'><?= $m?></span></td>
                           </tr>
                           <tr>
                             <td class="text-center">3</td>
                             <td class="text-center">Centena</td>
-                            <td class="text-center"><?= $c ?></td>
+                            <td class="text-center"><span style = 'color:red;'><?= $c?></span></td>
                           </tr>
                           <tr>
                             <td class="text-center">4</td>
                             <td class="text-center">Decena</td>
-                            <td class="text-center"><?= $d ?></td>
+                            <td class="text-center"><span style = 'color:red;'><?= $d?></span></td>
                           </tr>
                           <tr>
                             <td class="text-center">5</td>
                             <td class="text-center">Unidad</td>
-                            <td class="text-center"><?= $u ?></td>
+                            <td class="text-center"><span style = 'color:red;'><?= $u?></span></td>
                           </tr>
                         </tbody>
                     </table>
