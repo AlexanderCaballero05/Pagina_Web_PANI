@@ -29,23 +29,23 @@
         Arnold Caballero             05/04/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR
       -------------------------------------------------------------------------------------------------->
    <?php
-        /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST para consulta-premios-mayor*/
-        include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
-        $_PremiosMayor = new obtenerEndPointMayor;
-        $datos = $_PremiosMayor->obtenerDatos();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-mayor*/
+        // include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
+        // $_PremiosMayor = new obtenerEndPointMayor;
+        // $datos = $_PremiosMayor->obtenerDatos();
 
-        /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST para consulta-premios-menor*/
-        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
-        $_PremiosMenor = new obtenerEndPointMenor;
-        $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-menor*/
+        // include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
+        // $_PremiosMenor = new obtenerEndPointMenor;
+        // $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
 
-        /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST para consulta-premios-LaGrande*/
-        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
-        $_PremiosLaGrande = new ObtenerEndPointLaGrande;
-        $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-LaGrande*/
+        // include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
+        // $_PremiosLaGrande = new ObtenerEndPointLaGrande;
+        // $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
     ?>
 
 <!DOCTYPE html>
