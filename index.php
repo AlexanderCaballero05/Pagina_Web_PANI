@@ -104,6 +104,13 @@ include_once "conexion.php";
     <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
+
+<div style="margin-left: 16px; margin-top: 80px; border: 1px;">
+  <button type="button" class="btn btn-outline-primary">Preguntas Frecuentes</button>
+
+</div>
+
+
     <!---------------------------------------CIERRE DE CARRUSEL--------------------------------------->
 
     <!---------------------------------------INICIO-PRODUCTOS--------------------------------------->
@@ -144,6 +151,7 @@ include_once "conexion.php";
         </div> 
       </div>
     </div>
+
 
      <h5 class="sorteo"> Servicios de Loteria <hr size="4"></h5>
     
