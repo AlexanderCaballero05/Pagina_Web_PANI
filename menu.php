@@ -105,7 +105,7 @@
           Premios</a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"><!-- Lista del Item Institución-->
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
                Institución
               </a>
@@ -166,13 +166,25 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Gcia. de Imprenta</a></li>
-                    <li><a class="dropdown-item" href="#">Gcia. de Comercialización</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. de Comercializaci&oacute;n</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
                   </ul>
-                </li>              
+                </li>    
+                <li class="nav-item dropdown">
+                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    COCOIN
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./cocoinView.php">Comit&eacute; control Interno</a></li>
+                  </ul>
+                 
+                </li>
+                         
               </ul>
-            </li>
+            </li><!--Final del item institucion-->
+
+          
 
         <li class="nav-item">
           <a class="nav-link" href="contacto.php">

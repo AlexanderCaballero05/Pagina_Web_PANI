@@ -139,7 +139,7 @@ include_once "conexion.php";
               <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
             </div>
            <div class="mx-auto">
-           <a href="https://portalunico.iaip.gob.hn/#/portal=359" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
+           <a href="https://portalunico.iaip.gob.hn/portal=359" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
            </div>
         </div> 
       </div>
