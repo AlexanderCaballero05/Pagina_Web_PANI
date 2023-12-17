@@ -144,8 +144,11 @@ include_once "conexion.php";
         </div> 
       </div>
     </div>
+
+     <h5 class="sorteo"> Servicios de Loteria <hr size="4"></h5>
     
-    <div class="container-de-comites">
+     <h3 class="sorteo"> Enlaces de interes <hr size="4"></h3>
+    <div class="container-de-comites"> <!-- Comite-->
           <p>Comites PANI</p>
       <div class="container-comite">
           <div class="card">

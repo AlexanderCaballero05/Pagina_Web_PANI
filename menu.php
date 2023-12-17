@@ -118,6 +118,7 @@
                     <!--<li><a class="dropdown-item" href="institucion.php">Historia</a></li>-->
                     <li><a class="dropdown-item" href="institucion.php">Misión/Visión</a></li>
                     <li><a class="dropdown-item" href="institucion.php">Valores</a></li>
+                    <li><a class="dropdown-item" href="./docsInstitucionalView.php">Documentos Institucionales</a></li>
                     <li><hr class="dropdown-divider"/></li>
                     <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>   
                   </ul>
