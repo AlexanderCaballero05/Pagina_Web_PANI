@@ -67,6 +67,10 @@ include_once "conexion.php";
      ?>  
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
 <body>
+<a href="https://api.whatsapp.com/send?phone=50433120275" class="btn-wsp" target="_blank" style="bottom:60px !important;">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
+
      <!---------------------------------------INICIO DE CARRUSEL--------------------------------------->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators ms-5">
@@ -185,6 +189,7 @@ include_once "conexion.php";
         text:'prueba'
     });
 });</script>
+ <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </body>
 
 
