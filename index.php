@@ -110,8 +110,7 @@ include_once "conexion.php";
 </div>
 
 <div style="margin-left: 16px; margin-top: 80px; border: 1px;">
-  <button type="button" class="btn btn-outline-primary">Preguntas Frecuentes</button>
-
+<a href="./preguntasFrecuentes.php"><button type="button" class="btn btn-outline-primary">Preguntas Frecuentes</button></a>
 </div>
 
 
