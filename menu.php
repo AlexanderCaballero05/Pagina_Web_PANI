@@ -180,6 +180,14 @@
                   </ul>
                  
                 </li>
+                <li class="nav-item dropdown"><!--Comite de probidad y etica-->
+                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Probidad
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./probaEticaView.php">Comit&eacute; de probidad y &eacute;tica</a></li>
+                  </ul>
+                </li>
                          
               </ul>
             </li><!--Final del item institucion-->
