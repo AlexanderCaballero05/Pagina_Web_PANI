@@ -67,6 +67,10 @@ include_once "conexion.php";
      ?>  
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
 <body>
+<a href="https://api.whatsapp.com/send?phone=50433120275" class="btn-wsp" target="_blank" style="bottom:60px !important;">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
+
      <!---------------------------------------INICIO DE CARRUSEL--------------------------------------->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators ms-5">
@@ -104,6 +108,12 @@ include_once "conexion.php";
     <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
+
+<div style="margin-left: 16px; margin-top: 80px; border: 1px;">
+<a href="./preguntasFrecuentes.php"><button type="button" class="btn btn-outline-primary">Preguntas Frecuentes</button></a>
+</div>
+
+
     <!---------------------------------------CIERRE DE CARRUSEL--------------------------------------->
 
     <!---------------------------------------INICIO-PRODUCTOS--------------------------------------->
@@ -139,13 +149,17 @@ include_once "conexion.php";
               <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
             </div>
            <div class="mx-auto">
-           <a href="https://portalunico.iaip.gob.hn/#/portal=359" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
+           <a href="https://portalunico.iaip.gob.hn/portal=359" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
            </div>
         </div> 
       </div>
     </div>
+
+
+     <h5 class="sorteo"> Servicios de Loteria <hr size="4"></h5>
     
-    <div class="container-de-comites">
+     <h3 class="sorteo"> Enlaces de interes <hr size="4"></h3>
+    <div class="container-de-comites"> <!-- Comite-->
           <p>Comites PANI</p>
       <div class="container-comite">
           <div class="card">
@@ -185,6 +199,7 @@ include_once "conexion.php";
         text:'prueba'
     });
 });</script>
+ <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </body>
 
 

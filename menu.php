@@ -29,15 +29,23 @@
         Arnold Caballero             05/04/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR
       -------------------------------------------------------------------------------------------------->
    <?php
-        /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST consulta-premios-mayor*/
-        include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
-        $_PremiosMayor = new obtenerEndPointMayor;
-        $datos = $_PremiosMayor->obtenerDatos();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-mayor*/
+        // include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
+        // $_PremiosMayor = new obtenerEndPointMayor;
+        // $datos = $_PremiosMayor->obtenerDatos();
 
-        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
-        $_PremiosMenor = new obtenerEndPointMenor;
-        $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-menor*/
+        // include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
+        // $_PremiosMenor = new obtenerEndPointMenor;
+        // $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-LaGrande*/
+        // include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
+        // $_PremiosLaGrande = new ObtenerEndPointLaGrande;
+        // $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
     ?>
 
 <!DOCTYPE html>
@@ -92,7 +100,7 @@
           Premios</a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"><!-- Lista del Item Institución-->
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
                Institución
               </a>
@@ -105,6 +113,7 @@
                     <!--<li><a class="dropdown-item" href="institucion.php">Historia</a></li>-->
                     <li><a class="dropdown-item" href="institucion.php">Misión/Visión</a></li>
                     <li><a class="dropdown-item" href="institucion.php">Valores</a></li>
+                    <li><a class="dropdown-item" href="./docsInstitucionalView.php">Documentos Institucionales</a></li>
                     <li><hr class="dropdown-divider"/></li>
                     <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>   
                   </ul>
@@ -153,13 +162,33 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Gcia. de Imprenta</a></li>
-                    <li><a class="dropdown-item" href="#">Gcia. de Comercialización</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. de Comercializaci&oacute;n</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
                   </ul>
-                </li>              
+                </li>    
+                <li class="nav-item dropdown">
+                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    COCOIN
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./cocoinView.php">Comit&eacute; control Interno</a></li>
+                  </ul>
+                 
+                </li>
+                <li class="nav-item dropdown"><!--Comite de probidad y etica-->
+                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Probidad
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./probaEticaView.php">Comit&eacute; de probidad y &eacute;tica</a></li>
+                  </ul>
+                </li>
+                         
               </ul>
-            </li>
+            </li><!--Final del item institucion-->
+
+          
 
         <li class="nav-item">
           <a class="nav-link" href="contacto.php">
