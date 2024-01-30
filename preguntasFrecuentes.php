@@ -1,5 +1,5 @@
 <?php
-include_once './menu.php';
+include_once './template/menu.php';
 ?>
 
 <body>
@@ -78,5 +78,5 @@ $(document).ready(function() {
 </body>
 
 <?php
-// include_once './footer.php';
+// include_once './template/footer.php';
 ?>

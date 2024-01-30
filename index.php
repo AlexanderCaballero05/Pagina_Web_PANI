@@ -63,7 +63,7 @@ include_once "conexion.php";
 ?>
     <!---------------------------------------INICIO DE MENU--------------------------------------->
     <?php
-     include "menu.php";
+     include "template/menu.php";
      ?>  
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
 <body>
@@ -189,7 +189,7 @@ include_once "conexion.php";
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
 
         <?php
-        include "footer.php";
+        include "template/footer.php";
         ?>
   <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->        
 <script>$("#botonprueba").click(function(){
