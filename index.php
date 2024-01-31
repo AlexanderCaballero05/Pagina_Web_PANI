@@ -25,11 +25,10 @@
           Historial de Cambio
         -----------------------------------------------------------------------
             Programador               Fecha                      Descripcion
-          
         ----------------------------------------------------------------------->
 <?php
 
-include_once "conexion.php";
+// include_once "conexion.php";
 // //Sorteo Mayor
 //   $query_mayor = "SELECT imagen FROM tbl_imagen where estado = 'ACTIVO' and TIPO_CATEGORIA_IMAGEN = '1';";
 //   $consulta_mayor =$conn->query($query_mayor);
@@ -61,17 +60,16 @@ include_once "conexion.php";
   $objeto_consulta_carrucel3 = mysqli_fetch_object($consulta_carrucel3);
   $imagen_carrucel3 = $objeto_consulta_carrucel3->imagen; */
 ?>
-    <!---------------------------------------INICIO DE MENU--------------------------------------->
-    <?php
-     include "template/menu.php";
-     ?>  
-    <!---------------------------------------CIERRE DE MENU--------------------------------------->
+<!---------------------------------------INICIO DE MENU--------------------------------------->
+<?php
+include "template/menu.php";
+?>  
+<!---------------------------------------CIERRE DE MENU--------------------------------------->
 <body>
-<a href="https://api.whatsapp.com/send?phone=50433120275" class="btn-wsp" target="_blank" style="bottom:60px !important;">
-	    <i class="fa fa-whatsapp icono"></i>
-	</a>
+<!-- plugin de whatsApp -->
+<a href="https://api.whatsapp.com/send?phone=50433120275" class="btn-wsp" target="_blank" style="bottom:60px !important;"><i class="fa fa-whatsapp icono"></i></a>
 
-     <!---------------------------------------INICIO DE CARRUSEL--------------------------------------->
+<!---------------------------------------------------------------INICIO DE CARRUSEL--------------------------------------------------------------------------------->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators ms-5">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -81,19 +79,19 @@ include_once "conexion.php";
  
   <div class="carousel-inner mx-auto w-85">
     <div class="carousel-item active">
-      <img src="img/Institucional.png" class="d-block w-100" alt="panihonduras" >
+      <img src="template/img/Institucional.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
   
     <div class="carousel-item">
-      <img src="img/La_Chica.png" class="d-block w-100" alt="panihonduras" >
+      <img src="template/img/La_Chica.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
     
     <div class="carousel-item">
-      <img src="img/La_Grande_Web.png" class="d-block w-100" alt="panihonduras" >
+      <img src="template/img/La_Grande_Web.png" class="d-block w-100" alt="panihonduras" >
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
@@ -108,97 +106,163 @@ include_once "conexion.php";
     <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
+  <!----------------------------------------------------------------CIERRE DE CARRUSEL---------------------------------------------------------------------------->
 
-<div style="margin-left: 16px; margin-top: 80px; border: 1px;">
-<a href="./preguntasFrecuentes.php"><button type="button" class="btn btn-outline-primary">Preguntas Frecuentes</button></a>
-</div>
-
-
-    <!---------------------------------------CIERRE DE CARRUSEL--------------------------------------->
-
-    <!---------------------------------------INICIO-PRODUCTOS--------------------------------------->
- <!--  <button class="btn btn-info" id="botonprueba" >Boton Prueba</button>-->
-    <h2 class="sorteo animate__animated aanimate__bounce" id="Sorteos">Sorteos
-    <hr size="4">
-    </h2>
-    <div class="conteiner-principal-sorteos">
-      <div class="conteiner-sorteos">
-        <div class="card border-0 rounded-0"><!--Imagen sorteo mayor-->
-          <div class="card-body">
-          <img src="img/1253.jpg" class="card-img-top" alt="panihonduras">
+    <!---------------------------------------------------------------INICIO-SORTEOS----------------------------------------------------------------------------------->
+      <div class="conteiner-principal-sorteos"><!--Inicio contenedor sorteos-->
+         <H2 class="sorteo" id="Sorteos">Sorteos</H2>
+         <div class="bar-main">
+           <div class="bar-hr-inner"></div>
+         </div>
+        <div class="conteiner-sorteos">
+          <div class="card border-0 rounded-0"><!--Imagen sorteo mayor-->
+            <div class="card-body">
+            <img src="template/img/1253.jpg" class="card-img-top" alt="panihonduras">
+            </div>
+          </div>
+          <div class="card border-0 rounded-0"><!--Imagen sorteo menor-->
+            <div class="card-body">
+            <img src="template/img/3445.jpg" class="card-img-top" alt="panihonduras">
+            </div>
+          </div>          
+          <div class="card border-0 rounded-0">
+            <div class="card-body">
+              <div class="face-social-pani">
+                <div class="fb-page" data-href="https://www.facebook.com/panihonduras" data-tabs="timeline,messages" data-width="380" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                  <blockquote cite="https://www.facebook.com/panihonduras" class="fb-xfbml-parse-ignore">
+                      <a href="https://www.facebook.com/panihonduras">PANI Honduras</a>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card border-0 rounded-0"><!--Imagen sorteo menor-->
-          <div class="card-body">
-          <img src="img/3445.jpg" class="card-img-top" alt="panihonduras">
-          </div>
-        </div>          
-      </div>
-        
+      </div><!--Fin contenedor sorteos-->
 
-           <div class="face-social-pani">
-            <div class="fb-page" data-href="https://www.facebook.com/panihonduras" data-tabs="timeline,messages" data-width="380" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/panihonduras" class="fb-xfbml-parse-ignore">
-                  <a href="https://www.facebook.com/panihonduras">PANI Honduras</a>
-              </blockquote>
-            </div>
-           </div>
-
-           <div class="banner-panni">
+        <!-- <div class="banner-panni">
             <div>
               <a href="https://www.salud.gob.hn/site/index.php/covid19" target="_blank" style="background-color: transparent !important;"><button type="button" class="btn btn-danger" style="padding: 12px !important;">Seguimiento covid-19 Honduras</button></a>
             </div>
            <div class="mx-auto">
-           <a href="https://portalunico.iaip.gob.hn/portal=359" target="_blank" style="background-color: transparent !important;"><img src="img/portal.png"></a>
+             <a href="https://portalunico.iaip.gob.hn/portal=359" target="_blank" style="background-color: transparent !important;"><img src="template/img/portal.png"></a>
            </div>
-        </div> 
-      </div>
-    </div>
-
-
-     <h5 class="sorteo"> Servicios de Loteria <hr size="4"></h5>
+        </div>  -->
     
-     <h3 class="sorteo"> Enlaces de interes <hr size="4"></h3>
-    <div class="container-de-comites"> <!-- Comite-->
-          <p>Comites PANI</p>
-      <div class="container-comite">
-          <div class="card">
-            <a href="http://sielho.iaip.gob.hn" target="_blank" rel="noopener noreferrer"> <img src="img/SIELHO.png" alt="" class="card-img-top" width="30" height="30"></a>
-           
+    <!---------------------------------------------------------------INICIO-SERVICIOS Y TRAMITES----------------------------------------------------------------------------------->
+    <div class="conteiner" style="background-color: #f9f9f9; padding-bottom: 50px !important;">
+      <div class="row"><!--Cabecera de servicios-->
+        <div class="col-lg-12">
+          <h2 class="sorteo">Tr&aacute;mites y Servicios</h2>
+            <div class="bar-main">
+              <div class="bar-hr-inner"></div>
+            </div>
+        </div>
+      </div>
+      <div class="row margin-container"><!-- row Cuerpo de servicios-->
+        <div class="row row-cols-1 row-cols-md-3 g-4"><!-- Col Cuerpo de servicios-->
+          <div class="col">
+            <div class="card">
+              <img src="./template/img/SIELHO.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Horarios de venta de Loteria</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href="#" class="btn btn-primary">Leer m&aacute;s</a>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <a href="http://honducompras.gob.hn" target="_blank" rel="noopener noreferrer"><img src="img/honducompras.png" alt="" class="card-img-top"></a>
-            
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
           </div>
-
-          <div class="card">
-          <a href="http://onadici.gob.hn" target="_blank" rel="noopener noreferrer"><img src="img/ONADICI.png" alt="" class="card-img-top"></a>
-          </div>
-
-          <div class="card">
-          <a href="http://tsc.gob.hn" target="_blank" rel="noopener noreferrer"><img src="img/TSC.png" alt="" class="card-img-top"></a>
-          </div>
-          <div class="card">
-            <img src="img/etica.png" alt="" class="card-img-top">
-          </div>
+        </div>
       </div>
     </div>
-      
+    <!---------------------------------------------------------------INICIO-ENLACES----------------------------------------------------------------------------------->
+    <div class="container" style="padding-bottom: 50px !important;">
+      <div class="row"><!--Cabecera de enlaces-->
+        <div class="col-lg-12">
+          <h2 class="sorteo">Enlaces de Interes</h2>
+            <div class="bar-main">
+              <div class="bar-hr-inner"></div>
+            </div>
+        </div>
+      </div>
+      <div class="row margin-container"><!--Cuerpo de enlaces-->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="./template/img/SIELHO.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <a href="#" class="btn btn-primary">Ir <i class="bi bi-arrow-right-circle"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------------------------------------INICIO SECCION PREGUNTAS FRECUENTES----------------------------------------------------------------------------------->
+    <div class="conteiner" style="background-color: #f9f9f9; padding-bottom: 50px !important;">
+      <div class="row"><!--Cabecera de servicios-->
+        <div class="col-lg-12">
+          <h2 class="sorteo">Preguntas Frecuentes</h2>
+            <div class="bar-main">
+              <div class="bar-hr-inner"></div>
+            </div>
+        </div>
+      </div>
+      <div class="row margin-container"><!-- row Cuerpo de servicios-->
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                ¿Como puedo vender Loteria?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!---------------------------------------FINAL-PRODUCTOS--------------------------------------->
 
 <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
-
         <?php
         include "template/footer.php";
         ?>
   <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->        
-<script>$("#botonprueba").click(function(){
-    Swal.fire({
-        type:'info',
-        title:'mensaje',
-        text:'prueba'
-    });
-});</script>
+
  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </body>
 

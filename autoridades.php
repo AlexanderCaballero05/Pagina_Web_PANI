@@ -24,7 +24,7 @@ include_once "template/menu.php";
 
             </div>
             <div class="col-sm-5">
-                    <img src="img/1253.jpg" alt="" width="419" height="470" sizes="(max-width: 419px) 100vw, 419px">
+                    <img src="template/img/1253.jpg" alt="" width="419" height="470" sizes="(max-width: 419px) 100vw, 419px">
             </div>
         </div>
 
@@ -36,7 +36,7 @@ include_once "template/menu.php";
 
             </div>
             <div class="col-sm-5">
-                    <img src="img/1253.jpg" alt="" width="419" height="470" sizes="(max-width: 419px) 100vw, 419px">
+                    <img src="template/img/1253.jpg" alt="" width="419" height="470" sizes="(max-width: 419px) 100vw, 419px">
             </div>
         </div>
         <?php

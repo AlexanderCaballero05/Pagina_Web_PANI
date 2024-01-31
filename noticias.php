@@ -141,7 +141,7 @@ html {
                      </div>
 
                 <div class="mx-auto" style="margin-top: 50px; margin-left: 60px !important;">
-                   <a href="https://portalunico.iaip.gob.hn/#/homeLanding" target="_blank" style="background-color: transparent !important;"><img width="139" height="174" src="img/portal.png"></a>
+                   <a href="https://portalunico.iaip.gob.hn/#/homeLanding" target="_blank" style="background-color: transparent !important;"><img width="139" height="174" src="template/img/portal.png"></a>
                 </div><!--Banner de noticias-->
                 
     </div><!--fin de Div izquierdo-->

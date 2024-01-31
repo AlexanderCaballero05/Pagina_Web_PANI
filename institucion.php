@@ -80,7 +80,7 @@
 
     <div class="container">
       <div class="row mb-5 pe-5">
-      <img src="img/organigrama.jpg" alt="Organigrama_PANI">
+      <img src="template/img/organigrama.jpg" alt="Organigrama_PANI">
       </div>
     </div>
     <!----------------------------------------Final seccion institucion---------------------------------->
