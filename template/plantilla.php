@@ -48,33 +48,8 @@
     </head>
 <body>
 
-
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="VpSfLOcE"></script>
-<?php
-/**================================================================================================
- *                                       MENU DEL SITIO
- =================================================================================================*/
-include "views/menu.php";
-//Si no se envia recurso en el endpoint o se envia el nombre de index, se cargara el inicio de la pagina
-if (!isset($_GET["recurso"]) || $_GET["recurso"] == "index" ) 
-
-  include "views/inicio.php";
-
-if(isset($_GET["recurso"])){
-  if($_GET["recurso"] == "inicio" || $_GET["recurso"] == "contacto" || $_GET["recurso"] == "institucion"){
-
-    include_once "views/".$_GET["recurso"].".php";
-
-  }
- }
- /**================================================================================================
- *                                       FOOTER DE LA PAGINA
- =================================================================================================*/
- include "views/footer.php";
- 
-?>  
-      
 
  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
  <!--Scripts del sitio web-->

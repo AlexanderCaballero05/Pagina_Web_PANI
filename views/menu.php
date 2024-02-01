@@ -123,7 +123,7 @@
           
 
         <li class="nav-item">
-          <a class="nav-link" href="contacto.php">
+          <a class="nav-link" href="contacto">
             Contacto
           </a>
         </li>
