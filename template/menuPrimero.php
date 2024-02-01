@@ -28,7 +28,7 @@
         Arnold Caballero             28/03/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR-MENOR
         Arnold Caballero             05/04/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR
       -------------------------------------------------------------------------------------------------->
-   <?php
+      <?php
         // /*Codigo php en donde se instancia la clase que obtiene
         //   la API-REST para consulta-premios-mayor*/
         // include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
@@ -82,7 +82,7 @@
     <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
       <ul class="navbar-nav mx-auto mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">
+          <a class="nav-link active" aria-current="page" href="../views/inicio.php">
             Inicio
           </a>
         </li>
