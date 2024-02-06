@@ -159,31 +159,92 @@
         </div>
       </div>
       <div class="row margin-container"><!-- row Cuerpo de servicios-->
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                ¿Como puedo vender Loteria?
+      <section class="questions">
+         <!-- questions -->
+        <div class="section-center">
+          <!-- single question -->
+          <article class="question">
+              <!-- question title -->
+            <div class="question-title">
+              <p>¿Cómo puedo ayudar?</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
               </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                dolore illo dolores quia nemo doloribus quaerat, magni numquam
+                repellat reprehenderit.
+              </p>
+            </div>
+          </article>
+          <!-- end of single question -->
+          <!-- single question -->
+          <article class="question">
+              <!-- question title -->
+            <div class="question-title">
+              <p>¿Cómo puedo ayudar?</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
               </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
             </div>
-          </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                dolore illo dolores quia nemo doloribus quaerat, magni numquam
+                repellat reprehenderit.
+              </p>
+            </div>
+          </article>
+          <!-- end of single question -->
         </div>
+      </section>
+        <!-- end of questions -->
       </div>
     </div>
+<script>
+    //using selectors inside the element
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach( 
+      (question) => {
+      const btn = question.querySelector(".question-btn");//devueleve el primer elemento boton
+      
+      btn.addEventListener("click", () => {
+        // console.log(question);
+
+        questions.forEach(function (item) {
+          if (item !== question) {
+            item.classList.remove("show-text");
+          }
+        });
+        question.classList.toggle("show-text");
+      });
+    });
+
+    // traversing the dom
+    // const btns = document.querySelectorAll(".question-btn");
+
+    // btns.forEach(function (btn) {
+    //   btn.addEventListener("click", function (e) {
+    //     const question = e.currentTarget.parentElement.parentElement;
+
+    //     question.classList.toggle("show-text");
+    //   });
+    // });
+      
+
+</script>

@@ -39,8 +39,10 @@
         <link rel="stylesheet" href="template/css/bootstrap-icons.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link href="template/css/style.css" rel="stylesheet"/>
-        <link href="template/css/style_bottom.css" rel="stylesheet"/>
+        
+        <link href="template/css/style.css" rel="stylesheet"/><!-- styles -->
+        <link href="template/css/style_bottom.css" rel="stylesheet"/><!-- styles del boton de la nueva loteria -->
+        <link href="template/css/style-inicio.css" rel="stylesheet"/><!-- styles  para el inicio -->
 
         <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
         <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
