@@ -92,28 +92,31 @@
         </div>
       </div>
       <div class="row margin-container"><!-- row Cuerpo de servicios-->
-        <div class="row row-cols-1 row-cols-md-3 g-4"><!-- Col Cuerpo de servicios-->
-          <div class="col">
-            <div class="card">
-              <img src="./template/img/SIELHO.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Horarios de venta de Loteria</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-primary">Leer m&aacute;s</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
+      <section class="menu">
+        <!-- filter botons -->
+        <div class="btn-container">
+          <buton class="filter-btn" type="button" data-id="all">all</buton>
+          <buton class="filter-btn" type="button" data-id="Loteria Mayor">Lot Mayor</buton>
+          <buton class="filter-btn" type="button" data-id="Loteria Menor">Lot Menor</buton>
         </div>
+        <!-- servicios items -->
+        <div class="section-center-services">
+          <!-- Single servicio -->
+          <article class="menu-item">
+            <img src="SIELHO.png" alt="" class="photo">
+            <div class="item-info">
+              <header>
+                <h4></h4>
+              </header>
+              <p class="item-text">
+           
+              </p>
+            </div>
+          </article>
+          <!-- end of Single servicio -->
+        </div>
+       
+      </section>
       </div>
     </div>
     <!---------------------------------------------------------------INICIO-ENLACES----------------------------------------------------------------------------------->
@@ -215,8 +218,10 @@
         <!-- end of questions -->
       </div>
     </div>
+    <!---------------------------------------------------------------FIN SECCION PREGUNTAS FRECUENTES----------------------------------------------------------------------------------->
 <script>
-    //using selectors inside the element
+  // --------------------------------Script de presguntas--------------------------------
+      //using selectors inside the element
     const questions = document.querySelectorAll(".question");
 
     questions.forEach( 
@@ -245,6 +250,112 @@
     //     question.classList.toggle("show-text");
     //   });
     // });
+</script>
+
+<script>
+  //----------------------------------------- Script de servicios ----------------------------------------------------------------
+  //objeto de servicios
+  // class servicios{
+  //   static contadorDeServicios = 0;
+  //   constructor(title, tipoServicio, descripcion,imagen){
+  //     this.idServicios = ++servicios.contadorDeServicios;
+  //     this.title = title;
+  //     this.tipoServicio = tipoServicio;
+  //     this.descripcion = descripcion;
+  //     this.imagen = imagen;
+  //   }
+  // }
+
+
+  // let loteria = new servicios('Venta loteria menor', 'Loteria Mayor', 'Informacion sobre los requisitos de venta', '../template/img/SIELHO.png');
+
+
+
+
+
+  // // document.getElementById('title-service').innerHTML = loteriaMenor.title;
+
+  // //  let loteriaMayor = new servicios('Venta loteria mayor', 'Loteria Menor', 'Informacion sobre los requisitos de venta', '../template/img/SIELHO.png');
+
+  const servicios = [
+    { 
+      id: 1,
+      title: 'Venta loteria menor',
+      tipoServicio: 'Loteria Mayor',
+      descripcion: 'Informacion sobre los requisitos de venta',
+      imagen: './SIELHO.png'
+    }
+    ,
+
+    { id: 2,
+      title: 'Venta loteria mayor',
+      tipoServicio: 'Loteria Menor',
+      descripcion: 'Informacion sobre los requisitos de venta',
+      imagen: '../template/img/SIELHO.png'
+    },
+    {
+      id: 3,
+      title: 'Venta loteria grande',
+      tipoServicio: 'Loteria la grande',
+      descripcion: 'Informacion sobre los requisitos de venta',
+      imagen: '../template/img/SIELHO.png'
+    }
+  
+  ];
+
+  // Mostrar menu de servicios
+  const sectionCenter = document.querySelector('.section-center-services');
+  // load services
+  window.addEventListener("DOMContentLoaded", function() 
+  {
+    displayMenuItem(servicios);
+
+  });
+
+  function displayMenuItem(menuItems) {
+    let displayMenu = menuItems.map(function (item) {
+
+      return `<article class="menu-item">
+            <img src="${item.imagen}" alt=${item.title} class="photo">
+            <div class="item-info">
+              <header>
+                <h4>${item.title}</h4>
+              </header>
+              <p class="item-text">
+                ${item.descripcion}
+              </p>
+            </div>
+          </article>`
+      });
+      displayMenu = displayMenu.join("");
+      sectionCenter.innerHTML = displayMenu;
+  }
+
+// Codigo de botones de filter
+
+const filterBtns = document.querySelectorAll(".filter-btn");
+//load filter items
+filterBtns.forEach(function(btn){
+  btn.addEventListener("click", function(e) 
+  {
+    const servicio = e.currentTarget.dataset.id;
+    const tipoServicio = servicios.filter(function(servicioItem) 
+    {
+      if(servicioItem.tipoServicio === servicio) {
+        return servicioItem;
+
+      }    
+    });
+    if (servicio === "all") 
+    {
+      displayMenuItem(servicios);
       
+    } else {
+      displayMenuItem(tipoServicio);
+      
+    }
+
+  });
+});
 
 </script>
