@@ -92,34 +92,33 @@
         </div>
       </div>
       <div class="row margin-container"><!-- row Cuerpo de servicios-->
+      <!-- container main servicios-->
       <section class="menu">
         <!-- filter botons -->
         <div class="btn-container">
-          <buton class="filter-btn" type="button" data-id="all">all</buton>
+          <buton class="filter-btn" type="button" data-id="General">General</buton>
           <buton class="filter-btn" type="button" data-id="Loteria Mayor">Lot Mayor</buton>
           <buton class="filter-btn" type="button" data-id="Loteria Menor">Lot Menor</buton>
         </div>
-        <!-- servicios items -->
+        <!-- container de los items de servicios -->
         <div class="section-center-services">
-          <!-- Single servicio -->
+          <!-- item de servicio single-->
           <article class="menu-item">
-            <img src="SIELHO.png" alt="" class="photo">
+            <img src="" alt="" class="photo">
             <div class="item-info">
               <header>
                 <h4></h4>
               </header>
-              <p class="item-text">
-           
-              </p>
+              <p class="item-text"></p>
             </div>
           </article>
-          <!-- end of Single servicio -->
+          <!-- end of item de servicio single-->
         </div>
-       
+        <!-- end of container de items de servicios-->
       </section>
       </div>
     </div>
-    <!---------------------------------------------------------------INICIO-ENLACES----------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------INICIO-ENLACES----------------------------------------------------------------------------------->
     <div class="container" style="padding-bottom: 50px !important;">
       <div class="row"><!--Cabecera de enlaces-->
         <div class="col-lg-12">
@@ -141,7 +140,7 @@
             </div>
             <div class="col">
               <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="./template/img/SIELHO.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -153,7 +152,7 @@
     </div>
     <!---------------------------------------------------------------INICIO SECCION PREGUNTAS FRECUENTES----------------------------------------------------------------------------------->
     <div class="conteiner" style="background-color: #f9f9f9; padding-bottom: 50px !important;">
-      <div class="row"><!--Cabecera de servicios-->
+      <div class="row"><!--Cabecera de preguntas-->
         <div class="col-lg-12">
           <h2 class="sorteo">Preguntas Frecuentes</h2>
             <div class="bar-main">
@@ -161,9 +160,9 @@
             </div>
         </div>
       </div>
-      <div class="row margin-container"><!-- row Cuerpo de servicios-->
+      <div class="row margin-container">
       <section class="questions">
-         <!-- questions -->
+         <!-- questions body -->
         <div class="section-center">
           <!-- single question -->
           <article class="question">
@@ -223,139 +222,114 @@
   // --------------------------------Script de presguntas--------------------------------
       //using selectors inside the element
     const questions = document.querySelectorAll(".question");
-
-    questions.forEach( 
-      (question) => {
-      const btn = question.querySelector(".question-btn");//devueleve el primer elemento boton
-      
-      btn.addEventListener("click", () => {
-        // console.log(question);
-
-        questions.forEach(function (item) {
-          if (item !== question) {
+    //recorre los items de preguntas para detectar el boton que de click a la pregunta y mostrar la informacion
+    questions.forEach( (question) => 
+    {
+      const btn = question.querySelector(".question-btn");//accede al boton de esa pregunta
+      //detecta el el evento click del boton de esa pregunta
+      btn.addEventListener("click", () => 
+      {
+        questions.forEach( (item) => //vuelve a recorrer las preguntas
+        {
+          if (item !== question) //si no se registro el evento click del boton de esa pregunta
+          {
             item.classList.remove("show-text");
           }
         });
         question.classList.toggle("show-text");
       });
     });
-
-    // traversing the dom
-    // const btns = document.querySelectorAll(".question-btn");
-
-    // btns.forEach(function (btn) {
-    //   btn.addEventListener("click", function (e) {
-    //     const question = e.currentTarget.parentElement.parentElement;
-
-    //     question.classList.toggle("show-text");
-    //   });
-    // });
 </script>
 
 <script>
-  //----------------------------------------- Script de servicios ----------------------------------------------------------------
-  //objeto de servicios
-  // class servicios{
-  //   static contadorDeServicios = 0;
-  //   constructor(title, tipoServicio, descripcion,imagen){
-  //     this.idServicios = ++servicios.contadorDeServicios;
-  //     this.title = title;
-  //     this.tipoServicio = tipoServicio;
-  //     this.descripcion = descripcion;
-  //     this.imagen = imagen;
-  //   }
-  // }
+    //----------------------------------------- Script de servicios ----------------------------------------------------------------
 
+    // // document.getElementById('title-service').innerHTML = loteriaMenor.title;
 
-  // let loteria = new servicios('Venta loteria menor', 'Loteria Mayor', 'Informacion sobre los requisitos de venta', '../template/img/SIELHO.png');
+    // //  let loteriaMayor = new servicios('Venta loteria mayor', 'Loteria Menor', 'Informacion sobre los requisitos de venta', '../template/img/SIELHO.png');
 
+    const servicios = [
+      { 
+        id: 1,
+        title: 'Venta loteria menor',
+        tipoServicio: 'Loteria Mayor',
+        descripcion: 'Informacion sobre los requisitos de venta',
+        imagen: './template/img/SIELHO.png'
+      }
+      ,
 
+      { id: 2,
+        title: 'Venta loteria mayor',
+        tipoServicio: 'Loteria Menor',
+        descripcion: 'Informacion sobre los requisitos de venta',
+        imagen: './template/img/SIELHO.png'
+      },
+      {
+        id: 3,
+        title: 'Venta loteria grande',
+        tipoServicio: 'Loteria la grande',
+        descripcion: 'Informacion sobre los requisitos de venta',
+        imagen: './template/img/SIELHO.png'
+      }
+    
+    ];
 
+    // Mostrar menu de servicios
+    const sectionCenter = document.querySelector('.section-center-services');
 
-
-  // // document.getElementById('title-service').innerHTML = loteriaMenor.title;
-
-  // //  let loteriaMayor = new servicios('Venta loteria mayor', 'Loteria Menor', 'Informacion sobre los requisitos de venta', '../template/img/SIELHO.png');
-
-  const servicios = [
-    { 
-      id: 1,
-      title: 'Venta loteria menor',
-      tipoServicio: 'Loteria Mayor',
-      descripcion: 'Informacion sobre los requisitos de venta',
-      imagen: './SIELHO.png'
-    }
-    ,
-
-    { id: 2,
-      title: 'Venta loteria mayor',
-      tipoServicio: 'Loteria Menor',
-      descripcion: 'Informacion sobre los requisitos de venta',
-      imagen: '../template/img/SIELHO.png'
-    },
+    // sección de tramites y servicios cada vez que se carga la pagina
+    window.addEventListener("DOMContentLoaded", () => {  displayMenuItem(servicios); });
+  /**
+   * function que retorna el codigo HTML de los servicios
+   * {param} recibe un dato tipo objeto con Estructura de datos de pares clave-valor
+   * @return mixed
+   */
+    function displayMenuItem(itemServicios)
     {
-      id: 3,
-      title: 'Venta loteria grande',
-      tipoServicio: 'Loteria la grande',
-      descripcion: 'Informacion sobre los requisitos de venta',
-      imagen: '../template/img/SIELHO.png'
+      let displayMenu = itemServicios.map( (item) => {
+
+        return `<article class="menu-item">
+              <img src="${item.imagen}" alt=${item.title} class="photo">
+              <div class="item-info">
+                <header>
+                  <h4>${item.title}</h4>
+                </header>
+                <p class="item-text">
+                  ${item.descripcion}
+                </p>
+              </div>
+            </article>`
+        });
+
+        displayMenu = displayMenu.join("");
+        sectionCenter.innerHTML = displayMenu;
     }
-  
-  ];
 
-  // Mostrar menu de servicios
-  const sectionCenter = document.querySelector('.section-center-services');
-  // load services
-  window.addEventListener("DOMContentLoaded", function() 
-  {
-    displayMenuItem(servicios);
+  // Codigo de botones de filter
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  //load filter items
 
-  });
+  filterBtns.forEach( (btn) => 
+  { 
+      btn.addEventListener("click", (e) => 
+      {
+        const servicio = e.currentTarget.dataset.id;
 
-  function displayMenuItem(menuItems) {
-    let displayMenu = menuItems.map(function (item) {
+          const tipoServicio = servicios.filter( (servicioItem) => 
+          {
+            if(servicioItem.tipoServicio === servicio) {
+              return servicioItem;
+            }    
+          });
 
-      return `<article class="menu-item">
-            <img src="${item.imagen}" alt=${item.title} class="photo">
-            <div class="item-info">
-              <header>
-                <h4>${item.title}</h4>
-              </header>
-              <p class="item-text">
-                ${item.descripcion}
-              </p>
-            </div>
-          </article>`
+        if (servicio === "General") 
+        {
+          displayMenuItem(servicios);
+          
+        } else {
+          displayMenuItem(tipoServicio);
+        }
       });
-      displayMenu = displayMenu.join("");
-      sectionCenter.innerHTML = displayMenu;
-  }
-
-// Codigo de botones de filter
-
-const filterBtns = document.querySelectorAll(".filter-btn");
-//load filter items
-filterBtns.forEach(function(btn){
-  btn.addEventListener("click", function(e) 
-  {
-    const servicio = e.currentTarget.dataset.id;
-    const tipoServicio = servicios.filter(function(servicioItem) 
-    {
-      if(servicioItem.tipoServicio === servicio) {
-        return servicioItem;
-
-      }    
-    });
-    if (servicio === "all") 
-    {
-      displayMenuItem(servicios);
-      
-    } else {
-      displayMenuItem(tipoServicio);
-      
-    }
-
   });
-});
 
 </script>
