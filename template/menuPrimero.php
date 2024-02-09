@@ -28,16 +28,24 @@
         Arnold Caballero             28/03/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR-MENOR
         Arnold Caballero             05/04/2023                Consumo de API-REST-PANI-LOTERIA-MAYOR
       -------------------------------------------------------------------------------------------------->
-   <?php
-        /*Codigo php en donde se instancia la clase que obtiene
-          la API-REST consulta-premios-mayor*/
-        include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
-        $_PremiosMayor = new obtenerEndPointMayor;
-        $datos = $_PremiosMayor->obtenerDatos();
+      <?php
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-mayor*/
+        // include_once 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MAYOR.php';
+        // $_PremiosMayor = new obtenerEndPointMayor;
+        // $datos = $_PremiosMayor->obtenerDatos();
 
-        include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
-        $_PremiosMenor = new obtenerEndPointMenor;
-        $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-menor*/
+        // include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-MENOR.php';
+        // $_PremiosMenor = new obtenerEndPointMenor;
+        // $datosMenor = $_PremiosMenor->ObtenerDatosMenor();
+
+        // /*Codigo php en donde se instancia la clase que obtiene
+        //   la API-REST para consulta-premios-LaGrande*/
+        // include 'Consumir-APIS/WS-API-CONSULTA-PREMIOS-LAGRANDE.php';
+        // $_PremiosLaGrande = new ObtenerEndPointLaGrande;
+        // $datosLaGrande = $_PremiosLaGrande->getDatosLaGrande();
     ?>
 
 <!DOCTYPE html>
@@ -47,18 +55,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANI-Instituto Nacional de la Infancia</title>
-    <link rel="icon" href="img/pani1.png" type="image/png">
+    <link rel="icon" href="template/img/pani1.png" type="image/png">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="template/css/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="css/style.css" rel="stylesheet"/>
-    <link href="css/style_bottom.css" rel="stylesheet"/>
+    <link href="template/css/style.css" rel="stylesheet"/>
+    <link href="template/css/style_bottom.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
     <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
-    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free/template/css/all.min.css">
 </head>
 <body>
 
@@ -66,7 +74,7 @@
  <nav class="navbar navbar-expand-md navbar-light bg-light fixed p-2" id="main_navbar">
     <div class="container-fluid">
    <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
-    <img src="img/pani1.png" class="margin d-block" alt="logo-pani" width="160px">
+    <img src="template/img/pani1.png" class="margin d-block" alt="logo-pani" width="160px">
   </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -74,7 +82,7 @@
     <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
       <ul class="navbar-nav mx-auto mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">
+          <a class="nav-link active" aria-current="page" href="../views/inicio.php">
             Inicio
           </a>
         </li>
@@ -92,7 +100,7 @@
           Premios</a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"><!-- Lista del Item Institución-->
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
                Institución
               </a>
@@ -106,7 +114,7 @@
                     <li><a class="dropdown-item" href="institucion.php">Misión/Visión</a></li>
                     <li><a class="dropdown-item" href="institucion.php">Valores</a></li>
                     <li><hr class="dropdown-divider"/></li>
-                    <li><a class="dropdown-item" href="img/organigrama.jpg" target="_blank">Organigrama</a></li>   
+                    <li><a class="dropdown-item" href="template/img/organigrama.jpg" target="_blank">Organigrama</a></li>   
                   </ul>
                 </li><!--Quienes somos-->
 
@@ -153,13 +161,33 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Gcia. de Imprenta</a></li>
-                    <li><a class="dropdown-item" href="#">Gcia. de Comercialización</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. de Comercializaci&oacute;n</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
                     <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
                   </ul>
-                </li>              
+                </li>    
+                <li class="nav-item dropdown">
+                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    COCOIN
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./cocoinView.php">Comit&eacute; control Interno</a></li>
+                  </ul>
+                 
+                </li>
+                <li class="nav-item dropdown"><!--Comite de probidad y etica-->
+                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Probidad
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./probaEticaView.php">Comit&eacute; de probidad y &eacute;tica</a></li>
+                  </ul>
+                </li>
+                         
               </ul>
-            </li>
+            </li><!--Final del item institucion-->
+
+          
 
         <li class="nav-item">
           <a class="nav-link" href="contacto.php">
@@ -197,7 +225,7 @@
           <div class="form-group">
             <!--input tipo Loteria-->
                 <div class="form-floating mb-3">
-                  <select class="form-select" id ="select-tipo-sorteo" aria-label="Floating label select example" style="background-image: url(img/40319.png)">
+                  <select class="form-select" id ="select-tipo-sorteo" aria-label="Floating label select example" style="background-image: url(template/img/40319.png)">
                     <option  autofocus selected disabled>--Seleccione--</option>
                     <option value = "1">Mayor</option>
                     <option value = "2">Menor</option>

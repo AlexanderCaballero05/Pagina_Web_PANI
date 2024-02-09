@@ -31,7 +31,7 @@
 <!--INICIO DE QUERYS CON PHP-->
 <?php 
 
-    include_once "conexion.php";
+    // include_once "conexion.php";
 
     $query = "SELECT CONTENIDO FROM TBL_EMPRESA WHERE CODIGO_TIPO_DATO = 1;";
     $Consulta =$conn->query($query);
@@ -51,9 +51,7 @@
 ?>
 <!--FIN DE QUERYS CON PHP-->
  <!---------------------------------------INICIO DE MENU--------------------------------------->
- <?php
-  include "menu.php";
-  ?>
+
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
 <body>
         <!---------INICIO SECCION DE CONTACTO----------->
@@ -109,10 +107,4 @@
             </div>
         </div>
         <!--Fin de Contacto--> 
-
-        <!-------------------------------------------INICIO DE FOOTER---------------------------------------------------------->
-        <?php
-        include "footer.php";
-        ?>
-        <!-------------------------------------------FIN DE FOOTER---------------------------------------------------------->
 </body>

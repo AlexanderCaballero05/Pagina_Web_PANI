@@ -35,12 +35,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PANI-Instituto Nacional de la Infancia</title>
-    <link rel="icon" href="/img/pani1.png" type="image/png">
+    <link rel="icon" href="/template/img/pani1.png" type="image/png">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="template/css/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="template/css/style.css" rel="stylesheet"/>
 </head>
 <body>
 <footer class="footer">
@@ -48,7 +48,7 @@
     <div class="box"><!--box del logo-->
       <figure>
         <a href="">
-          <img src="img/pani2.png" alt="Logo Pani">
+          <img src="template/img/pani2.png" alt="Logo Pani">
         </a>
       </figure>
     </div>
@@ -69,7 +69,7 @@
       <div class="">
         <!--Plugin de facebook en tiempo real-->
         <a href="https://play.google.com/store/apps/details?id=com.pani.honduras&hl=es" target="_blank">
-        <img src="img/googleplay.png" alt="logo google play">
+        <img src="template/img/googleplay.png" alt="logo google play">
         </a>
         <!--Boton de subir al inicio-->
         <button class="toTop" id="toTop">

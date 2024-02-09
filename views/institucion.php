@@ -27,14 +27,7 @@
             Programador               Fecha                      Descripcion
           
         ----------------------------------------------------------------------->
-
-
  
-    <!---------------------------------------INICIO DE MENU--------------------------------------->
-  <?php
-    include "menu.php";
-  ?>
-    <!---------------------------------------CIERRE DE MENU--------------------------------------->
  <body>
     <!------------------------------Seccion Institucion---------------------------------->
     <div class="container m-auto">
@@ -80,13 +73,8 @@
 
     <div class="container">
       <div class="row mb-5 pe-5">
-      <img src="img/organigrama.jpg" alt="Organigrama_PANI">
+      <img src="template/img/organigrama.jpg" alt="Organigrama_PANI">
       </div>
     </div>
     <!----------------------------------------Final seccion institucion---------------------------------->
-    <!-------------------------------------------INICIO DE FOOTER-------------------------------------->
-        <?php
-        include "footer.php";
-        ?>
-   <!-------------------------------------------FINAL DE FOOTER/-------------------------------------->
 </body>

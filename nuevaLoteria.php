@@ -29,7 +29,7 @@
         ----------------------------------------------------------------------->
 <!---------------------------------------INICIO DE MENU--------------------------------------->
 <?php
-  include "menu.php";
+  include "template/menu.php";
   ?>
     <!---------------------------------------CIERRE DE MENU--------------------------------------->
   
@@ -87,7 +87,7 @@
                     <strong><p>Contáctanos y adquiere tu Fábrica De Millonarios: 3312-0275 (ÚNICAMENTE WHATSAPP)</p></strong>
                     <strong><p>Correo de ayuda: ayuda@pani.hn 🤑🤑🤑</p></strong>
                     <!-- Imagen modal -->
-                     <img id="myImg" src="img/vender-loteria.jpg" alt="PANI" style="width:100%;max-width:300px">
+                     <img id="myImg" src="template/img/vender-loteria.jpg" alt="PANI" style="width:100%;max-width:300px">
                     <div id="myModal" class="modal">
                         <span class="close">&times;</span>
                         <img class="modal-content" id="img01">
@@ -163,6 +163,6 @@
 </script>
   <!-------------------------------------------INICIO DE FOOTER---------------------------------------------------------->
   <?php
-     include "footer.php";
+     include "template/footer.php";
   ?>
   <!-------------------------------------------FIN DE FOOTER------------------------------------------------------------->    
