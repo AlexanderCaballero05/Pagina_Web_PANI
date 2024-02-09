@@ -346,8 +346,8 @@ con porcentajes*/
   background-color:#2b9eb3 !important; 
   font-family: 'Raleway', sans-serif !important; 
   font-size: 15px;
- /* position: fixed;
-  bottom: 0;*/
+  /* position: fixed; bottom: 0;  */
+
 }
 
 .footer .grupo-1{
@@ -610,6 +610,66 @@ padding: 40px 10px;
 font-family:Verdana, Geneva, Tahoma, sans-serif;
 background-image: linear-gradient(70deg);
 border: solid 0.5px #030b0d;
+}
 
 
+
+/*
+------Cabezera de sesión de probidad y etica
+*/
+
+.cabezera {
+  width: 80%;
+  margin: 0 auto;
+  display: relative;
+  padding-bottom: 1em;
+}
+
+.imagen {
+  margin: auto;
+  width: 80%;
+  image-resolution: inherit;
+  padding: 0 auto;
+  align-items: center;
+}
+
+.section-center-probidad {
+  max-width: 980px;
+  margin: auto;
+}
+
+.apartado-item {
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  margin: 1rem auto 1rem auto; ;
+}
+
+.item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+
+.item-title p {
+  margin-bottom: 0;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-1);
+}
+
+.text-body {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.text-body p {
+  margin-bottom: 0;
+}
+/* hide text */
+.text-body {
+  display: none;
+}
+.mostrar-text .text-body {
+  display: block;
 }

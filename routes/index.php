@@ -20,7 +20,8 @@ class Route{
             $recurso = $_GET["recurso"]; //obtenemos el valor del recurso
             if( $recurso == "inicio" || 
                 $recurso == "contacto" || 
-                $recurso == "institucion"
+                $recurso == "institucion" ||
+                $recurso == "probidad-etica"
                 ):
                include_once "views/".$recurso.".php";
              endif;

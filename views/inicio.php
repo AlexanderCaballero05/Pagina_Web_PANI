@@ -165,7 +165,7 @@
          <!-- questions body -->
         <div class="section-center">
           <!-- single question -->
-          <article class="question">
+          <article class="question" >
               <!-- question title -->
             <div class="question-title">
               <p>¿Cómo puedo ayudar?</p>
