@@ -164,7 +164,7 @@
       <div class="row margin-container"><!-- row Cuerpo de servicios-->
       <section class="questions">
          <!-- questions -->
-        <div class="section-center">
+        <div class="section-center" id="section">
           <!-- single question -->
           <article class="question">
               <!-- question title -->
@@ -221,24 +221,93 @@
     <!---------------------------------------------------------------FIN SECCION PREGUNTAS FRECUENTES----------------------------------------------------------------------------------->
 <script>
   // --------------------------------Script de presguntas--------------------------------
-      //using selectors inside the element
+
+  // ------------------------------------------------------------------ Crear una nueva presgunta---------------------------------------------
+    //esta es la referencia del nodo padre del article
+    const section = document.getElementById("section");
+    //creacion del nodo article en el document
+    const article = document.createElement("article");
+    //agrego una class al element article
+    article.classList.add("question");
+    //añado el nodo del article
+    section.appendChild(article);
+
+    const questionTitle = document.createElement("div");
+    questionTitle.classList.add("question-title");
+    article.appendChild(questionTitle);
+   
+    const tagP = document.createElement('p');
+    const textTagp = document.createTextNode("Hola");
+    tagP.appendChild(textTagp);
+    questionTitle.appendChild(tagP);
+
+    const button = document.createElement('button');
+    button.classList.add("question-btn");
+    button.innerHTML = '<span class="plus-icon"><i class="far fa-plus-square"></i></span><span class="minus-icon"><i class="far fa-minus-square"></i></span>';
+    questionTitle.appendChild(button);
+
+    const questionText = document.createElement("div");
+    questionText.classList.add("question-text");
+    article.appendChild(questionText);
+
+    const pText = document.createElement('p');
+    const textP = document.createTextNode("Hola a todos");
+    pText.appendChild(textP);
+    questionText.appendChild(pText);
+   
+    //----------------------------------------------------------------Iterar los elementos para mostrarlos-----------------
+    
+    //accedemos a los elementos
     const questions = document.querySelectorAll(".question");
+    //iteremos la lista de elementos que contengan la clase
+    for (const question of questions){ 
+       agregarclaseMostrar(question);
+     } 
 
-    questions.forEach( 
-      (question) => {
-      const btn = question.querySelector(".question-btn");//devueleve el primer elemento boton
-      
-      btn.addEventListener("click", () => {
-        // console.log(question);
+     //funcion que se llama por cada elemento iterado
+     function agregarclaseMostrar (question)
+     {
+        const btn = question.querySelector(".question-btn");//capturo el boton que me dara el evento click
+        btn.addEventListener("click", () => 
+        {
+          //itero los elementos que no hayan registrado el evento click
+          for (const item of questions){ 
+            removerClassMostrar(item, question);
+          }
+          //se le añadira la clase al elemento  que haya registrado el evento click
+          question.classList.toggle("show-text");
 
-        questions.forEach(function (item) {
-          if (item !== question) {
+        });
+    };
+
+    function removerClassMostrar(item, question){
+        if (item !== question) {
             item.classList.remove("show-text");
           }
-        });
-        question.classList.toggle("show-text");
-      });
-    });
+    }
+
+    /**
+     * Codigo mas avanzado y entendible
+     */
+
+    // questions.forEach( 
+    //   (question) => {
+    //   const btn = question.querySelector(".question-btn");//devueleve el primer elemento boton
+      
+    //   btn.addEventListener("click", () => {
+    //     // console.log(question);
+
+    //     questions.forEach(function (item) {
+    //       if (item !== question) {
+    //         item.classList.remove("show-text");
+    //       }
+    //     });
+    //     question.classList.toggle("show-text");
+    //   });
+    // });
+
+
+
 
     // traversing the dom
     // const btns = document.querySelectorAll(".question-btn");
