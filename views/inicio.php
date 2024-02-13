@@ -166,11 +166,11 @@
                 <h4>Vender loteria CHICA</h4>
               </header>
               <p class="item-text">Informacion sobre los requisitos de venta</p>
-                <button class="btn modal-btn-chica">
-                        Leer M&aacute;s
+                <button class="btn modal-btn">
+                        Leer M&aacute;ss
                 </button>
                 <!-- modal -->
-              <div class="modal-overlay-chica">
+              <div class="modal-overlay">
                 <div class="modal-container">
                   <h3>Requisitos</h3>
                   <ul class="list-group">
@@ -183,7 +183,7 @@
                        
                       </li>
                 </ul>
-                  <button class="close-btn-chica"><i class="fas fa-times"></i></button>
+                  <button class="close-btn"><i class="fas fa-times"></i></button>
                 </div>
               </div>
                 <!-- end modal -->
@@ -451,30 +451,41 @@
 // when user clicks modal-btn add .open-modal to modal-overlay
 // when user clicks close-btn remove .open-modal from modal-overlay
 
-//modal la mayor
-const modalBtnMayor = document.querySelector(".modal-btn");
-const modal = document.querySelector(".modal-overlay");
-const closeBtn = document.querySelector(".close-btn");
-
-modalBtnMayor.addEventListener("click", function () {
-  modal.classList.add("open-modal");
-});
-closeBtn.addEventListener("click", function () {
-  modal.classList.remove("open-modal");
-});
 
 
-//modal la chica
-const modalBtnChica = document.querySelector(".modal-btn-chica");
-const modalChica = document.querySelector(".modal-overlay-chica");
-const closeBtnChica = document.querySelector(".close-btn-chica");
+/**
+ * itero cado uno de los servicios y mando a llamar la funcion segun el evento
+ * en esta logica el modal de cada servivio contiene el estilo de visibility: hidden, por ende no se visualiza el modal
+ * Con este codigo capturo dinamicamente el elemento del servicio que el usuario quiere visualizar y le aplico una clase con el estilo visibility: hidden
+ */
 
-modalBtnChica.addEventListener("click", () =>{
-   modalChica.classList.add("open-modal");
-});
-closeBtnChica.addEventListener("click", function () {
-  modalChica.classList.remove("open-modal");
-});
+ //acceso a los elementos de servicios
+ const servicios = document.querySelectorAll(".menu-item");
+for (const servicio of servicios) 
+{
+        mostrarModal(servicio); 
+        ocultarModal(servicio);
+}
+
+  function mostrarModal(servicio)
+  {
+    const btnAbrir = servicio.querySelector('.modal-btn');
+    const modal = servicio.querySelector('.modal-overlay');//obtengo la estructura HTML del modal a visualizar
+    btnAbrir.addEventListener("click", () => //capturo el event click del boton que abre el modal
+    {   
+      modal.classList.add("open-modal"); //al modal a visualizar se aplica la clase que contiene el estilo de visibilitid: visible, y se muestra dinamicamente
+    });
+  }
+
+  function ocultarModal(servicio)
+  {
+    const btnCerrar = servicio.querySelector('.close-btn');
+    const modal = servicio.querySelector('.modal-overlay');
+    btnCerrar.addEventListener("click", () =>
+    {   
+      modal.classList.remove("open-modal");
+    });
+  }
 
 
 
