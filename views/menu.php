@@ -113,7 +113,7 @@
                     Probidad
                  </a>
                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="./probaEticaView.php">Comit&eacute; de probidad y &eacute;tica</a></li>
+                    <li><a class="dropdown-item" href="probidad-etica">Comit&eacute; de probidad y &eacute;tica</a></li>
                   </ul>
                 </li>
                          
