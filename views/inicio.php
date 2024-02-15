@@ -95,21 +95,98 @@
       <!-- container main servicios-->
       <section class="menu">
         <!-- filter botons -->
-        <div class="btn-container">
+        <!-- <div class="btn-container">
           <buton class="filter-btn" type="button" data-id="General">General</buton>
           <buton class="filter-btn" type="button" data-id="Loteria Mayor">Lot Mayor</buton>
           <buton class="filter-btn" type="button" data-id="Loteria Menor">Lot Menor</buton>
-        </div>
+        </div> -->
         <!-- container de los items de servicios -->
         <div class="section-center-services">
           <!-- item de servicio single-->
           <article class="menu-item">
-            <img src="" alt="" class="photo">
+            <img src="./template/img/SIELHO.png" alt="" class="photo">
             <div class="item-info">
               <header>
-                <h4></h4>
+                <h4>Vender loteria mayor</h4>
               </header>
-              <p class="item-text"></p>
+              <p class="item-text">Informacion sobre los requisitos de venta</p>
+                <button class="btn modal-btn">
+                        Leer M&aacute;s
+                </button>
+                <!-- modal -->
+              <div class="modal-overlay">
+                <div class="modal-container">
+                  <h3>Requisitos</h3>
+                  <ul class="list-group">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        1. Permiso de operaci&oacute;n vigente 
+                        <span class="badge bg-primary rounded-pill">1</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        2. Referencias Personales 
+                        <span class="badge bg-primary rounded-pill">2</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        3. Referencias Bancarias o Comerciales 
+                        <span class="badge bg-primary rounded-pill">2</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        4. Escritura del Negocio 
+                        <span class="badge bg-primary rounded-pill">1</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        5. Permiso de Operaci&oacute;n;
+                        <span class="badge bg-primary rounded-pill">1</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        6. Copia de la Identidad
+                        <span class="badge bg-primary rounded-pill">1</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        7. Copia de RTN
+                        <span class="badge bg-primary rounded-pill">1</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        8. Croquis
+                        <span class="badge bg-primary rounded-pill">1</span>
+                      </li>
+                </ul>
+                  <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+                <!-- end modal -->
+            </div>
+          </article>
+          <!-- end of item de servicio single-->
+          <!-- item de servicio single-->
+          <article class="menu-item">
+            <img src="./template/img/SIELHO.png" alt="" class="photo">
+            <div class="item-info">
+              <header>
+                <h4>Vender loteria CHICA</h4>
+              </header>
+              <p class="item-text">Informacion sobre los requisitos de venta</p>
+                <button class="btn modal-btn">
+                        Leer M&aacute;ss
+                </button>
+                <!-- modal -->
+              <div class="modal-overlay">
+                <div class="modal-container">
+                  <h3>Requisitos</h3>
+                  <ul class="list-group">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        1. Copia de Identidad 
+                      
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        2. Comprar una bolsa de Chica en Banrural precio Lps. 1,383.00 
+                       
+                      </li>
+                </ul>
+                  <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+                <!-- end modal -->
             </div>
           </article>
           <!-- end of item de servicio single-->
@@ -318,89 +395,169 @@
 
     // //  let loteriaMayor = new servicios('Venta loteria mayor', 'Loteria Menor', 'Informacion sobre los requisitos de venta', '../template/img/SIELHO.png');
 
-    const servicios = [
-      { 
-        id: 1,
-        title: 'Venta loteria menor',
-        tipoServicio: 'Loteria Mayor',
-        descripcion: 'Informacion sobre los requisitos de venta',
-        imagen: './template/img/SIELHO.png'
-      }
-      ,
+  //   const servicios = [
+      
+  //     { id: 1,
+  //       title: 'Vender loteria mayor',
+  //       tipoServicio: 'Loteria Mayor',
+  //       descripcion: 'Informacion sobre los requisitos de venta',
+  //       imagen: './template/img/SIELHO.png',
+  //       requisitos: '1. Copia Identidad'
+  //     },
 
-      { id: 2,
-        title: 'Venta loteria mayor',
-        tipoServicio: 'Loteria Menor',
-        descripcion: 'Informacion sobre los requisitos de venta',
-        imagen: './template/img/SIELHO.png'
-      },
-      {
-        id: 3,
-        title: 'Venta loteria grande',
-        tipoServicio: 'Loteria la grande',
-        descripcion: 'Informacion sobre los requisitos de venta',
-        imagen: './template/img/SIELHO.png'
-      }
+  //     { 
+  //       id: 2,
+  //       title: 'Vender loteria menor',
+  //       tipoServicio: 'Loteria Menor',
+  //       descripcion: 'Informacion sobre los requisitos de venta',
+  //       imagen: './template/img/SIELHO.png'
+  //     }
+  //     ,
+  //     {
+  //       id: 3,
+  //       title: 'Pago de premios loteria mayor',
+  //       tipoServicio: 'Loteria Mayor',
+  //       descripcion: 'Informacion sobre el pago de premios loteria mayor',
+  //       imagen: './template/img/SIELHO.png'
+  //     },
+  //     ,
+  //     {
+  //       id: 3,
+  //       title: 'Pago de premios loteria menor',
+  //       tipoServicio: 'Loteria Menor',
+  //       descripcion: 'Informacion sobre el pago de premios loteria menor',
+  //       imagen: './template/img/SIELHO.png'
+  //     }
     
-    ];
+  //   ];
 
-    // Mostrar menu de servicios
-    const sectionCenter = document.querySelector('.section-center-services');
+   
 
-    // sección de tramites y servicios cada vez que se carga la pagina
-    window.addEventListener("DOMContentLoaded", () => {  displayMenuItem(servicios); });
-  /**
-   * function que retorna el codigo HTML de los servicios
-   * {param} recibe un dato tipo objeto con Estructura de datos de pares clave-valor
-   * @return mixed
-   */
-    function displayMenuItem(itemServicios)
-    {
-      let displayMenu = itemServicios.map( (item) => {
 
-        return `<article class="menu-item">
-              <img src="${item.imagen}" alt=${item.title} class="photo">
-              <div class="item-info">
-                <header>
-                  <h4>${item.title}</h4>
-                </header>
-                <p class="item-text">
-                  ${item.descripcion}
-                </p>
-              </div>
-            </article>`
-        });
+  // //   // fetch("http://localhost:80/Pagina_Web_PANI/Consumir-APIS/API-Administrador-web-site")
+  // //   // .then((response) => response.json())
+  // //   // .then((data) => {
+  // //   //   console.log(data);
+  // //   // });
 
-        displayMenu = displayMenu.join("");
-        sectionCenter.innerHTML = displayMenu;
-    }
+  // //   // fetch("http://localhost:80/Pagina_Web_PANI/Consumir-APIS/API-Administrador-web-site")
+  // //   // .then((res) => res.json())
+  // //   // .then((data) => {
+  // //   //     console.log(data);
+  // //   // })
+  
+  //   // Mostrar menu de servicios
+  //   const sectionCenter = document.querySelector('.section-center-services');
 
-  // Codigo de botones de filter
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  //load filter items
+  //   // sección de tramites y servicios cada vez que se carga la pagina
+  //   window.addEventListener("DOMContentLoaded", () => {  displayMenuItem(servicios); });
+  // /**
+  //  * function que retorna el codigo HTML de los servicios
+  //  * {param} recibe un dato tipo objeto con Estructura de datos de pares clave-valor
+  //  * @return mixed
+  //  */
+  //   function displayMenuItem(itemServicios)
+  //   {
+  //     let displayMenu = itemServicios.map( (item) => {
 
-  filterBtns.forEach( (btn) => 
-  { 
-      btn.addEventListener("click", (e) => 
-      {
-        const servicio = e.currentTarget.dataset.id;
+        // return `<article class="menu-item">
+        //       <img src="${item.imagen}" alt=${item.title} class="photo">
+        //       <div class="item-info">
+        //         <header>
+        //           <h4>${item.title}</h4>
+        //         </header>
+        //         <p class="item-text">
+        //           ${item.descripcion}
+        //         </p>
+        //         <button class="btn modal-btn" value="${item.id}">
+        //                 Leer M&aacute;s
+        //         </button>
+        //         <!-- modal -->
+        //       <div class="modal-overlay" value="${item.id}">
+        //         <div class="modal-container">
+        //           <h3>modal content</h3>
+        //           <button class="close-btn"><i class="fas fa-times"></i></button>
+        //         </div>
+        //       </div>
+        //         <!-- end modal -->
 
-          const tipoServicio = servicios.filter( (servicioItem) => 
-          {
-            if(servicioItem.tipoServicio === servicio) {
-              return servicioItem;
-            }    
-          });
+        //       </div>
+        //     </article>`
+  //       });
 
-        if (servicio === "General") 
-        {
-          displayMenuItem(servicios);
+  //       displayMenu = displayMenu.join("");
+  //       sectionCenter.innerHTML = displayMenu;
+  //   }
+
+  // // Codigo de botones de filter
+  // const filterBtns = document.querySelectorAll(".filter-btn");
+  // //load filter items
+
+  // filterBtns.forEach( (btn) => 
+  // { 
+  //     btn.addEventListener("click", (e) => 
+  //     {
+  //       const servicio = e.currentTarget.dataset.id;
+
+  //         const tipoServicio = servicios.filter( (servicioItem) => 
+  //         {
+  //           if(servicioItem.tipoServicio === servicio) {
+  //             return servicioItem;
+  //           }    
+  //         });
+
+  //       if (servicio === "General") 
+  //       {
+  //         displayMenuItem(servicios);
           
-        } else {
-          displayMenuItem(tipoServicio);
-        }
-      });
-  });
+  //       } else {
+  //         displayMenuItem(tipoServicio);
+  //       }
+  //     });
+  // });
+  
+// select modal-btn,modal-overlay,close-btn
+// listen for click events on modal-btn and close-btn
+// when user clicks modal-btn add .open-modal to modal-overlay
+// when user clicks close-btn remove .open-modal from modal-overlay
+
+
+
+/**
+ * itero cado uno de los servicios y mando a llamar la funcion segun el evento
+ * en esta logica el modal de cada servivio contiene el estilo de visibility: hidden, por ende no se visualiza el modal
+ * Con este codigo capturo dinamicamente el elemento del servicio que el usuario quiere visualizar y le aplico una clase con el estilo visibility: hidden
+ */
+
+ //acceso a los elementos de servicios
+ const servicios = document.querySelectorAll(".menu-item");
+for (const servicio of servicios) 
+{
+        mostrarModal(servicio); 
+        ocultarModal(servicio);
+}
+
+  function mostrarModal(servicio)
+  {
+    const btnAbrir = servicio.querySelector('.modal-btn');
+    const modal = servicio.querySelector('.modal-overlay');//obtengo la estructura HTML del modal a visualizar
+    btnAbrir.addEventListener("click", () => //capturo el event click del boton que abre el modal
+    {   
+      modal.classList.add("open-modal"); //al modal a visualizar se aplica la clase que contiene el estilo de visibilitid: visible, y se muestra dinamicamente
+    });
+  }
+
+  function ocultarModal(servicio)
+  {
+    const btnCerrar = servicio.querySelector('.close-btn');
+    const modal = servicio.querySelector('.modal-overlay');
+    btnCerrar.addEventListener("click", () =>
+    {   
+      modal.classList.remove("open-modal");
+    });
+  }
+
+
 
 </script>
 
