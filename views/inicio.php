@@ -129,25 +129,16 @@
         </div>
       </div>
       <div class="row margin-container"><!--Cuerpo de enlaces-->
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card">
-                <img src="./template/img/SIELHO.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <a href="#" class="btn btn-primary">Ir <i class="bi bi-arrow-right-circle"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="./template/img/SIELHO.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
+      <section class="enlaces">
+        <!-- seccion de enlaces -->
+        <div class="section-center-enlaces">
+          <!-- item de enlace single-->
+          <article class="enlace-item">
+						<img src="./template/img/ONADICI.png" alt="" class="image-enlace">
+						<a href="http://" target="_blank" class="btn btn-enlace">ir</a>
+          </article>
         </div>
+       </section>
       </div>
     </div>
     <!---------------------------------------------------------------INICIO SECCION PREGUNTAS FRECUENTES----------------------------------------------------------------------------------->
@@ -332,4 +323,55 @@
       });
   });
 
+</script>
+
+
+<script>
+  //------------------------------------------------ENLACES DEL PANI-----------------------------------------------
+    //datos estaticos
+  const enlaces = [
+      
+      { id: 1,
+        nombre: 'ONADICI',
+        url: 'https://www.onadici.gob.hn/',
+        categoria: '3',
+        imagen: './template/img/ONADICI.png',
+        descripcion: 'plataforma onadici',
+        estado: 'activo'
+      },
+
+      { id: 2,
+        nombre: 'sielho',
+        url: 'https://sielho.iaip.gob.hn/',
+        categoria: '3',
+        imagen: './template/img/SIELHO.png',
+        descripcion: 'plataforma sielho',
+        estado: 'activo'
+      }
+
+    ];
+
+    const sectionCenterEnlaces = document.querySelector('.section-center-enlaces');
+
+    window.addEventListener("DOMContentLoaded", () => { 
+       displayMenuItem(enlaces); 
+      });
+
+      function displayMenuItem(itemEnlaces) 
+      {
+        let displayMenu = itemEnlaces.map( (item) => 
+        {
+          return `
+              <article class="enlace-item">
+                <img src=${item.imagen} alt="" class="image-enlace">
+                <a href="${item.url}" target="_blank" class="btn btn-enlace">ir</a>
+              </article>
+          `;
+
+        });
+        displayMenu = displayMenu.join("");
+        sectionCenterEnlaces.innerHTML = displayMenu;
+
+      }
+       
 </script>
