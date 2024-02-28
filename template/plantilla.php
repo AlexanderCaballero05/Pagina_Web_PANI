@@ -44,6 +44,7 @@
         <link href="template/css/style_bottom.css" rel="stylesheet"/><!-- styles del boton de la nueva loteria -->
         <link href="template/css/style-inicio.css" rel="stylesheet"/><!-- styles  para el inicio -->
         <link href="template/css/style-services.css" rel="stylesheet"/><!-- styles  para el inicio -->
+        <link href="template/css/style-enlaces.css" rel="stylesheet"/><!-- styles  para el inicio -->
 
         <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
         <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
@@ -67,6 +68,8 @@
     <script src="js/popper.min.js"></script>
     <script src="js/main.js"></script>
     <script> new bootnavbar();</script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 <!--Scripts del sitio web-->
 </body>
 

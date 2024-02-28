@@ -584,6 +584,39 @@ for (const servicio of servicios)
         descripcion: 'plataforma sielho',
         estado: 'activo'
       }
+      ,
+      {
+        id: 3,
+        nombre: 'TCS',
+        url: 'https://www.tsc.gob.hn/',
+        categoria: '3',
+        imagen: './template/img/TSC.png',
+        descripcion: 'plataforma Tribunal superior de cuenta',
+        estado: 'activo'
+      },
+
+      {
+        id: 4,
+        nombre: 'HONDUCOMPRAS',
+        url: 'https://honducompras.gob.hn/',
+        categoria: '3',
+        imagen: './template/img/honducompras.png',
+        descripcion: 'plataforma IAIP',
+        estado: 'Plataforma de Honducompras Honduras'
+      },
+      {
+        id: 5,
+        nombre: 'portal de transparencia',
+        url: 'https://portalunico.iaip.gob.hn/portal=359',
+        categoria: '3',
+        imagen: './template/img/portal.png',
+        descripcion: 'plataforma portal de transparencia',
+        estado: 'activo'
+      },
+   
+
+
+
 
     ];
 

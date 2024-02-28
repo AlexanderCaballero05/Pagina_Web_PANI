@@ -1,0 +1,54 @@
+
+  /*====================================================================================
+===================================== Enlaces PANI====================================
+=====================================================================================*/
+.enlaces{
+    padding: 5rem 0;
+  }
+  
+  .section-center-enlaces {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .enlace-item {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
+  }
+  
+  .image-enlace {
+    object-fit: cover;
+    height: 150px;
+    border: 0.10rem solid #c9cfcf8b;
+    border-radius: 0.5rem;;
+  }
+  
+  .image-enlace:not(.logo) {
+    width: 100%;
+  }
+  
+  .btn-enlace{
+    color: #414242 !important;
+    background: #f6ffff !important;
+  }
+  
+  .btn-enlace:hover{
+    color: #000000!important;
+    background: #62efff!important;
+  }
+  
+  @media screen and (max-width: 768px){
+    .section-center-enlaces {
+      width: 80%;
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+  }
