@@ -104,12 +104,12 @@
         <div class="section-center-services">
           <!-- item de servicio single-->
           <article class="menu-item">
-            <img src="./template/img/SIELHO.png" alt="" class="photo">
+            <img src="./template/img/La_Grande_Web.png" alt="La grande" class="photo">
             <div class="item-info">
               <header>
                 <h4>Vender loteria mayor</h4>
               </header>
-              <p class="item-text">Informacion sobre los requisitos de venta</p>
+              <p class="item-text">Informaci&oacute;n sobre los requisitos para la venta</p>
                 <button class="btn modal-btn">
                         Leer M&aacute;s
                 </button>
@@ -160,14 +160,14 @@
           <!-- end of item de servicio single-->
           <!-- item de servicio single-->
           <article class="menu-item">
-            <img src="./template/img/SIELHO.png" alt="" class="photo">
+            <img src="./template/img/La_Chica.png" alt="La chica" class="photo">
             <div class="item-info">
               <header>
                 <h4>Vender loteria CHICA</h4>
               </header>
-              <p class="item-text">Informacion sobre los requisitos de venta</p>
+              <p class="item-text">Informaci&oacute;n sobre los requisitos para la venta</p>
                 <button class="btn modal-btn">
-                        Leer M&aacute;ss
+                        Leer M&aacute;s
                 </button>
                 <!-- modal -->
               <div class="modal-overlay">
