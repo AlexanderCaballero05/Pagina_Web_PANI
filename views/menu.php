@@ -19,11 +19,10 @@
             Sorteos
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMayor">Lotería Mayor</a></li>
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loteriaMenor">Lotería Menor</a></li>
-            <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="">Lotería La Grande</button></li>
-
-            <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li>
+            <li><a class="dropdown-item" href="#loteria" data-toggle="" data-bs-toggle="" data-bs-target="">Lotería Mayor</a></li>
+            <li><a class="dropdown-item" href="#loteria" data-toggle="" data-bs-toggle="" data-bs-target="">Lotería Menor</a></li>
+            <!-- <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="">Lotería La Grande</button></li> -->
+            <!-- <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li> -->
             <!-- <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li> -->
             
           </ul>

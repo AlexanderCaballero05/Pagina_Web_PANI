@@ -42,7 +42,7 @@
   <!----------------------------------------------------------------CIERRE DE CARRUSEL---------------------------------------------------------------------------->
 
     <!---------------------------------------------------------------INICIO-SORTEOS----------------------------------------------------------------------------------->
-      <div class="conteiner-principal-sorteos"><!--Inicio contenedor sorteos-->
+      <div class="conteiner-principal-sorteos" id="loteria"><!--Inicio contenedor sorteos-->
          <H2 class="sorteo" id="Sorteos">Sorteos</H2>
          <div class="bar-main">
            <div class="bar-hr-inner"></div>
