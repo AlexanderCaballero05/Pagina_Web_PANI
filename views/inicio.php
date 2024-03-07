@@ -85,7 +85,7 @@
     <div class="conteiner" style="background-color: #f9f9f9; padding-bottom: 50px !important;">
       <div class="row"><!--Cabecera de servicios-->
         <div class="col-lg-12">
-          <h2 class="sorteo">Tr&aacute;mites y Servicios</h2>
+          <h2 class="sorteo" id="verTramites">Tr&aacute;mites y Servicios</h2>
             <div class="bar-main">
               <div class="bar-hr-inner"></div>
             </div>
@@ -232,54 +232,7 @@
       <section class="questions">
          <!-- questions -->
         <div class="section-center" id="section">
-          <!-- single question -->
-          <article class="question" >
-              <!-- question title -->
-            <div class="question-title">
-              <p>¿Cómo puedo ayudar?</p>
-              <button type="button" class="question-btn">
-                <span class="plus-icon">
-                  <i class="far fa-plus-square"></i>
-                </span>
-                <span class="minus-icon">
-                  <i class="far fa-minus-square"></i>
-                </span>
-              </button>
-            </div>
-            <!-- question text -->
-            <div class="question-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                dolore illo dolores quia nemo doloribus quaerat, magni numquam
-                repellat reprehenderit.
-              </p>
-            </div>
-          </article>
-          <!-- end of single question -->
-          <!-- single question -->
-          <article class="question">
-              <!-- question title -->
-            <div class="question-title">
-              <p>¿Cómo puedo ayudar?</p>
-              <button type="button" class="question-btn">
-                <span class="plus-icon">
-                  <i class="far fa-plus-square"></i>
-                </span>
-                <span class="minus-icon">
-                  <i class="far fa-minus-square"></i>
-                </span>
-              </button>
-            </div>
-            <!-- question text -->
-            <div class="question-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                dolore illo dolores quia nemo doloribus quaerat, magni numquam
-                repellat reprehenderit.
-              </p>
-            </div>
-          </article>
-          <!-- end of single question -->
+        
         </div>
       </section>
         <!-- end of questions -->
@@ -289,38 +242,89 @@
 <script>
   // --------------------------------Script de presguntas--------------------------------
 
+  const preguntas = [
+      {
+        id: 1,
+        pregunta: "¿Cómo se juegan las loterias?",
+        respuesta: "Se juegan al comprar el numero de un billete",
+        estado: "activo"
+      }, 
+      {
+        id: 2,
+        pregunta: "¿Dónde se puede comprar?",
+        respuesta: "En los puntos de ventas: Carrion, Eirpak, Almacenes Extra, Banrural a nivel Nacional  ",
+        estado: "activo"
+      },
+      {
+        id: 3,
+        pregunta: "¿Dónde puedo reclamar los premios?",
+        respuesta: "Estos se reclaman al presentar tu billete ganador en sucursales de Banrural",
+        estado: "activo"
+      },
+      {
+        id: 4,
+        pregunta: "¿Cada cuánto se juega?",
+        respuesta: "Loteria Mayor el ultimo dia del mes, Loteria Menor cada Domingo del mes",
+        estado: "activo"
+      },
+      {
+        id: 5,
+        pregunta: "¿Cómo puedo ser vendedor?",
+        respuesta: "Dirigite a la seccion de tramites y servicios de esta pagina para ver los requistos",
+        estado: "activo"
+      }
+
+      
+
+    ];
+
+
+
+
   // ------------------------------------------------------------------ Crear una nueva presgunta---------------------------------------------
-    //esta es la referencia del nodo padre del article
-    const section = document.getElementById("section");
-    //creacion del nodo article en el document
-    const article = document.createElement("article");
-    //agrego una class al element article
-    article.classList.add("question");
-    //añado el nodo del article
-    section.appendChild(article);
 
-    const questionTitle = document.createElement("div");
-    questionTitle.classList.add("question-title");
-    article.appendChild(questionTitle);
+    let agregarPreguntas = preguntas.map(function (clave) 
+    {
+        //esta es la referencia del nodo padre del article
+        const section = document.getElementById("section");
+        //creacion del nodo article en el document
+        const article = document.createElement("article");
+        //agrego una class al element article
+        article.classList.add("question");
+        //añado el nodo del article
+        section.appendChild(article);
+        const questionTitle = document.createElement("div");
+        questionTitle.classList.add("question-title");
+        article.appendChild(questionTitle);
+        const tagP = document.createElement('p');
+        const textTagp = document.createTextNode(`${clave.pregunta}`);
+        tagP.appendChild(textTagp);
+        questionTitle.appendChild(tagP);
+        const button = document.createElement('button');
+        button.classList.add("question-btn");
+        button.innerHTML = '<span class="plus-icon"><i class="far fa-plus-square"></i></span><span class="minus-icon"><i class="far fa-minus-square"></i></span>';
+        questionTitle.appendChild(button);
+        const questionText = document.createElement("div");
+        questionText.classList.add("question-text");
+        article.appendChild(questionText);
+    
+        const pText = document.createElement('p');
+        const textP = document.createTextNode(`${clave.respuesta}`);
+        pText.appendChild(textP);
+        questionText.appendChild(pText);
+    });
+
+    agregarPreguntas = agregarPreguntas.join(''); //
+    
+
+
+
+
+
    
-    const tagP = document.createElement('p');
-    const textTagp = document.createTextNode("Hola");
-    tagP.appendChild(textTagp);
-    questionTitle.appendChild(tagP);
 
-    const button = document.createElement('button');
-    button.classList.add("question-btn");
-    button.innerHTML = '<span class="plus-icon"><i class="far fa-plus-square"></i></span><span class="minus-icon"><i class="far fa-minus-square"></i></span>';
-    questionTitle.appendChild(button);
 
-    const questionText = document.createElement("div");
-    questionText.classList.add("question-text");
-    article.appendChild(questionText);
 
-    const pText = document.createElement('p');
-    const textP = document.createTextNode("Hola a todos");
-    pText.appendChild(textP);
-    questionText.appendChild(pText);
    
     //----------------------------------------------------------------Iterar los elementos para mostrarlos-----------------
     
