@@ -58,37 +58,7 @@
         <div class="container">
             <div class="row mt-5 mb-5 justify-content-center mx-auto">
                 <div class="col-sm-12 contacto mx-auto">
-                    <h2 class="text-center pt-3"><strong>CONTACTO</strong></h2>
-                    <h4 class="mx-auto ps-4 pb-2">Datos de contacto</h4>
-                <!--PHP CONTACTO -->
-                    <?php  
-                    
-                    // $objeto_consulta = mysqli_fetch_object($Consulta);
-                    // $razon_social = $objeto_consulta->CONTENIDO;
-
-                    // $objeto_consulta1 = mysqli_fetch_object($Consulta1);
-                    // $telefono = $objeto_consulta1->CONTENIDO;
-
-                    // $objeto_consulta2 = mysqli_fetch_object($Consulta2);
-                    // $email = $objeto_consulta2->CONTENIDO;
-                    
-                    // $objeto_consulta4 = mysqli_fetch_object($Consulta3);
-                    // $web = $objeto_consulta4->CONTENIDO;
-
-                    // $objeto_consulta5 = mysqli_fetch_object($Consulta4);
-                    // $direccion = $objeto_consulta5->CONTENIDO;
-                
-                    ?>    
-                <!--FIN PHP CONTACTO -->  
-                
-                    <!-- <ul>
-                        <li class="text-justify"><strong> Razón Social: </strong><?= $razon_social; ?></li>
-                        <li class="datos-contacto"><strong> Teléfono: </strong><?= $telefono; ?></i></li>
-                        <li class="datos-contacto"><strong> Email: </strong> <?= $email; ?></li>
-                        <li class="datos-contacto"><strong> Sitio Web: </strong> <?= $web;?></li>
-                        <li class="datos-contacto"><strong> Dirección:</strong> <?= $direccion; ?></li>
-                    </ul> -->
-                  
+                    <h2 class="text-center pt-3"><strong>CONTACTO</strong></h2>                 
                     <ul>
                         <li class="text-justify"><strong> Razón Social: </strong>Somos una institución del estado con autonomía técnica, administrativa y patrimonio propio, generando recursos para proyecto sociales. A través de la producción y comercialización 
                         de las loterías del Estado para el bienestar integral de la población.</li>
