@@ -44,6 +44,7 @@
         <link href="template/css/style_bottom.css" rel="stylesheet"/><!-- styles del boton de la nueva loteria -->
         <link href="template/css/style-inicio.css" rel="stylesheet"/><!-- styles  para el inicio -->
         <link href="template/css/style-services.css" rel="stylesheet"/><!-- styles  para el inicio -->
+        <link href="template/css/style.preguntas.css" rel="stylesheet"/><!-- styles  para el inicio -->
         <link href="template/css/style-enlaces.css" rel="stylesheet"/><!-- styles  para el inicio -->
 
         <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
