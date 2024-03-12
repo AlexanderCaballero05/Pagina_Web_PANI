@@ -27,10 +27,10 @@
             
           </ul>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
         <a class="nav-link" href="" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#ModalPremios">
           Premios</a>
-        </li>
+        </li> -->
 
         <li class="nav-item dropdown"><!-- Lista del Item Institución-->
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
@@ -128,7 +128,7 @@
         </li>
         <!-- Item Nueva Modalidad -->
         <li class="nav-item">
-          <a class="nav-link animated-button1" href="nuevaLoteria.php">
+          <a class="nav-link animated-button1" href="nuevaLoteria">
             <span></span>
             <span></span>
             <span></span>

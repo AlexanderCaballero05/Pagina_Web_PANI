@@ -21,7 +21,8 @@ class Route{
             if( $recurso == "inicio" || 
                 $recurso == "contacto" || 
                 $recurso == "institucion" ||
-                $recurso == "probidad-etica"
+                $recurso == "probidad-etica" ||
+                $recurso == "nuevaLoteria" 
                 ):
                include_once "views/".$recurso.".php";
              endif;

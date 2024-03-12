@@ -164,3 +164,27 @@ p {
     display: grid;
     place-items: center;
   }
+
+
+
+/*
+Icono de whatsapp 
+*/
+
+@media screen and (min-width: 320px) and (max-width: 768px) {	
+  .btn-wsp {
+      width: 45px;
+      height: 44px;
+      line-height: 66px;
+      right: 21px !important;
+   }
+ }
+
+ @media screen and (min-width: 720px) and (max-width: 1980px) {	
+  .btn-wsp {
+      width: 69px;
+      height: 64px;
+      line-height: 66px;
+      font-size: 55px;
+   }
+ }
