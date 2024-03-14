@@ -317,14 +317,6 @@
     agregarPreguntas = agregarPreguntas.join(''); //
     
 
-
-
-
-
-   
-
-
-
    
     //----------------------------------------------------------------Iterar los elementos para mostrarlos-----------------
     

@@ -22,10 +22,14 @@ class Route{
                 $recurso == "contacto" || 
                 $recurso == "institucion" ||
                 $recurso == "probidad-etica" ||
-                $recurso == "nuevaLoteria" 
+                $recurso == "nuevaLoteria"
                 ):
                include_once "views/".$recurso.".php";
-             endif;
+              
+             elseif( $recurso == "direccion-ejecutiva"):
+                include_once "views/estructura-organica/".$recurso.".php";
+
+            endif;
         endif;
         /**================================================================================================
          *                                       FOOTER DEL SITIO

@@ -46,6 +46,7 @@
         <link href="template/css/style-services.css" rel="stylesheet"/><!-- styles  para el inicio -->
         <link href="template/css/style.preguntas.css" rel="stylesheet"/><!-- styles  para el inicio -->
         <link href="template/css/style-enlaces.css" rel="stylesheet"/><!-- styles  para el inicio -->
+        <link href="template/css/style-estructura-organica.css" rel="stylesheet"/><!-- styles  para el inicio -->
 
         <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
         <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
