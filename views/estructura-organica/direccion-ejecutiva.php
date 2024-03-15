@@ -17,6 +17,7 @@
         {
             cod_autoridad: '1',
             nombre_autoridad: 'Ana Julia Arana Canales',
+            profesion: 'Abogada',
             foto: './template/img/directora.jpeg',
             cargo_autoridad: 'Director Ejecutivo',
             descripcion_cargo: 'La Dirección Ejecutiva del PANI, por ley es la autoridad responsable de ejecutar las decisiones y disposiciones emitidas por el Consejo Directivo (CODIPANI), así como implementar políticas administrativas, financieras y personal que correspondan a las necesidades de la institución.'
@@ -43,7 +44,7 @@
                 <div class="descripcion-perfil-autoridad">
                 <p></p>
                 <p id="puesto">${item.cargo_autoridad}</p>
-                <h3>${item.nombre_autoridad}</h3>
+                <h3>${item.profesion} ${item.nombre_autoridad}</h3>
                 <p>${item.descripcion_cargo}</p>
                 </div>
                 </div>`
