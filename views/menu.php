@@ -119,11 +119,15 @@
               </ul>
             </li><!--Final del item institucion-->
 
-          
-
         <li class="nav-item">
           <a class="nav-link" href="contacto">
             Contacto
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="seccion-noticias">
+            Noticias
           </a>
         </li>
         <!-- Item Nueva Modalidad -->

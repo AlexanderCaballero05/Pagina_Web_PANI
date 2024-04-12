@@ -22,7 +22,9 @@ class Route{
                 $recurso == "contacto" || 
                 $recurso == "institucion" ||
                 $recurso == "probidad-etica" ||
-                $recurso == "nuevaLoteria"
+                $recurso == "nuevaLoteria" ||
+                $recurso == "seccion-noticias" ||
+                $recurso == "noticia-vista"
                 ):
                include_once "views/".$recurso.".php";
               
