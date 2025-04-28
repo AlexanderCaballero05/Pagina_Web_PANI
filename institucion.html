@@ -1,4 +1,4 @@
-<!-- 
+  <!-- 
         -----------------------------------------------------------------------
                 PATRONATO NACIONAL DE LA INFANCIA (PANI)
                         Gobierno de la Republica
@@ -16,192 +16,191 @@
           Ing. Luis Fernando Cambar Vallecillo
 
         ---------------------------------------------------------------------
-            Programa:         Información Institucion de la empresa
+            Programa:         plantilla del sitio web
             Fecha:            1/23/2023 
             Programador:      Arnold Alexander Caballero Garcia
-            descripcion:      Pagina web en donde se visualizan la información institucional del PANI
+            descripcion:      Index del sitio web, muestra el menu, los sorteos
             @versión 1.0
         -----------------------------------------------------------------------
           Historial de Cambio
         -----------------------------------------------------------------------
             Programador               Fecha                      Descripcion
-          
         ----------------------------------------------------------------------->
         <!DOCTYPE html>
-        <html lang="en">
-     <head>
-         <meta charset="UTF-8">
-         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>PANI-Instituto Nacional de la Infancia</title>
-         <link rel="icon" href="template/img/pani1.png" type="image/png">
- 
-         <link rel="stylesheet" href="template/css/bootstrap.min.css">
-         <link rel="stylesheet" href="template/css/bootstrap-icons.css">
-         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
- 
- 
-         <link rel="stylesheet" href="template/css/bootstrap.min.css">
-         <link rel="stylesheet" href="template/css/bootstrap-icons.css">
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-         
-         <link href="template/css/style.css" rel="stylesheet"/><!-- styles -->
-         <link href="template/css/style_bottom.css" rel="stylesheet"/><!-- styles del boton de la nueva loteria -->
-         <link href="template/css/style-inicio.css" rel="stylesheet"/><!-- styles  para el inicio -->
-         <link href="template/css/style-services.css" rel="stylesheet"/><!-- styles  para el inicio -->
-         <link href="template/css/style.preguntas.css" rel="stylesheet"/><!-- styles  para el inicio -->
-         <link href="template/css/style-enlaces.css" rel="stylesheet"/><!-- styles  para el inicio -->
- 
-         <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
-         <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
-         <link rel="stylesheet" href="fontawesome-free/template/css/all.min.css">
-     </head>
- <body>
+       <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PANI-Instituto Nacional de la Infancia</title>
+        <link rel="icon" href="template/img/pani1.png" type="image/png">
 
-  <!-- ----------------------------------------------------------------INICIO DE MENU------------------------------------------------------------------------------ -->
+        <link rel="stylesheet" href="template/css/bootstrap.min.css">
+        <link rel="stylesheet" href="template/css/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+        <link rel="stylesheet" href="template/css/bootstrap.min.css">
+        <link rel="stylesheet" href="template/css/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        
+        <link href="template/css/style.css" rel="stylesheet"/><!-- styles -->
+        <link href="template/css/style_bottom.css" rel="stylesheet"/><!-- styles del boton de la nueva loteria -->
+        <link href="template/css/style-inicio.css" rel="stylesheet"/><!-- styles  para el inicio -->
+        <link href="template/css/style-services.css" rel="stylesheet"/><!-- styles  para el inicio -->
+        <link href="template/css/style.preguntas.css" rel="stylesheet"/><!-- styles  para el inicio -->
+        <link href="template/css/style-enlaces.css" rel="stylesheet"/><!-- styles  para el inicio -->
+
+        <link rel="stylesheet" href="Plugins/animate/animate.min.css">    
+        <link rel="stylesheet" href="Plugins/sweetalert2/sweetalert2.min.css">
+        <link rel="stylesheet" href="fontawesome-free/template/css/all.min.css">
+    </head>
+<body>
+<!-- ----------------------------------------------------------------INICIO DE MENU------------------------------------------------------------------------------ -->
 <!--Inicio, Items Header-->
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed p-2" id="main_navbar">
-   <div class="container-fluid">
-  <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
-   <img src="template/img/pani1.png" class="margin d-block" alt="logo-pani" width="160px">
- </a>
-   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-   </button>
-   <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-     <ul class="navbar-nav mx-auto mb-lg-0">
-       <li class="nav-item">
-         <a class="nav-link active" aria-current="page" href="index.html">
-           Inicio
-         </a>
-       </li>
-       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Sorteos
-         </a>
-         <ul class="dropdown-menu">
-           <li><a class="dropdown-item" href="#loteria" data-toggle="" data-bs-toggle="" data-bs-target="">Lotería Mayor</a></li>
-           <li><a class="dropdown-item" href="#loteria" data-toggle="" data-bs-toggle="" data-bs-target="">Lotería Menor</a></li>
-           <!-- <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="">Lotería La Grande</button></li> -->
-           <!-- <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li> -->
-           <!-- <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li> -->
-           
-         </ul>
-       </li>
-       <li class="nav-item">
-       <a class="nav-link" href="" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#ModalPremios">
-         Premios</a>
-       </li>
+    <div class="container-fluid">
+   <a class="navbar-brand" href="" style="background-color: transparent !important;"><!--Referencia del logo de la empresa-->
+    <img src="template/img/pani1.png" class="margin d-block" alt="logo-pani" width="160px">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+      <ul class="navbar-nav mx-auto mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">
+            Inicio
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sorteos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#loteria" data-toggle="" data-bs-toggle="" data-bs-target="">Lotería Mayor</a></li>
+            <li><a class="dropdown-item" href="#loteria" data-toggle="" data-bs-toggle="" data-bs-target="">Lotería Menor</a></li>
+            <!-- <li><button class="btn btn-primary" data-bs-target="#loteriaLaGrande" data-bs-toggle="modal" id="">Lotería La Grande</button></li> -->
+            <!-- <li><a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#">Lotería La Chica</a></li> -->
+            <!-- <li><a href="menu_backend.php"><button class="btn btn-danger" data-bs-target="" data-bs-toggle="modal" id="Item-LaGrande">Menu prueba</button></a></li> -->
+            
+          </ul>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#ModalPremios">
+          Premios</a>
+        </li>
 
-       <li class="nav-item dropdown"><!-- Lista del Item Institución-->
-             <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
-              Institución
-             </a>
-             <ul class="dropdown-menu">
-               <li class="nav-item dropdown"><!--Quienes somos-->
+        <li class="nav-item dropdown"><!-- Lista del Item Institución-->
+              <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">
+               Institución
+              </a>
+              <ul class="dropdown-menu">
+                <li class="nav-item dropdown"><!--Quienes somos-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Quienes Somos
+                  </a>
+                  <ul class="dropdown-menu">
+                    <!--<li><a class="dropdown-item" href="institucion.php">Historia</a></li>-->
+                    <li><a class="dropdown-item" href="institucion.html">Misión/Visión</a></li>
+                    <li><a class="dropdown-item" href="institucion.html">Valores</a></li>
+                    <li><hr class="dropdown-divider"/></li>
+                    <li><a class="dropdown-item" href="template/img/organigrama.jpg" target="_blank">Organigrama</a></li>   
+                  </ul>
+                </li><!--Quienes somos-->
+
+                <li class="nav-item dropdown"><!--Direccion-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Direcciones
+                  </a>
+                  <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Dirección Ejecutiva</a></li>
+                    <li><a class="dropdown-item" href="#">Sub dirección Ejecutiva</a></li>
+
+                  </ul>
+                </li><!--Direccion-->
+
+                <li class="nav-item dropdown"><!--Secretaria-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Secretaria
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Secretaria General</a></li>
+                    <li><a class="dropdown-item" href="#">Asesoría legal</a></li>
+                  </ul>
+                </li><!--Secretaria-->
+
+
+                <li class="nav-item dropdown"><!--Unidades-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Unidades
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Unid. de Relaciones Públicas</a></li>
+                    <li><a class="dropdown-item" href="#">Unid. de Planificación</a></li>
+                    <li><a class="dropdown-item" href="#">Unid. de Informática</a></li>
+                    <?php
+                    $option = 1;
+                    // '<li><a class="dropdown-item" href="#">Unid. de Informática</a></li>'
+                    ?>
+                  </ul>
+                </li><!--Unidades-->
+
+                <li class="nav-item dropdown"><!--Gerencias-->
+                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Gerencias
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Gcia. de Imprenta</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. de Comercializaci&oacute;n</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
+                    <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
+                  </ul>
+                </li>    
+                <li class="nav-item dropdown">
                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   Quienes Somos
+                    COCOIN
                  </a>
                  <ul class="dropdown-menu">
-                   <!--<li><a class="dropdown-item" href="institucion.php">Historia</a></li>-->
-                   <li><a class="dropdown-item" href="institucion.html">Misión/Visión</a></li>
-                   <li><a class="dropdown-item" href="institucion.html">Valores</a></li>
-                   <li><hr class="dropdown-divider"/></li>
-                   <li><a class="dropdown-item" href="template/img/organigrama.jpg" target="_blank">Organigrama</a></li>   
-                 </ul>
-               </li><!--Quienes somos-->
-
-               <li class="nav-item dropdown"><!--Direccion-->
+                    <li><a class="dropdown-item" href="cocoinView.html">Comit&eacute; control Interno</a></li>
+                  </ul>
+                 
+                </li>
+                <li class="nav-item dropdown"><!--Comite de probidad y etica-->
                  <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   Direcciones
+                    Probidad
                  </a>
                  <ul class="dropdown-menu">
-                 <li><a class="dropdown-item" href="#">Dirección Ejecutiva</a></li>
-                   <li><a class="dropdown-item" href="#">Sub dirección Ejecutiva</a></li>
+                    <li><a class="dropdown-item" href="probidad-etica.html">Comit&eacute; de probidad y &eacute;tica</a></li>
+                  </ul>
+                </li>
+                         
+              </ul>
+            </li><!--Final del item institucion-->
 
-                 </ul>
-               </li><!--Direccion-->
+          
 
-               <li class="nav-item dropdown"><!--Secretaria-->
-                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   Secretaria
-                 </a>
-                 <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="#">Secretaria General</a></li>
-                   <li><a class="dropdown-item" href="#">Asesoría legal</a></li>
-                 </ul>
-               </li><!--Secretaria-->
-
-
-               <li class="nav-item dropdown"><!--Unidades-->
-                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   Unidades
-                 </a>
-                 <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="#">Unid. de Relaciones Públicas</a></li>
-                   <li><a class="dropdown-item" href="#">Unid. de Planificación</a></li>
-                   <li><a class="dropdown-item" href="#">Unid. de Informática</a></li>
-                   <?php
-                   $option = 1;
-                   // '<li><a class="dropdown-item" href="#">Unid. de Informática</a></li>'
-                   ?>
-                 </ul>
-               </li><!--Unidades-->
-
-               <li class="nav-item dropdown"><!--Gerencias-->
-                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   Gerencias
-                 </a>
-                 <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="#">Gcia. de Imprenta</a></li>
-                   <li><a class="dropdown-item" href="#">Gcia. de Comercializaci&oacute;n</a></li>
-                   <li><a class="dropdown-item" href="#">Gcia. Administrativa</a></li>
-                   <li><a class="dropdown-item" href="#">Gcia. Financiera</a></li>
-                 </ul>
-               </li>    
-               <li class="nav-item dropdown">
-                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   COCOIN
-                </a>
-                <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="#">Comit&eacute; control Interno</a></li>
-                 </ul>
-                
-               </li>
-               <li class="nav-item dropdown"><!--Comite de probidad y etica-->
-                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                   Probidad
-                </a>
-                <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="#">Comit&eacute; de probidad y &eacute;tica</a></li>
-                 </ul>
-               </li>
-                        
-             </ul>
-           </li><!--Final del item institucion-->
-
-         
-
-       <li class="nav-item">
-         <a class="nav-link" href="contacto.html">
-           Contacto
-         </a>
-       </li>
-       <!-- Item Nueva Modalidad -->
-       <li class="nav-item">
-         <a class="nav-link animated-button1" href="nuevaLoteria.html">
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           Nueva-Modalidad
-         </a>
-       </li>
-     </ul>
-   </div>
- </div>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">
+            Contacto
+          </a>
+        </li>
+        <!-- Item Nueva Modalidad -->
+        <li class="nav-item">
+          <a class="nav-link animated-button1" href="nuevaLoteria.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Nueva-Modalidad
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav><!--Fin items del Header-->
+
 
    <!---------------------------------------CIERRE DE MENU--------------------------------------->
     <!------------------------------Seccion Institucion---------------------------------->
