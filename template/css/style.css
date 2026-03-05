@@ -35,8 +35,12 @@ h2, h1{
   padding-right: 10px;
 }
 
+.navbar-nav .nav-link{
+    color: #fff !important;
+    }
+
 .navbar{ 
-  background-color:#49a6c8c9 !important;
+  background-color:#19438c !important;
   font-family: 'Raleway', sans-serif !important; 
   word-spacing: 30px !important;
   height: auto;
@@ -44,7 +48,7 @@ h2, h1{
 }
 
 .navbar a:hover {
-  background-color: #b5d5e1c9 ;
+  background-color: #60a2bac9 ;
   color: black;
   border-radius: 5px;
 }
@@ -343,7 +347,7 @@ con porcentajes*/
 
 .footer{ 
   width: 100%;
-  background-color:#2b9eb3 !important; 
+  background-color:#19438c !important; 
   font-family: 'Raleway', sans-serif !important; 
   font-size: 15px;
   /* position: fixed; bottom: 0;  */
